@@ -12,14 +12,14 @@ import { Image, Button } from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
 
-import {
-	Table,
-	TableBody,
-	TableHeader,
-	TableColumn,
-	TableCell,
-	TableRow,
-} from "@nextui-org/table";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import "swiper/css";
 
 const bookContent = [
 	// PartI
@@ -319,18 +319,49 @@ const BookSection: React.FC<BookSectionProps> = ({ className }) => {
 					/>
 				</Button>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-				<Image
-					src="/images/frontcoverpdf_orig.png" // Path relative to the public directory
-					alt="Description of the image"
-					// Add other properties as needed, like width, height, etc.
-				/>
-				<Image
-					src="/images/backcoverpdf_orig.png" // Path relative to the public directory
-					alt="Description of the image"
-					// Add other properties as needed, like width, height, etc.
-				/>
-			</div>
+			<Swiper
+				spaceBetween={32}
+				slidesPerView={2}
+				navigation // Enable navigation
+				modules={[Navigation]} // Add the Navigation module
+				autoHeight={true}
+			>
+				<SwiperSlide>
+					<div>
+						<h4 className="text-2xl mb-3 font-medium">
+							Front cover of the book
+						</h4>
+						<Image
+							src="/images/frontcoverpdf_orig.png"
+							alt="Front cover of the book"
+							// Add other properties as needed, like width, height, etc.
+						/>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div>
+						<h4 className="text-2xl mb-3 font-medium">
+							Rear cover of the book
+						</h4>
+						<Image
+							src="/images/backcoverpdf_orig.png"
+							alt="Rear cover of the book"
+						/>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div>
+						<h4 className="text-2xl mb-3 font-medium">
+							The Book of the Quran with its German translation
+						</h4>
+						<Image
+							src="/images/quran_orig.jpg"
+							alt="The Book of the Quran with its German translation"
+						/>
+					</div>
+				</SwiperSlide>
+				{/* Add more SwiperSlides as needed */}
+			</Swiper>
 		</div>
 	);
 };
