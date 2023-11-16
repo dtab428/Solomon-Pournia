@@ -242,6 +242,140 @@ const bookContent = [
 	},
 ];
 
+const books = [
+	{
+		part: "II",
+		page: "98",
+		description:
+			"God ordered Abraham to sacrifice his son Isaac as a test of his faith (Genesis, 22: 1-13). But in Islam, the belief is that it was Ishmael (Ismail) who God asked Abraham to sacrifice. (Qur’an 37: 101-105) Painting depicted by the great Dutch artist Rembrandt van Rijn, The Sacrifice of Isaac, 1635, is here masterfully copied by the Iranian carpet weaver, 41” by 58”.",
+		imageURL: "@/public/images/references/image1.png",
+	},
+	{
+		part: "I",
+		page: "4",
+		description:
+			"An ongoing Hajj process in Mecca. The brown-black cube in the middle is, the Kaaba. Source: Wikipedia. Every Muslim, if capable, has to make a pilgrimage to Mecca at least once in his life.",
+		imageURL: "@/public/images/references/image2.png",
+	},
+	{
+		part: "I",
+		page: "19",
+		description:
+			"An Aerial view of the Temple Mount, known by the Muslims as Haram al-Sharif. Source: www.myjewishlearning.com <br/><br/> Today the <strong>Temple Mount</strong>, a 35-acre walled compound within the Old City of Jerusalem, is the site of the Dome of the Rock to the north (with golden dome) and the Al-Aqsa Mosque to the south (with silvered dome). In the southwest stands the Western Wall—a remnant of the Second Temple and the holiest site in Judaism. The Israeli government holds the political sovereignty over the compound; however, the custodianship entrusted with an Islamic Council called the Waqf. <br /><br />According to the Bible King Solomon, built here the First Temple. A 1929 publication, “A Brief Guide to the Haram al-Sharif,” written by Waqf historian Aref al Aref, declares that the Mount’s “identity with the site of Solomon’s temple is beyond dispute,” a fact, which Yasser Arafat deputed when in 2000 he met the US President Bill Clinton and Ehud Barack the Israeli PM. Source: Joshua Hammer, April 2011, www.smithsonianmag.com/history, partially adapted.",
+		imageURL: "@/public/images/references/image3.png",
+	},
+	{
+		part: "IV",
+		page: "436",
+		description:
+			"<strong>A Brief Guide to al-Haram al-Sharif</strong>, published in 1924 by the Supreme Muslim Council in Jerusalem, ironically when Haj Amin Muhammad al Husseini was the head of this Council and was the Grand Mufti of Jerusalem from 1922 to 1937, in which the Supreme Muslim Council confirms the truth of the Jewish people’s unique relationship to the consecrated Mount Temple dating back some three thousand years. <br /><br />This Guide officially recognizes the Jewish connection to the Temple Mount. On its fourth page the Historical Sketch of the Haram declares: “The site is one of the oldest in the world. Its sanctity dates from the earliest times. Its identity with the site of Solomon’s Temple is beyond dispute. “Describing the area of Solomon’s Stables, the Guide states: “It dates probably as far back as the construction of Solomon’s Temple.” <br /><br />Photo: Courtesy of Simon Wiesenthal Center, Los Angeles",
+		imageURL: "@/public/images/references/image4.png",
+	},
+	{
+		part: "I",
+		page: "28",
+		description:
+			"During the 400-year occupation of the City of Jerusalem by the Ottoman Turks the City’s Jewish population grew steadily. <br /><br /> <strong>“A Survey of Palestine”</strong>, a booklet, which was prepared in December 1945 - January 1946, by the English Mandate for the information of the ANGLO-AMERICAN COMMITTEE OF INQUIRY. <br /><br />Its volume I, chapter VI, pages 148, and, tables 7b & 8b, the figures for Jerusalem’s population are shown. <br /><br /> Data for reference # 105 (Part I, page 28) were obtained from this “Booklet”, which is available from Internet",
+		imageURL: "@/public/images/references/image5.png",
+	},
+	{
+		part: "I",
+		page: "19",
+		description:
+			"A clip from a video about the City of Jerusalem, showing a portion of the Western (Wailing) Wall around the old City. <strong>The Dome of the Rock</strong> and the <strong>Al-Aqsa Mosque</strong> are shown as well.",
+		imageURL: "@/public/images/references/image6.png",
+	},
+	{
+		part: "I",
+		page: "14",
+		description: "",
+		imageURL: "@/public/images/references/image7.png",
+	},
+	{
+		part: "I",
+		page: "80-84",
+		description:
+			"The atrocities of radical Muslims against religious minorities for political or for other reasons are not always reported by the news agencies, newspapers or by the radio broadcastings. Reports, photographs, and even videos of beheading non-Muslims, videos of the destruction of non-Muslim houses of worships, and even of mass killings of the innocents including women and children, all by fanatic Muslims have been portrayed in Internet. A clip from a YouTube Video about persecution of the Christians in Egypt. <br /><br /> More about this subject on Part I, pages 80 to 84.",
+		imageURL: "@/public/images/references/image8.png",
+	},
+	{
+		part: "IV",
+		page: "377",
+		description:
+			"<strong>Machpelah</strong>, the Tomb, known by the Muslims as “Ibrahimi Mosque” enclosed by a rectangular building from the Herodian era, is said to be the spot where Judaism’s patriarchs and matriarchs are buried, including Abraham and Sarah, Isaac and Rebecca, and Jacob and Leah. It is considered the second holiest site in Judaism, next to the Temple Mount in Jerusalem. Wikipedia Common",
+		imageURL: "@/public/images/references/image9.png",
+	},
+	{
+		part: "III",
+		page: "221",
+		description:
+			"In 539 B.C.E., King Cyrus the Great of Persia conquered Babylon and terminated the Babylonian Empire. Cyrus was hailed by many of the Jewish leaders in captivity as the person designated to fulfill the biblical prophecy that the Jews would be liberated and allowed to return to the Promised Land. A postage stamp of the State of Israel testifying how the Jews all over the world honor the ancient Persian King, Cyrus.",
+		imageURL: "@/public/images/references/image10.png",
+	},
+	{
+		part: "II",
+		page: "127",
+		description:
+			"A painting on the interior wall of the Wilshire Temple in Los Angeles, after sculptured panel inside the Arch of Titus in Rome. It depicts Titus's victory procession and spoils, which were taken from the Temple in Jerusalem after the city of Jerusalem was conquered and the Temple looted.",
+		imageURL: "@/public/images/references/image11.png",
+	},
+	{
+		part: "II",
+		page: "124",
+		description:
+			"The Fortress of Masada: the mountaintop fortress, Masada was built by Herod on a 1,300 feet high rock in the Judaean desert overlooking the Dead Sea. The Jewish revolts against Rome from 63-73 CE ended here with the fall of a fortress after resisting the Roman army for longer than two years. It finally fell in 73 CE.. Allen: The above description should be next to the Fortress. Source: JewishVirtualLibrary.org",
+		imageURL: "@/public/images/references/image12.png",
+	},
+	{
+		part: "IV",
+		page: "299",
+		description:
+			"<strong>Sir Moses Montefiore</strong>, 1784 – 1885, an English citizen had Jewish philanthropist. The Holy Land was in the center of his interests. He, being aware of the importance of education as an investment and as a foundation for a victorious future society, donated large sums of money to promote industry, education and health in the Ottoman Palestine. His activities were part of the broader program to enable the Jews of Palestine to become self-supporting, in the anticipation of the establishment of a Jewish homeland. Source: montefioredellaso.com",
+		imageURL: "@/public/images/references/image13.png",
+	},
+	{
+		part: "III",
+		page: "155",
+		description:
+			"<strong>Martin Luther</strong>, a German theologian and monk, who with his <em><strong>95 Theses</strong></em>, protested several Church practices and doctrines. His uncontrollable words ignited religious reformers all across the Europe. On January 3, 1521, he was excommunicated from the Catholic Church. With that, the Pope helped galvanizing the development of the Lutheran church and the Protestant Reformation. When Jews did not accept his invitation to Lutheranism, he turned on them in fury. He published a pamphlet, “From the Jews and their lies'”, which may be termed the first work of the modern anti-Semitism and a giant step forward on the road to the Holocaust. Photo: Wikimedia",
+		imageURL: "@/public/images/references/image14.png",
+	},
+	{
+		part: "IV",
+		page: "263",
+		description:
+			"In the <em>World War I</em>, for the first time the trench warfare was started, as did the widespread use of the machine gun and poisonous gas. More than 65 million men from 30 countries fought on the side of the <em>Central Powers</em> or the of <em>The Allies</em>. Photo: Wikipedia Common",
+		imageURL: "@/public/images/references/image15.png",
+	},
+	{
+		part: "IV",
+		page: "269",
+		description:
+			"On November 2, 1917, the British Foreign Secretary <strong>Lord Arthur James Balfour</strong>, on behalf of the British Government, in the form of a letter to Lord Rothschild sent a declaration of support for the Jewish National Home in the Mandate Palestine, (which applied originally to the country on both sides of the river Jordan). Photo: Wikimedia. Part IV, page 269",
+		imageURL: "@/public/images/references/image16.png",
+	},
+	{
+		part: "IV",
+		page: "269",
+		description:
+			"Chaim Weizmann. He was a science professor before becoming a Zionist leader. Later he was elected as the State of Israel’s first president. Source: Wikipedia",
+		imageURL: "@/public/images/references/image17.png",
+	},
+	{
+		part: "IV",
+		page: "279",
+		description:
+			"<strong>A Recruitment Poster</strong>.  A Yiddish-language poster recruiting men for the all-volunteer Jewish Legion to serve under British rule in Ottoman-occupied Palestine. The Daughter of Zion (representing the Hebrew people): The text reads: &quot;Your Old New Land must have you! Join the Jewish regiment&quot; Source: Tablet Magazine 11-9-2012.",
+		imageURL: "@/public/images/references/image18.png",
+	},
+	{
+		part: "IV",
+		page: "279",
+		description: "The Jewish Legion Flag in WWI. Source: Wikipedia",
+		imageURL: "@/public/images/references/image19.png",
+	},
+];
+
 interface BookSectionProps {
 	className?: string; // Optional className prop
 }
@@ -256,51 +390,7 @@ const BookSection: React.FC<BookSectionProps> = ({ className }) => {
 			</h4>
 			<div className="grid grid-cols-5 my-5 gap-4">
 				<Button variant="solid" style={{ height: "6rem" }}>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						version="1.1"
-						width="603"
-						height="182"
-						style={{ fill: "#221f1f" }}
-						id="svg1936"
-						viewBox="0 0 603 182"
-					>
-						<path
-							d="m 374.00642,142.18404 c -34.99948,25.79739 -85.72909,39.56123 -129.40634,39.56123 -61.24255,0 -116.37656,-22.65135 -158.08757,-60.32496 -3.2771,-2.96252 -0.34083,-6.9999 3.59171,-4.69283 45.01431,26.19064 100.67269,41.94697 158.16623,41.94697 38.774689,0 81.4295,-8.02237 120.6499,-24.67006 5.92501,-2.51683 10.87999,3.88009 5.08607,8.17965"
-							id="path8"
-							style={{ fill: "#ff9900" }}
-						/>
-						<path
-							d="m 388.55678,125.53635 c -4.45688,-5.71527 -29.57261,-2.70033 -40.84585,-1.36327 -3.43442,0.41947 -3.95874,-2.56925 -0.86517,-4.71905 20.00346,-14.07844 52.82696,-10.01483 56.65462,-5.2958 3.82764,4.74526 -0.99624,37.64741 -19.79373,53.35128 -2.88385,2.41195 -5.63662,1.12734 -4.35198,-2.07113 4.2209,-10.53917 13.68519,-34.16054 9.20211,-39.90203"
-							id="path10"
-							style={{ fill: "#ff9900" }}
-						/>
-						<path
-							d="M 348.49744,20.06598 V 6.38079 c 0,-2.07113 1.57301,-3.46062 3.46062,-3.46062 h 61.26875 c 1.96628,0 3.53929,1.41571 3.53929,3.46062 v 11.71893 c -0.0262,1.96626 -1.67788,4.53551 -4.61418,8.59912 l -31.74859,45.32893 c 11.79759,-0.28837 24.25059,1.46814 34.94706,7.49802 2.41195,1.36327 3.06737,3.35575 3.25089,5.32203 V 99.4506 c 0,1.99248 -2.20222,4.32576 -4.5093,3.1198 -18.84992,-9.88376 -43.887,-10.95865 -64.72939,0.10487 -2.12356,1.15354 -4.35199,-1.15354 -4.35199,-3.14602 V 85.66054 c 0,-2.22843 0.0262,-6.02989 2.25463,-9.41186 l 36.78224,-52.74829 h -32.01076 c -1.96626,0 -3.53927,-1.38948 -3.53927,-3.43441"
-							id="path12"
-						/>
-						<path
-							d="m 124.99883,105.45424 h -18.64017 c -1.78273,-0.13107 -3.19845,-1.46813 -3.32954,-3.17224 V 6.61676 c 0,-1.91383 1.59923,-3.43442 3.59171,-3.43442 h 17.38176 c 1.80898,0.0786 3.25089,1.46814 3.38199,3.19845 v 12.50545 h 0.34082 c 4.53551,-12.08598 13.05597,-17.7226 24.53896,-17.7226 11.66649,0 18.95477,5.63662 24.19814,17.7226 4.5093,-12.08598 14.76008,-17.7226 25.74495,-17.7226 7.81262,0 16.35931,3.22467 21.57646,10.46052 5.89879,8.04857 4.69281,19.74128 4.69281,29.99208 l -0.0262,60.37739 c 0,1.91383 -1.59923,3.46061 -3.59171,3.46061 h -18.61397 c -1.86138,-0.13107 -3.35574,-1.62543 -3.35574,-3.46061 V 51.29025 c 0,-4.03739 0.36702,-14.10466 -0.52434,-17.93233 -1.38949,-6.42311 -5.55797,-8.23209 -10.95865,-8.23209 -4.5093,0 -9.22833,3.01494 -11.14216,7.83885 -1.91383,4.8239 -1.73031,12.89867 -1.73031,18.32557 v 50.70338 c 0,1.91383 -1.59923,3.46061 -3.59171,3.46061 h -18.61395 c -1.88761,-0.13107 -3.35576,-1.62543 -3.35576,-3.46061 L 152.946,51.29025 c 0,-10.67025 1.75651,-26.37415 -11.48298,-26.37415 -13.39682,0 -12.87248,15.31063 -12.87248,26.37415 v 50.70338 c 0,1.91383 -1.59923,3.46061 -3.59171,3.46061"
-							id="path14"
-						/>
-						<path
-							d="m 469.51439,1.16364 c 27.65877,0 42.62858,23.75246 42.62858,53.95427 0,29.17934 -16.54284,52.32881 -42.62858,52.32881 -27.16066,0 -41.94697,-23.75246 -41.94697,-53.35127 0,-29.78234 14.96983,-52.93181 41.94697,-52.93181 m 0.15729,19.53156 c -13.73761,0 -14.60278,18.71881 -14.60278,30.38532 0,11.69271 -0.18352,36.65114 14.44549,36.65114 14.44548,0 15.12712,-20.13452 15.12712,-32.40403 0,-8.07477 -0.34082,-17.72257 -2.779,-25.3779 -2.09735,-6.65906 -6.26581,-9.25453 -12.19083,-9.25453"
-							id="path16"
-						/>
-						<path
-							d="M 548.00762,105.45424 H 529.4461 c -1.86141,-0.13107 -3.35577,-1.62543 -3.35577,-3.46061 l -0.0262,-95.69149 c 0.1573,-1.75653 1.7041,-3.1198 3.59171,-3.1198 h 17.27691 c 1.62543,0.0786 2.96249,1.17976 3.32954,2.67412 v 14.62899 h 0.3408 c 5.21717,-13.0822 12.53165,-19.32181 25.40412,-19.32181 8.36317,0 16.51662,3.01494 21.75999,11.27324 4.87633,7.65532 4.87633,20.5278 4.87633,29.78233 v 60.22011 c -0.20973,1.67786 -1.75653,3.01492 -3.59169,3.01492 h -18.69262 c -1.70411,-0.13107 -3.11982,-1.38948 -3.30332,-3.01492 V 50.47753 c 0,-10.46052 1.20597,-25.77117 -11.66651,-25.77117 -4.5355,0 -8.70399,3.04117 -10.77512,7.65532 -2.62167,5.84637 -2.96249,11.66651 -2.96249,18.11585 v 51.5161 c -0.0262,1.91383 -1.65166,3.46061 -3.64414,3.46061"
-							id="path18"
-						/>
-						<use
-							xlinkHref="#path30"
-							transform="translate(244.36719)"
-							id="use28"
-						/>
-						<path
-							d="M 55.288261,59.75829 V 55.7209 c -13.475471,0 -27.711211,2.88385 -27.711211,18.77125 0,8.04857 4.16847,13.50169 11.32567,13.50169 5.24337,0 9.93618,-3.22467 12.8987,-8.46805 3.670341,-6.44935 3.486841,-12.50544 3.486841,-19.7675 m 18.79747,45.43378 c -1.23219,1.10111 -3.01495,1.17976 -4.40444,0.4457 -6.18716,-5.1385 -7.28828,-7.52423 -10.69647,-12.42678 -10.224571,10.4343 -17.460401,13.55409 -30.726141,13.55409 -15.67768,0 -27.89471,-9.67401 -27.89471,-29.04824 0,-15.12713 8.20587,-25.43035 19.87236,-30.46398 10.1197,-4.45688 24.25058,-5.24337 35.051931,-6.47556 v -2.41195 c 0,-4.43066 0.34082,-9.67403 -2.25465,-13.50167 -2.280881,-3.43442 -6.632861,-4.85013 -10.460531,-4.85013 -7.10475,0 -13.44924,3.64414 -14.99603,11.19459 -0.31461,1.67789 -1.5468,3.32955 -3.22467,3.4082 L 6.26276,32.67628 C 4.74218,32.33548 3.0643,31.10327 3.48377,28.76999 7.65225,6.85271 27.44596,0.24605 45.16856,0.24605 c 9.071011,0 20.921021,2.41195 28.078221,9.28076 9.07104,8.46804 8.20587,19.7675 8.20587,32.06321 v 29.04826 c 0,8.73022 3.61794,12.55786 7.02613,17.27691 1.20597,1.67786 1.46814,3.69656 -0.05244,4.95497 -3.80144,3.17225 -10.56538,9.07104 -14.28819,12.37436 l -0.05242,-0.0525"
-							id="path30"
-						/>
-					</svg>
+					<AmazonLogo />
 				</Button>
 				<Button style={{ height: "6rem" }}>
 					<ITunesLogo />
@@ -597,7 +687,7 @@ export default function Home() {
                          </TableBody>
                     </Table> */}
 
-				<BookTable bookContent={bookContent} />
+				<BookTable bookContent={books} />
 
 				<div className="flex gap-3">
 					{/* <Link
