@@ -50,7 +50,7 @@ const bookContent = [
 		part: "PartI",
 		page: "Page28",
 		description:
-			'"A Survey of Palestine", a booklet prepared by the English Mandate for the ANGLO-AMERICAN COMMITTEE OF INQUIRY, showing figures for Jerusalem&apos;s population.',
+			"A Survey of Palestine, a booklet prepared by the English Mandate for the ANGLO-AMERICAN COMMITTEE OF INQUIRY, showing figures for Jerusalem&apos;s population.",
 		source: "Internet",
 		imageURL: "@/public/images/abe_orig.png",
 	},
