@@ -242,9 +242,13 @@ const bookContent = [
 	},
 ];
 
-const BookSection = (props) => {
+interface BookSectionProps {
+	className?: string; // Optional className prop
+}
+
+const BookSection: React.FC<BookSectionProps> = ({ className }) => {
 	return (
-		<div className="container mx-auto px-4" {...props}>
+		<div className={`container mx-auto px-4 ${className}`}>
 			<h4 className={(subtitle(), "text-center max-w-xl mx-auto")}>
 				Readers who wish to experience this intriguing work can purchase this
 				book at select bookstores, or online at the Apple iTunes store, Amazon,
@@ -526,7 +530,7 @@ export default function Home() {
 					</h1>
 				</div>
 
-				<BookSection className="mt-0" />
+				<BookSection className="mt-3" />
 
 				<PressRelease />
 

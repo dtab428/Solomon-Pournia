@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
+	max-width: unset;
+}
