@@ -24,32 +24,35 @@ interface BookTableProps {
 
 const BookTable: React.FC<BookTableProps> = ({ bookContent }) => {
 	return (
-		<Table aria-label="Book Content Table">
-			<TableHeader>
-				<TableColumn>Image</TableColumn>
-				<TableColumn>Part</TableColumn>
-				<TableColumn>Page</TableColumn>
-				<TableColumn>Description</TableColumn>
-			</TableHeader>
-			<TableBody>
-				{bookContent.map((item, index) => (
-					<TableRow key={index}>
-						<TableCell>
-							<Image
-								src={item.imageURL.replace("@/public/", "/")}
-								alt="Book Image"
-								style={{ width: "100%" }}
-							/>
-						</TableCell>
-						<TableCell>{item.part}</TableCell>
-						<TableCell>{item.page}</TableCell>
-						<TableCell>
-							<p dangerouslySetInnerHTML={{ __html: item.description }} />
-						</TableCell>
-					</TableRow>
-				))}
-			</TableBody>
-		</Table>
+		<div className="mt-7">
+			<h3 className="text-3xl mb-6">Synopsis</h3>
+			<Table aria-label="Book Content Table">
+				<TableHeader>
+					<TableColumn>Image</TableColumn>
+					<TableColumn>Part</TableColumn>
+					<TableColumn>Page</TableColumn>
+					<TableColumn>Description</TableColumn>
+				</TableHeader>
+				<TableBody>
+					{bookContent.map((item, index) => (
+						<TableRow key={index}>
+							<TableCell>
+								<Image
+									src={item.imageURL.replace("@/public/", "/")}
+									alt="Book Image"
+									style={{ width: "100%" }}
+								/>
+							</TableCell>
+							<TableCell>{item.part}</TableCell>
+							<TableCell>{item.page}</TableCell>
+							<TableCell>
+								<p dangerouslySetInnerHTML={{ __html: item.description }} />
+							</TableCell>
+						</TableRow>
+					))}
+				</TableBody>
+			</Table>
+		</div>
 	);
 };
 

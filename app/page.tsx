@@ -13,234 +13,10 @@ import { Image, Button } from "@nextui-org/react";
 import BookTable from "@/components/BookTable";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation, Pagination } from "swiper/modules";
-
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import "swiper/css";
-
-const bookContent = [
-	// PartI
-	{
-		part: "PartI",
-		page: "Page4",
-		description:
-			"An ongoing Hajj process in Mecca. The brown-black cube in the middle is the Kaaba. Every Muslim, if capable, has to make a pilgrimage to Mecca at least once in his &apos;life&apos;.",
-		source: "Wikipedia",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartI",
-		page: "Page14",
-		description:
-			"The atrocities of radical Muslims against religious minorities for political or for other reasons are not always reported. Reports, photographs, and videos of beheading non-Muslims, destruction of non-Muslim houses of worships, and mass killings have been portrayed on the Internet. A clip from a YouTube video about persecution of the Christians in Egypt.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartI",
-		page: "Page19",
-		description:
-			"An aerial view of the Temple Mount, known by Muslims as Haram al-Sharif. It is a 35-acre walled compound in the Old City of Jerusalem, site of the Dome of the Rock and the Al-Aqsa Mosque. The Israeli government holds political sovereignty, but custodianship is with an Islamic Council called the Waqf.",
-		source: "www.myjewishlearning.com",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartI",
-		page: "Page28",
-		description:
-			"A Survey of Palestine, a booklet prepared by the English Mandate for the ANGLO-AMERICAN COMMITTEE OF INQUIRY, showing figures for Jerusalem&apos;s population.",
-		source: "Internet",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-
-	// PartII
-	{
-		part: "PartII",
-		page: "Page98",
-		description:
-			"God ordered Abraham to sacrifice his son Isaac as a test of his faith. Painting by Rembrandt van Rijn, &apos;The Sacrifice of Isaac&apos;, 1635, copied by an Iranian carpet weaver.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartII",
-		page: "Page124",
-		description:
-			"The Fortress of Masada, a mountaintop fortress built by Herod, overlooking the Dead Sea. The Jewish revolts against Rome ended here after resisting the Roman army for more than two years.",
-		source: "JewishVirtualLibrary.org",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartII",
-		page: "Page127",
-		description:
-			"A painting on the interior wall of the Wilshire Temple in Los Angeles, depicting Titus&apos;s victory procession with spoils from the Temple in Jerusalem.",
-		photographer: "Allen",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-
-	// PartIII
-	{
-		part: "PartIII",
-		page: "Page155",
-		description:
-			"Martin Luther, a German theologian and monk, initiated the Protestant Reformation. His work &apos;From the Jews and their lies&apos; is considered the first work of modern anti-Semitism.",
-		source: "Wikimedia",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIII",
-		page: "Page187",
-		description:
-			"Vladimir Jabotinsky&apos;s idea to establish a warrior force to fight for conquering Palestine.",
-		source: "Wikipedia",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIII",
-		page: "Page200",
-		description:
-			"Oranienburg and Sachsenhausen Concentration Camp history and details, including the treatment of prisoners and camp liberation.",
-		photographer: "Allen",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIII",
-		page: "Page201",
-		description:
-			"Survival of young children and teens in Sachsenhausen Concentration Camp, rescued by prisoners and liberated by American troops.",
-		source: "Children of the Holocaust book cover",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIII",
-		page: "Page212",
-		description:
-			"Henry Ford&apos;s anti-Semitic actions, including the spread of &apos;The Protocols of the Elders of Zion&apos; and ownership of &apos;The Dearborn Independent&apos;.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIII",
-		page: "Page238",
-		description:
-			"Habib Elghanayan, an Iranian Jewish industrialist and philanthropist, sentenced to death after the Islamic Revolution of 1979.",
-		source: "Tehran newspaper Etela&apos;at",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIII",
-		page: "Page242",
-		description:
-			"Mahmoud Abbas encourages the Palestinians to stop Jews from visiting the holy site and emphasizes the reward for those who spill blood for Allah and Jerusalem.",
-		source: "YouTube video",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-
-	// PartIV
-	{
-		part: "PartIV",
-		page: "Page269",
-		description:
-			"Chaim Weizmann, a science professor before becoming a Zionist leader and the first president of the State of Israel.",
-		source: "Wikipedia",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page279",
-		description:
-			"A Yiddish-language poster recruiting men for the all-volunteer Jewish Legion to serve under British rule in Ottoman-occupied Palestine.",
-		source: "Tablet Magazine or military.wikia.com",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page287",
-		description:
-			"The Armenian Genocide: Armenian men, women, and children were marched from Anatolia to Syria.",
-		source: "thestar.com",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page300",
-		description:
-			"Alfred Dreyfus, a French army Jewish captain, was tried as a spy and wrongfully sentenced to life in prison, influencing Theodor Herzl&apos;s Zionist views.",
-		source: "World Jewish conference",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page301",
-		description:
-			"Theodor Ze&apos;ev Herzl, founder of political Zionism, made two trips to the Mandate Palestine and was hailed as &apos;the anointed one&apos; by local Jews.",
-		source: "JNF brochures or Wikimedia",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page350",
-		description:
-			"The blue collecting box of the Jewish National Fund (J.N.F.), crucial for land purchase and development in Palestine.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page376",
-		description:
-			"Leopold Pilichowski&apos;s painting &apos;The Opening of the Hebrew University in Jerusalem&apos; showing Lord Balfour addressing the assembly.",
-		source: "Wikimedia.com",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page377",
-		description:
-			"The Baltimore News report on the massacre of women and children at Hebron.",
-		source: "Documentary YouTube video",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page396",
-		description:
-			"A man in the Jewish Brigade, a segment of the British Army fighting the Germans in Italy in 1944, with a rocket labeled &apos;Hitler&apos;s Gift&apos;.",
-		source: "Wikipedia Common",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page398",
-		description:
-			"The Palestine Post (later Jerusalem Post) report on the UN&apos;s General Assembly Resolution 181 approval, proposing a Jewish state, an Arab state, and Jerusalem as an international zone.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page401",
-		description:
-			"David Ben-Gurion declaring the Israeli Independence beneath a portrait of Theodor Herzl.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-	{
-		part: "PartIV",
-		page: "Page414",
-		description:
-			"In February 1969, Golda Meir became the Prime Minister of Israel. Her announcement as prime minister emphasized Israel&apos;s readiness to discuss peace, but her territory-for-peace policy was ignored, leading to the Yom Kippur war.",
-		source: "https://www.bbc.co.uk/programmes/p02lqqtp",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-
-	// PartV
-	{
-		part: "PartV",
-		page: "Page469",
-		description:
-			"The Palestinian young generation&apos;s ideation about the &apos;peace with Israel&apos; in the future. Emphasizes the importance of cooperation for peace, highlighting the value of lives, Palestinian or Israeli.",
-		imageURL: "@/public/images/abe_orig.png",
-	},
-];
 
 const books = [
 	{
@@ -376,11 +152,11 @@ const books = [
 	},
 ];
 
-interface BookSectionProps {
+interface SectionProps {
 	className?: string; // Optional className prop
 }
 
-const BookSection: React.FC<BookSectionProps> = ({ className }) => {
+const BookSection: React.FC<SectionProps> = ({ className }) => {
 	return (
 		<div className={`container mx-auto px-4 ${className}`}>
 			<h4 className={(subtitle(), "text-center max-w-xl mx-auto")}>
@@ -459,7 +235,7 @@ const BookSection: React.FC<BookSectionProps> = ({ className }) => {
 const PressRelease = () => {
 	return (
 		<div className="container mx-auto px-4 mt-4">
-			<h3 className={subtitle()}>Full press release text</h3>
+			<h3 className="text-3xl mb-3">Full press release text</h3>
 			<p>
 				An interesting work that offers well-documented accuracy and
 				authenticity of the quoted facts, rendering them beyond malicious
@@ -494,7 +270,7 @@ const PressRelease = () => {
 const Intro = () => {
 	return (
 		<div className="container mx-auto px-4 mt-4">
-			<h3 className={subtitle()}>Introduction</h3>
+			<h3 className="text-3xl mb-3">Introduction</h3>
 			<p>
 				After some 45 years apart, my friend and medical school peer visited me
 				in Los Angeles. He and his wife brought us many gifts from Germany,
@@ -639,7 +415,7 @@ const Intro = () => {
 export default function Home() {
 	return (
 		<>
-			<section className="flex flex-col items-center justify-center gap-4 pt-8 pb-5 md:pt-10 pb-8">
+			<section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
 				<div className="inline-block max-w-3xl text-center justify-center">
 					<h1 className={title()}>Introducing&nbsp;</h1>
 					<h1 className={title({ color: "violet" })}>
@@ -656,36 +432,6 @@ export default function Home() {
 				<PressRelease />
 
 				<Intro />
-				{/* 
-                    <Table aria-label="Example static collection table">
-                         <TableHeader>
-                              <TableColumn>NAME</TableColumn>
-                              <TableColumn>ROLE</TableColumn>
-                              <TableColumn>STATUS</TableColumn>
-                         </TableHeader>
-                         <TableBody>
-                              <TableRow key="1">
-                                   <TableCell>Tony Reichert</TableCell>
-                                   <TableCell>CEO</TableCell>
-                                   <TableCell>Active</TableCell>
-                              </TableRow>
-                              <TableRow key="2">
-                                   <TableCell>Zoey Lang</TableCell>
-                                   <TableCell>Technical Lead</TableCell>
-                                   <TableCell>Paused</TableCell>
-                              </TableRow>
-                              <TableRow key="3">
-                                   <TableCell>Jane Fisher</TableCell>
-                                   <TableCell>Senior Developer</TableCell>
-                                   <TableCell>Active</TableCell>
-                              </TableRow>
-                              <TableRow key="4">
-                                   <TableCell>William Howard</TableCell>
-                                   <TableCell>Community Manager</TableCell>
-                                   <TableCell>Vacation</TableCell>
-                              </TableRow>
-                         </TableBody>
-                    </Table> */}
 
 				<BookTable bookContent={books} />
 
