@@ -187,69 +187,80 @@ const books = [
           imageURL: "@/public/images/references/image23.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "200",
+          description:
+               "Oranienburg is a town located on the banks of the Havel river, 22 miles north of the center of Berlin.   One can reach this small city via railways from Berlin. The Sachsenhausen Concentration Camp is located at its outskirts. This Camp is the second, after Dachau in Munich, camp built by the Nazis on the German soil. In its 9 years history some 200,000 people, among them some prominent Germans who opposed the Nazi policies, were interned.",
           imageURL: "@/public/images/references/image24.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "200",
+          page: "III",
+          description:
+               "The street leading to Sachsenhausen Concentration Camp. The Sachsenhausen Concentration Camp is one of the two first built camps. It is located outside the city of Berlin, a fifteen-minute walk from train station of the little city of Oranienburg. The Jews and other prisoners were made to walk 15 minutes from the train station to the Camp. During the walk they were booed and spitted at by the horrid residents. On the main gate it reads in German, &apos;Work Makes You Free,&apos; which in reality meant, “Extermination through Labor.” Originally in 1936 this Camp was constructed by the prisoners as a labor camp. In 1945 it was liberated by the Soviets. Nearly 50,000 people died there. Photo taken by Solomon Pournia",
           imageURL: "@/public/images/references/image25.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "202",
+          description:
+               "The Nazi concentration camp Sachsenhausen was built in 1936 north of the capital city of Berlin. <br /><br />The sign over the gate reads &apos;Work makes you free&apos;. This “logo” could be found in different formats on the entry gate of every/different concentration camp. <br/><br /> Allen: I made the photo.<br /><br/> The Nazi SS imprisoned more than 200,000 people at this camp, including political prisoners, Jews, Gypsies and captured soviet soldiers. Tens of thousands of inmates died from starvation, forced labor, medical experiments and murder by the SS personals. The camp is now a memorial where visitors learn about Nazi atrocities.",
           imageURL: "@/public/images/references/image26.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "200",
+          description:
+               "There were several Prominent figures interned in <em>Sachsenhausen Concentration Camp</em>. One of them was Pastor Martin Niemoeller. While he initially enthusiastically welcomed the Third Reich, after a meeting with Hitler in January 1934, he came to see the Nazi state as a dictatorship, which he opposed. Niemoeller is best remembered for his quotation: <em>First they came for the socialists, and I did not speak out—because I was not a socialist. Then they came for the trade unionists, and I did not speak out— because I was not a trade unionist. Then they came for the Jews, and I did not speak out—because I was not a Jew. Then they came for me—and there was no one left to speak for me.</em> Source and photo: Holocaust Encyclopedia. Adapted.",
           imageURL: "@/public/images/references/image27.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "200",
+          description:
+               "<strong>Anne Frank</strong>, the young Jewish diarist, born in Frankfurt, Germany. She and family escaped and moved to Amsterdam. When Nazis occupied Netherland they lived in hiding, where she wrote her diary during those two years. Nazis transported all the Jews from Netherland to concentration camps. Anne died in Sachsenhausen Concentration Camp of Typhus on March 12, 1945. After the war her father who survived the Holocaust found her diary. It is translated and published in many languages.",
           imageURL: "@/public/images/references/image28.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "200",
+          description:
+               "Only a chimney has remained from the crematorium in the Sachsenhausen Concentration Camp. <br /><br />Photo taken by Solomon Pournia",
           imageURL: "@/public/images/references/image29.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "201",
+          description:
+               "In January 1945 as the prisoners were forced to help run the camp, they secretly set aside block 66 to rescue young children and teens. The children received relatively slightly more nourishments than the other prisoners. On April 11, 1945, when the camp was liberated by the American troops, they were shocked to see hundreds of the children who were no more than skeletons covered by skin. The American commander sent messages to the children's rescue group in Geneva, asking for help to evacuate the children. Photo: Cover page of the book: <strong>Children of the Holocaust</strong>.",
           imageURL: "@/public/images/references/image30.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "202",
+          description:
+               "The Concentration camp prisoners in Buchenwald after liberation by the US forces in April 1945, celebrating their freedom with champagne and cigarettes provided by the US Army. <br /><br />Photo by Margaret Bourke-White.",
           imageURL: "@/public/images/references/image31.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "212",
+          description:
+               "The Antisemitism, which was supported by the Christian Protestants, reached its peak in the United States soon after the World War I. Henry Ford, who in 1915 publicly expressed his anti-Semitic thoughts spent a lot of his own money to get the Protocols translated into English. He distributed it in America as widely as possible. The Protocols became after the Bible the second biggest selling book in the United States in the 1920s and 1930s. And, as if he was not satiated, he in 1919, he purchased the openly anti-Semitic paper “The Dearborn Independent”, which became his war machine to fight the Jews. In a series of articles entitled 'The International Jew: The World's Problem, he “inaugurated a series of attacks upon Jews, which resulted in an unbelievably remarkable steady increase in his Newspaper's circulation. The initial circulation of about 72,000 copies a week, picked in 1924 at 700,000. But he was a man of peace and therefore after Hitler started the WW II, he helped America to win the war by producing one B-24 bomber per hour.",
           imageURL: "@/public/images/references/image32.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "266",
+          description:
+               "<strong>Husayn Ben Ali, Sharif of Arabia</strong>. He was the Emir and ruler of Arabia in Mecca. He was appointed by the Ottoman Empire, at the time when Ottoman Empire had a vast territory including part of Arabia, Syria, Lebanon, Iraq and Palestine under its control. After WWI his two sones, who led the Arab revolt against Ottoman Empire and cooperated with the British army, both became a King, one in Iraq and the other one in Transjordan. <br /><br /> Source: Wikipedia.org",
           imageURL: "@/public/images/references/image33.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "271",
+          description:
+               "<strong>Emir Faisal</strong>, son of Husayn Ben Ali of Arabia, commander of Arab Legion. After WWI, he was ultimately appointed by the Brits as the King in Iraq. His brother Emir Abdullah was appointed by the British government as the King of Transjordan. Here Emir Faisal is shown after WWI as a participant in the Paris Conference.",
           imageURL: "@/public/images/references/image34.png",
      },
      {
