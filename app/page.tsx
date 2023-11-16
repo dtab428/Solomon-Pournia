@@ -190,7 +190,6 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 				slidesPerView={2}
 				navigation // Enable navigation
 				modules={[Navigation]} // Add the Navigation module
-				autoHeight={true}
 			>
 				<SwiperSlide>
 					<div>
