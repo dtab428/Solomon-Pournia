@@ -26,25 +26,25 @@ const BookTable: React.FC<BookTableProps> = ({ bookContent }) => {
 	return (
 		<Table aria-label="Book Content Table">
 			<TableHeader>
+				<TableColumn>Image</TableColumn>
 				<TableColumn>Part</TableColumn>
 				<TableColumn>Page</TableColumn>
 				<TableColumn>Description</TableColumn>
-				<TableColumn>Image</TableColumn>
 			</TableHeader>
 			<TableBody>
 				{bookContent.map((item, index) => (
 					<TableRow key={index}>
-						<TableCell>{item.part}</TableCell>
-						<TableCell>{item.page}</TableCell>
-						<TableCell>
-							<p dangerouslySetInnerHTML={{ __html: item.description }} />
-						</TableCell>
 						<TableCell>
 							<Image
 								src={item.imageURL.replace("@/public/", "/")}
 								alt="Book Image"
 								style={{ width: "100%" }}
 							/>
+						</TableCell>
+						<TableCell>{item.part}</TableCell>
+						<TableCell>{item.page}</TableCell>
+						<TableCell>
+							<p dangerouslySetInnerHTML={{ __html: item.description }} />
 						</TableCell>
 					</TableRow>
 				))}
