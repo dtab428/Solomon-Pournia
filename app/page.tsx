@@ -18,7 +18,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 
-const books = [
+const bookImageReferences = [
      {
           part: "II",
           page: "98",
@@ -864,7 +864,7 @@ export default function Home() {
 
                     <Intro />
 
-                    <BookTable bookContent={books} />
+                    <BookTable bookContent={bookImageReferences} />
 
                     <div className="flex gap-3">
                          {/* <Link
