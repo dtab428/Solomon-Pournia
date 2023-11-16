@@ -125,7 +125,7 @@ const bookContent = [
           page: "Page238",
           description:
                "Habib Elghanayan, an Iranian Jewish industrialist and philanthropist, sentenced to death after the Islamic Revolution of 1979.",
-          source: "Tehran newspaper Etela’at",
+          source: "Tehran newspaper Etela&apos;at",
           imageURL: "@/public/images/abe_orig.png",
      },
      {
@@ -174,7 +174,7 @@ const bookContent = [
           part: "PartIV",
           page: "Page301",
           description:
-               "Theodor Ze’ev Herzl, founder of political Zionism, made two trips to the Mandate Palestine and was hailed as 'the anointed one' by local Jews.",
+               "Theodor Ze&apos;ev Herzl, founder of political Zionism, made two trips to the Mandate Palestine and was hailed as 'the anointed one' by local Jews.",
           source: "JNF brochures or Wikimedia",
           imageURL: "@/public/images/abe_orig.png",
      },
@@ -205,7 +205,7 @@ const bookContent = [
           part: "PartIV",
           page: "Page396",
           description:
-               "A man in the Jewish Brigade, a segment of the British Army fighting the Germans in Italy in 1944, with a rocket labeled 'Hitler’s Gift'.",
+               "A man in the Jewish Brigade, a segment of the British Army fighting the Germans in Italy in 1944, with a rocket labeled 'Hitler&apos;s Gift'.",
           source: "Wikipedia Common",
           imageURL: "@/public/images/abe_orig.png",
      },
@@ -213,7 +213,7 @@ const bookContent = [
           part: "PartIV",
           page: "Page398",
           description:
-               "The Palestine Post (later Jerusalem Post) report on the UN’s General Assembly Resolution 181 approval, proposing a Jewish state, an Arab state, and Jerusalem as an international zone.",
+               "The Palestine Post (later Jerusalem Post) report on the UN&apos;s General Assembly Resolution 181 approval, proposing a Jewish state, an Arab state, and Jerusalem as an international zone.",
           imageURL: "@/public/images/abe_orig.png",
      },
      {
@@ -362,10 +362,10 @@ const PressRelease = () => {
                     targeted search, I discovered evidence confirming the
                     gravity of the first ayah in relation to other ayahs, all of
                     which I will explain in detail in this book.” Published by
-                    Fulton Books, Solomon Pournia’s book tackles very sensitive
-                    topics and serves as an eye-opener for Muslim politicians,
-                    traditional clerics, Muslims in general, and interested
-                    Westerners.
+                    Fulton Books, Solomon Pournia&apos;s book tackles very
+                    sensitive topics and serves as an eye-opener for Muslim
+                    politicians, traditional clerics, Muslims in general, and
+                    interested Westerners.
                </p>
           </div>
      );
@@ -415,46 +415,47 @@ const Intro = () => {
                     these verses to mislead lay Muslims. Understanding Islam and
                     the Quran would be the prerequisites for following a cliché
                     Muslim's frame of mind and the aim of his ventures. Assuming
-                    we can understand a ‘theoretical’ or ‘stereotypical’
-                    Muslim’s ideas and beliefs would be a slippery slope of
-                    assumptions not based on reality or evidence – we might
-                    study a school of thought, for example, typical religious
-                    beliefs of Muslims in a specific region or of a specific
-                    set. This is even more pertinent when Muslim extremists and
-                    fundamentalists are the players. For them, the Qur'anic laws
-                    and their interpretations or misinterpretations are crucial
-                    to their daily political conduct, as are the many statements
-                    and misinterpretations in the Hadith. It is fair to conclude
-                    that Islam is not merely a religion, but also acts as
-                    guidance for a Muslim's life and la vie quotidienne. Ever
-                    since the Medina Agreement of the 7th century, the religion
-                    of Islam and its accompanying politics have merged. Hence,
-                    in dealings with the Muslims, one cannot achieve a
-                    comprehensive understanding without giving some
-                    consideration to their religious mannerisms. For westerners,
-                    the Islamic Republic of Iran, the Islamic Republic of
-                    Pakistan, and Saudi Arabia's government, as theocratic
-                    regimes, modus operandi lack comprehensibility. Therefore,
-                    the need for information about Islam is essential. Without
-                    it, it would be not only difficult but nearly impossible to
-                    unravel related local and world affairs. Most westerners
-                    lack general knowledge on Islam, its emergence, its laws,
-                    its bylaws, and its convictions. In the western hemisphere,
-                    people generally only gain information about Islam through
-                    news media, which solely serve their own political agendas
-                    and espouse their own ideologies without revealing the whole
-                    truth. I was raised in a Muslim country. In school, I never
-                    missed the “Sharia hours”, which I was not obligated to
-                    attend but I did. Later, in Germany, I encountered Catholic
-                    students who, on campus or in the dormitories, tried to
-                    proselytize the students from Muslim countries. We spent
-                    many nighttime hours into the dawn discussing religion.
-                    Ironically, in many instances, I contributed and elaborated
-                    more on Islamic weltanschauung than the participating Muslim
-                    students. And, without being religious, religion has always
-                    been one of the topics I was most interested in, especially
-                    from a historical point of view. Soon after conceptualizing
-                    the first steps of the present manuscript, I realized what a
+                    we can understand a ‘theoretical&apos; or
+                    ‘stereotypical&apos; Muslim&apos;s ideas and beliefs would
+                    be a slippery slope of assumptions not based on reality or
+                    evidence – we might study a school of thought, for example,
+                    typical religious beliefs of Muslims in a specific region or
+                    of a specific set. This is even more pertinent when Muslim
+                    extremists and fundamentalists are the players. For them,
+                    the Qur'anic laws and their interpretations or
+                    misinterpretations are crucial to their daily political
+                    conduct, as are the many statements and misinterpretations
+                    in the Hadith. It is fair to conclude that Islam is not
+                    merely a religion, but also acts as guidance for a Muslim's
+                    life and la vie quotidienne. Ever since the Medina Agreement
+                    of the 7th century, the religion of Islam and its
+                    accompanying politics have merged. Hence, in dealings with
+                    the Muslims, one cannot achieve a comprehensive
+                    understanding without giving some consideration to their
+                    religious mannerisms. For westerners, the Islamic Republic
+                    of Iran, the Islamic Republic of Pakistan, and Saudi
+                    Arabia's government, as theocratic regimes, modus operandi
+                    lack comprehensibility. Therefore, the need for information
+                    about Islam is essential. Without it, it would be not only
+                    difficult but nearly impossible to unravel related local and
+                    world affairs. Most westerners lack general knowledge on
+                    Islam, its emergence, its laws, its bylaws, and its
+                    convictions. In the western hemisphere, people generally
+                    only gain information about Islam through news media, which
+                    solely serve their own political agendas and espouse their
+                    own ideologies without revealing the whole truth. I was
+                    raised in a Muslim country. In school, I never missed the
+                    “Sharia hours”, which I was not obligated to attend but I
+                    did. Later, in Germany, I encountered Catholic students who,
+                    on campus or in the dormitories, tried to proselytize the
+                    students from Muslim countries. We spent many nighttime
+                    hours into the dawn discussing religion. Ironically, in many
+                    instances, I contributed and elaborated more on Islamic
+                    weltanschauung than the participating Muslim students. And,
+                    without being religious, religion has always been one of the
+                    topics I was most interested in, especially from a
+                    historical point of view. Soon after conceptualizing the
+                    first steps of the present manuscript, I realized what a
                     difficult task it is, as I had to deal with a great number
                     of historical facts, which at times occurred more than three
                     millennia ago. I shared my plan with my relatives. My wife
