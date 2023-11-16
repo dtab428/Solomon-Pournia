@@ -264,105 +264,115 @@ const books = [
           imageURL: "@/public/images/references/image34.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "I",
+          page: "28",
+          description:
+               "On December 11, 1917, 2 days after Ottoman army left the city, as Jerusalem was conquered by the British army, General Allenby, its Commander, to show respect for the holy city entered the City on foot. <br /><br />Photos: Wikipedia",
           imageURL: "@/public/images/references/image35.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "I",
+          page: "28",
+          description:
+               "On December 11, 1917, 2 days after Ottoman army left the city, as Jerusalem was conquered by the British army, General Allenby, its Commander, to show respect for the holy city entered the City on foot. <br /><br />Photos: Wikipedia",
           imageURL: "@/public/images/references/image36.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "301",
+          description:
+               "<strong>Theodor Ze’ev Herzl</strong>. 1860-1904. Founder of the political Zionism.",
           imageURL: "@/public/images/references/image37.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "301",
+          description:
+               "During his eight years of Zionist activities Herzl made two trips to the Mandate Palestine. He was welcomed by the Jews everywhere and at times they called him the “anointed one.” <br /><br />Source: JNF Brochures",
           imageURL: "@/public/images/references/image38.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "303",
+          description:
+               "<strong>Reverend William H. Hechler</strong>. He was an Anglican clergyman, and a Christian Zionist. And, he was a close friend of and an aid to Herzl via counseling him and introducing him to the upper echelons, including the Barons, the Kaiser of Germany, emperors and viziers and more. <br /><br /> Source: Wikipedia",
           imageURL: "@/public/images/references/image39.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "149",
+          page: "III",
+          description:
+               "Wall-Calendar for the Hebrew year 5354, corresponding 1593-94, printed in Italy, which at its bottom is printed in bold Hebrew letters, 'Leshana habaa be-yeroushalaim', the Hebrew words for: “Next year in Jerusalem.” This wall-calendar was among the other 12th to 18th century Jewish books and prayer books. They all were part of the Valmadonna Trust Library collection, which was partially auctioned in December 2015 by Sotheby's in New York.",
           imageURL: "@/public/images/references/image40.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          imageURL: "@/public/images/references/image40.png",
-     },
-     {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "350",
+          description:
+               "This blue collecting box, owned by the Jewish National Fund (J.N.F.), has been present all over the world in many Jewish homes, offices and institutions. The J.N.F. was set up at the 5th Zionist Congress in 1901. It was responsible and crucial for the purchase and land development in Palestine.",
           imageURL: "@/public/images/references/image41.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "376",
+          description:
+               "<strong>Leopold Pilichowski</strong> (1869 –1933) was a Jewish Polish painter in the late 19th and early 20th centuries. He painted “The Opening of the Hebrew University in Jerusalem.” Here the artist shows Lord Balfour while he is addressing the assembly. Adapted from de Lange, Nicholas, Atlas of the Jewish World, Equinox (Oxford) Ltd, England. 1984. ISBN 0-87196-043-5. <br /><br />Photo: Wikimedia.com",
           imageURL: "@/public/images/references/image42.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "377",
+          description:
+               "The Baltimore News header reads: &apos;Massacre of women, children at Hebron told by refugees&apos;. A Clip from a documentary YouTube video.",
           imageURL: "@/public/images/references/image43.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "357",
+          description:
+               "A portion of the cover page of the book, <strong>This Land Is My Land</strong>, written by Eli E. Hertz, illustrating how the region of ‘Mandate for Palestine’ was truncated by the British authorities creating a larger so called ‘Arab Palestine’ and a much smaller ‘Jewish Palestine’.",
           imageURL: "@/public/images/references/image44.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "382",
+          description:
+               "The “TWO-STATE solution according to The Peel Commission Report, July 7, 1937. Green: Arab State. Blue: Jewish State. Red: Independent, controlled by UN. <br /><br />Source: Encyclopedia Britannica",
           imageURL: "@/public/images/references/image45.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "396",
+          description:
+               "This image is of a man in the Jewish Brigade, a segment of the British Army that fought the Germans in Italy in 1944. The rocket says in Hebrew, “Hitler’s Gift” <br /><br />Source: Wikipedia Common",
           imageURL: "@/public/images/references/image46.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "398",
+          page: "IV",
+          description:
+               "The TWO-STATE solution according to the United Nation Resolution 181 in 1947. <br /><br />Source: Encyclopedia Britannica",
           imageURL: "@/public/images/references/image47.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "398",
+          description:
+               "The Palestine Post (later Jerusalem Post) of November 30, 1947, reported the UN’s General Assembly Resolution 181 approval of November 29, 1947. There will be a Jewish state, an Arab state and Jerusalem as an international zone.",
           imageURL: "@/public/images/references/image48.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "401",
+          description:
+               "<strong>The Newspapers in Jerusalem reported about UN Resolution 181 and how it was received by Jews and Arabs.</strong> A clip of a video showing <strong>‘The Palestine Post’</strong> daily newspaper of November 30, 1947.",
           imageURL: "@/public/images/references/image49.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "401",
+          description:
+               "<strong>David Ben-Gurion</strong>, the first Prime Minister of Israel declaring the Israeli Independence beneath a large portrait of Theodor Herzl, the founder of political Zionism. ",
           imageURL: "@/public/images/references/image50.png",
      },
      {
