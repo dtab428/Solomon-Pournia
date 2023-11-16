@@ -27,7 +27,7 @@ const bookContent = [
 		part: "PartI",
 		page: "Page4",
 		description:
-			"An ongoing Hajj process in Mecca. The brown-black cube in the middle is the Kaaba. Every Muslim, if capable, has to make a pilgrimage to Mecca at least once in his life.",
+			"An ongoing Hajj process in Mecca. The brown-black cube in the middle is the Kaaba. Every Muslim, if capable, has to make a pilgrimage to Mecca at least once in his &apos;life&apos;.",
 		source: "Wikipedia",
 		imageURL: "@/public/images/abe_orig.png",
 	},
@@ -60,7 +60,7 @@ const bookContent = [
 		part: "PartII",
 		page: "Page98",
 		description:
-			"God ordered Abraham to sacrifice his son Isaac as a test of his faith. Painting by Rembrandt van Rijn, 'The Sacrifice of Isaac', 1635, copied by an Iranian carpet weaver.",
+			"God ordered Abraham to sacrifice his son Isaac as a test of his faith. Painting by Rembrandt van Rijn, &apos;The Sacrifice of Isaac&apos;, 1635, copied by an Iranian carpet weaver.",
 		imageURL: "@/public/images/abe_orig.png",
 	},
 	{
@@ -85,7 +85,7 @@ const bookContent = [
 		part: "PartIII",
 		page: "Page155",
 		description:
-			"Martin Luther, a German theologian and monk, initiated the Protestant Reformation. His work 'From the Jews and their lies' is considered the first work of modern anti-Semitism.",
+			"Martin Luther, a German theologian and monk, initiated the Protestant Reformation. His work &apos;From the Jews and their lies&apos; is considered the first work of modern anti-Semitism.",
 		source: "Wikimedia",
 		imageURL: "@/public/images/abe_orig.png",
 	},
@@ -117,7 +117,7 @@ const bookContent = [
 		part: "PartIII",
 		page: "Page212",
 		description:
-			"Henry Ford&apos;s anti-Semitic actions, including the spread of 'The Protocols of the Elders of Zion' and ownership of 'The Dearborn Independent'.",
+			"Henry Ford&apos;s anti-Semitic actions, including the spread of &apos;The Protocols of the Elders of Zion&apos; and ownership of &apos;The Dearborn Independent&apos;.",
 		imageURL: "@/public/images/abe_orig.png",
 	},
 	{
@@ -174,7 +174,7 @@ const bookContent = [
 		part: "PartIV",
 		page: "Page301",
 		description:
-			"Theodor Ze&apos;ev Herzl, founder of political Zionism, made two trips to the Mandate Palestine and was hailed as 'the anointed one' by local Jews.",
+			"Theodor Ze&apos;ev Herzl, founder of political Zionism, made two trips to the Mandate Palestine and was hailed as &apos;the anointed one&apos; by local Jews.",
 		source: "JNF brochures or Wikimedia",
 		imageURL: "@/public/images/abe_orig.png",
 	},
@@ -189,7 +189,7 @@ const bookContent = [
 		part: "PartIV",
 		page: "Page376",
 		description:
-			"Leopold Pilichowski&apos;s painting 'The Opening of the Hebrew University in Jerusalem' showing Lord Balfour addressing the assembly.",
+			"Leopold Pilichowski&apos;s painting &apos;The Opening of the Hebrew University in Jerusalem&apos; showing Lord Balfour addressing the assembly.",
 		source: "Wikimedia.com",
 		imageURL: "@/public/images/abe_orig.png",
 	},
@@ -205,7 +205,7 @@ const bookContent = [
 		part: "PartIV",
 		page: "Page396",
 		description:
-			"A man in the Jewish Brigade, a segment of the British Army fighting the Germans in Italy in 1944, with a rocket labeled 'Hitler&apos;s Gift'.",
+			"A man in the Jewish Brigade, a segment of the British Army fighting the Germans in Italy in 1944, with a rocket labeled &apos;Hitler&apos;s Gift&apos;.",
 		source: "Wikipedia Common",
 		imageURL: "@/public/images/abe_orig.png",
 	},
@@ -237,7 +237,7 @@ const bookContent = [
 		part: "PartV",
 		page: "Page469",
 		description:
-			"The Palestinian young generation&apos;s ideation about the 'peace with Israel' in the future. Emphasizes the importance of cooperation for peace, highlighting the value of lives, Palestinian or Israeli.",
+			"The Palestinian young generation&apos;s ideation about the &apos;peace with Israel&apos; in the future. Emphasizes the importance of cooperation for peace, highlighting the value of lives, Palestinian or Israeli.",
 		imageURL: "@/public/images/abe_orig.png",
 	},
 ];
