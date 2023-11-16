@@ -376,136 +376,143 @@ const books = [
           imageURL: "@/public/images/references/image50.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "401",
+          description:
+               "<em><strong>The Palestine Post</strong></em> was a daily English language newspaper, which was established in Jerusalem as part of the Zionists’ initiatives. It was founded in 1932 during the British Mandate of Palestine. This is its Sunday, May 16, 1948, issue, the first one after the Proclamation of Israel’s statehood. It was published later as <strong>“The Jerusalem Post”</strong>.",
           imageURL: "@/public/images/references/image51.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "238",
+          page: "III",
+          description:
+               "Habib Elghanayan, the Iranian Jewish industrialist and philanthropist. He was pioneering Iran’s industry",
           imageURL: "@/public/images/references/image52.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "238-239",
+          description:
+               "After the Islamic Revolution of 1979, Habib Elghanayan was jailed. But soon during a 30-minute <em>Revolutionary Court procedure</em> – shown here on the right side of the photo - without the presence of a defense attorney, he was dubbed wrongly as Zionist spy and was sentenced to death by firing squad. This became the headline news on the first page of the famous daily Tehran newspaper <em>Etela’at</em>.",
           imageURL: "@/public/images/references/image53.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "414",
+          description:
+               "1967 war. The first Israeli paratroopers reaching victoriously the Western (Wailing) Wall in the Old City of Jerusalem. A screenshot from a YouTube documentary film.",
           imageURL: "@/public/images/references/image54.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "414",
+          description:
+               "<strong>Moshe Dayan</strong> (center and in the thumb nail photo) during the Six-Day War.",
           imageURL: "@/public/images/references/image55.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "414",
+          description:
+               "<strong>Moshe Dayan</strong> (center and in the thumb nail photo) during the Six-Day War.",
           imageURL: "@/public/images/references/image56.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "414",
+          description: "The cover page of the LIFE Magazine, June 23, 1967.",
           imageURL: "@/public/images/references/image57.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          imageURL: "@/public/images/references/image58.png",
+          part: "III",
+          page: "187",
+          description:
+               "It was Vladimir Jabotinsky’s idea to establish a warrior force that will fight to conquer Palestine. <br /><br />Source: Wikipedia",
+          imageURL: "@/public/images/references/image58.jpeg",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "412",
+          description:
+               "The immediate pre-Six-Day-War’s newspaper headlines, even outside the Arab countries, were filled with warmongering threats against Israel’s existence. <br /><br />Source: A video clip from a YouTube film",
           imageURL: "@/public/images/references/image59.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "416",
+          description:
+               "Short after the Six-Day-War, - from August 29 to September 1, 1967 - eight heads of Arab states attend a summit conference in Khartoum/Sudan and adopt The Dictum of Three Nos. No peace with Israel. No recognition of Israel. No negotiation with Israel. The rapid and heavy re-arming of the Arab armies had started. <br /><br /> A clip from a documentary YouTube video.",
           imageURL: "@/public/images/references/image60.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          imageURL: "@/public/images/references/image61.png",
+          part: "IV",
+          page: "414",
+          description:
+               "“In six days Israel passed from a sensation of being menaced with destruction by a fierce and united Arab world, to the reality of total military supremacy and political triumph” Abba Eban. <br /><br />Source: A clip from a YouTube video",
+          imageURL: "@/public/images/references/image61.jpeg",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "242",
+          description:
+               "Mahmoud Abbas encourages the Palestinians to stop Jews from visiting the holy site and emphasizes, “We bless every drop of blood that has been spilled for Allah and Jerusalem. Every martyr will reach Paradise, and everyone wounded will be rewarded by Allah.” <br /><br />Source: A clip from a YouTube video, <a href='https://www.youtube.com/watch?v=n4Mq63fUwEo'>https://www.youtube.com/watch?v=n4Mq63fUwEo</a>",
           imageURL: "@/public/images/references/image62.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "III",
+          page: "242",
+          description:
+               "Mahmoud Abbas encourages the Palestinians to stop Jews from visiting the holy site and emphasizes, “We bless every drop of blood that has been spilled for Allah and Jerusalem. Every martyr will reach Paradise, and everyone wounded will be rewarded by Allah.” <br /><br />Source: A clip from a YouTube video, <a href='https://www.youtube.com/watch?v=n4Mq63fUwEo'>https://www.youtube.com/watch?v=n4Mq63fUwEo</a>",
           imageURL: "@/public/images/references/image63.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          imageURL: "@/public/images/references/image64.png",
+          part: "IV",
+          page: "414",
+          description:
+               "In February 1969, Golda Meir became the Prime Minister of Israel. At her first announcement as prime minister, she said that 'we are prepared to discuss peace with our neighbors, all day and on all matters'. But the proposed exchange of territory for peace policy fell on deaf ears while the arm race escalated more rapidly. And, the 1973 Yom Kippur war ensued. <br /><br />Photo source: https://www.bbc.co.uk/programmes/p02lqqtp",
+          imageURL: "@/public/images/references/image64.jpeg",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "287",
+          description:
+               "The Armenian men, women and children were marched through the highways, roads and villages from Anatolia in the east Turkey to Syria, which was then a part of the Ottoman Empire.",
           imageURL: "@/public/images/references/image65.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "300",
+          description:
+               "<strong>Alfred Dreyfus</strong>, a French army Jewish captain, was tried as a spy and wrongfully sentenced to life in prison. His trial and the subsequent events were a turning point for the future Zionist Herzl. Herzl as a journalist was covering the Dreyfus trial in Paris for the newspaper, <em>The Neue Freie Presse</em> in Vienna, Austria. Photo: World Jewish conference.",
           imageURL: "@/public/images/references/image66.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "IV",
+          page: "440",
+          description:
+               "The anti-Semitic teachings and propagandas are not only in the madrassas, schools and universities a part of the education but the new generation is additionally trained as if they are in the regular army. A clip from a YouTube video.",
           imageURL: "@/public/images/references/image67.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "I",
+          page: "86",
+          description:
+               "Haj Amin Muhammad al-Husseini (1897-1974), the Jerusalem grand mufti was the ‘founding father’ of the Palestinian nationalism. He played an important role in the Palestine mandate era. During World War II he allied himself with Hitler’s Nazi Regime in order to drive the Brits from Palestine and to prevent Jews from entering their homeland. Yasser Arafat was his distant cousin and one of his close followers. <br /><br />Photo source: https://encyclopedia.ushmm.org",
           imageURL: "@/public/images/references/image68.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "I",
+          page: "86",
+          description:
+               "Haj Amin as a Nazi collaborator served as an Arab ally and propagandist for the Third Reich in Berlin. He continued with his campaign of antisemitic incitement, which he had started in Palestine. He recruited and organized Bosnian Muslim battalions to fight along with the German Army’s ‘Waffen-SS’ units. <br/><br/>Photo by Yad Vashem.",
           imageURL: "@/public/images/references/image69.png",
      },
      {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          part: "V",
+          page: "469",
+          description:
+               "This is the Palestinian young generation’s ideation about the “peace with Israel” the future. For cooperation to make peace, in whatever form, a lot needs to be done. People’s lives are of the essence, Palestinian or Israeli.",
           imageURL: "@/public/images/references/image70.png",
-     },
-     {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          imageURL: "@/public/images/references/image71.png",
-     },
-     {
-          part: "xxxxxxxxxxxxxxxxxxxx",
-          page: "xxxxxxxxxxxxxxxxxxxxx",
-          description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          imageURL: "@/public/images/references/image72.png",
      },
 ];
 
