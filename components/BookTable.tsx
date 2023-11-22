@@ -3,11 +3,12 @@ import { Image, Accordion, AccordionItem } from "@nextui-org/react";
 
 interface BookContentItem {
      part: string;
-     page: number;
+     page: string;
      description: string;
      image: string;
+     title?: string; // Optional property
+     source?: string; // Optional property
 }
-
 interface BookTableProps {
      bookContent: BookContentItem[];
 }
@@ -27,7 +28,7 @@ const BookTable: React.FC<BookTableProps> = ({ bookContent }) => {
      }, {});
 
      return (
-          <div className="w-full mt-7">
+          <div className="container mx-auto w-full mt-7">
                <h3 className="text-3xl mb-6">Image References</h3>
                <p className="mt-0 mb-5">
                     The book refers to many images, but does not include them.
