@@ -3,7 +3,7 @@ import { Image, Accordion, AccordionItem } from "@nextui-org/react";
 
 interface BookContentItem {
      part: string;
-     page: string;
+     page: number;
      description: string;
      image: string;
 }
