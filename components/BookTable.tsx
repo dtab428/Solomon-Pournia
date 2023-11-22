@@ -4,8 +4,8 @@ import { Image, Accordion, AccordionItem } from "@nextui-org/react";
 interface BookContentItem {
      part: string;
      page: string;
-     description: string;
-     image: string;
+     description?: string;
+     image?: string;
      title?: string; // Optional property
      source?: string; // Optional property
 }
@@ -66,16 +66,20 @@ const BookTable: React.FC<BookTableProps> = ({ bookContent }) => {
                                                        <strong>Page:</strong>{" "}
                                                        {item.page}
                                                   </p>
-                                                  <p className="text-xl mb-2">
-                                                       <strong>
-                                                            Description:
-                                                       </strong>
-                                                  </p>
-                                                  <p
-                                                       dangerouslySetInnerHTML={{
-                                                            __html: item.description,
-                                                       }}
-                                                  />
+                                                  {item.description && (
+                                                       <div>
+                                                            <p className="text-xl mb-2">
+                                                                 <strong>
+                                                                      Description:
+                                                                 </strong>
+                                                            </p>
+                                                            <p
+                                                                 dangerouslySetInnerHTML={{
+                                                                      __html: item.description,
+                                                                 }}
+                                                            />
+                                                       </div>
+                                                  )}
                                              </div>
                                         </div>
                                    ))}
