@@ -3,5 +3,50 @@
 @tailwind utilities;
 
 body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
-	max-width: unset;
+     max-width: unset;
+}
+
+.marquee .swiper-wrapper {
+     -webkit-transition-timing-function: linear;
+     transition-timing-function: linear;
+     position: relative;
+}
+
+.marquee svg {
+     height: 60px;
+     width: auto;
+}
+
+.marquee {
+     position: relative;
+}
+
+.marquee .swiper-slide {
+     width: auto;
+     height: auto;
+}
+.marquee::before,
+.marquee::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     width: 100px; /* Adjust the width as needed */
+     z-index: 10;
+     pointer-events: none;
+     background: linear-gradient(
+          to right,
+          hsl(var(--nextui-background)) 0%,
+          transparent 100%
+     );
+}
+
+.marquee::after {
+     right: 0;
+     transform: rotate(180deg);
+}
+
+.marquee .swiper-button-prev,
+.swiper .swiper-button-next {
+     z-index: 15;
 }
