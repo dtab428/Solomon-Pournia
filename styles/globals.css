@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+     --tw-indigo-500: #6366f1; /* Replace with the actual value */
+     --tw-slate-300: #cbd5e1; /* Replace with the actual value */
+}
+
 body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
      max-width: unset;
 }
@@ -49,4 +54,15 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
 .marquee .swiper-button-prev,
 .swiper .swiper-button-next {
      z-index: 15;
+}
+
+.gradient-text {
+     background: linear-gradient(
+          45deg,
+          var(--tw-indigo-500),
+          var(--tw-slate-300)
+     );
+     -webkit-background-clip: text;
+     color: transparent;
+     background-clip: text;
 }

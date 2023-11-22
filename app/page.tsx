@@ -597,7 +597,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                >
                     <SwiperSlide>
                          <Card
-                              className="p-3 bg-slate-200 dark:bg-sky-400 w-full h-full justify-center items-center justify-center items-center"
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
                               isHoverable
                               shadow="none"
                               isPressable
@@ -607,7 +607,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                     </SwiperSlide>
                     <SwiperSlide>
                          <Card
-                              className="p-3 bg-slate-200 dark:bg-sky-400 w-full h-full justify-center items-center"
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
                               isHoverable
                               shadow="none"
                               isPressable
@@ -617,7 +617,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                     </SwiperSlide>
                     <SwiperSlide>
                          <Card
-                              className="p-3 bg-slate-200 dark:bg-sky-400 w-full h-full justify-center items-center"
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
                               isHoverable
                               shadow="none"
                               isPressable
@@ -627,7 +627,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                     </SwiperSlide>
                     <SwiperSlide>
                          <Card
-                              className="p-3 bg-slate-200 dark:bg-sky-400 w-full h-full justify-center items-center"
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
                               isHoverable
                               shadow="none"
                               isPressable
@@ -637,7 +637,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                     </SwiperSlide>
                     <SwiperSlide>
                          <Card
-                              className="p-3 bg-slate-200 dark:bg-sky-400 w-full h-full justify-center items-center"
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
                               isHoverable
                               shadow="none"
                               isPressable
@@ -949,12 +949,12 @@ export default function Home() {
           <>
                <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
                     <div className="inline-block max-w-3xl text-center justify-center">
-                         <h1 className={title()}>Introducing&nbsp;</h1>
-                         <h1 className={title({ color: "violet" })}>
-                              THE PROMISED LAND OF ISRAEL &nbsp;
+                         <h1 className="text-3xl">Introducing</h1>
+                         <h1 className="mt-3 text-5xl gradient-text">
+                              THE PROMISED LAND OF ISRAEL
                          </h1>
-                         <br />
-                         <h1 className={title()}>
+
+                         <h1 className="mt-5 text-2xl">
                               An In-Depth Look at Zionism in the Quran and in
                               Jewish History
                          </h1>
