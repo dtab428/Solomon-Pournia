@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { title, subtitle } from "@/components/primitives";
 import {
      GithubIcon,
@@ -8,7 +9,13 @@ import {
      BarnesNoblesLogo,
      GooglePlayLogo,
 } from "@/components/icons";
-import { Image, Card } from "@nextui-org/react";
+import {
+     Image,
+     Card,
+     Button,
+     Accordion,
+     AccordionItem,
+} from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
 
@@ -17,6 +24,8 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+
+import React, { useState } from "react";
 
 const bookImageReferences = [
      {
@@ -747,199 +756,103 @@ const PressRelease = () => {
           </div>
      );
 };
+type IntroText = {
+     introText: string;
+};
+const introText =
+     "...the Children of Israel to go to the promised land. It was amazing how openly and boldly the Quran demonstrated its pro-Zionist standpoint. After coming across more pro-Zionist ayahs, it was difficult for me to comprehend how the Muslim world has remained seemingly unaware of these commandments. So many skirmishes, so many wars, so much misery and loss of life because the Muslims are unaware of these commandments? Or, like everything else these days, are even the divine commandments politically smeared? Or, is it due to lack of information and education? Or, a combination of all? Still more questions popped up when continued research reaffirmed the intent of ayah 5:21. The process of fact finding on this subject took me on a long journey, a journey through 3,500 years of Jewish history. At first, this extensive research was unplanned, but soon it evolved into a planned venture. Fortunately, research and comprehensive reading were part of my education in the European school I attended, and these were habits I never gave up. Having completed my research, I decided to elucidate readers on these Qur'anic verses, which have never been brought to widespread public attention. The pro-Zionist verses in the Quran express that Jews should live in the land promised by Allah. The Quran attests to the Jews' affiliation with the land of Israel. Sadly, lack of proper knowledge has aided biased and radical clerics and politicians in their agenda of hiding or misinterpreting these verses to mislead lay Muslims. Understanding Islam and the Quran would be the prerequisites for following a cliché Muslim's frame of mind and the aim of his ventures. Assuming we can understand a ‘theoretical&apos; or ‘stereotypical&apos; Muslim&apos;s ideas and beliefs would be a slippery slope of assumptions not based on reality or evidence – we might study a school of thought, for example, typical religious beliefs of Muslims in a specific region or of a specific set. This is even more pertinent when Muslim extremists and fundamentalists are the players. For them, the Qur'anic laws and their interpretations or misinterpretations are crucial to their daily political conduct, as are the many statements and misinterpretations in the Hadith. It is fair to conclude that Islam is not merely a religion, but also acts as guidance for a Muslim's life and la vie quotidienne. Ever since the Medina Agreement of the 7th century, the religion of Islam and its accompanying politics have merged. Hence, in dealings with the Muslims, one cannot achieve a comprehensive understanding without giving some consideration to their religious mannerisms. For westerners, the Islamic Republic of Iran, the Islamic Republic of Pakistan, and Saudi Arabia's government, as theocratic regimes, modus operandi lack comprehensibility. Therefore, the need for information about Islam is essential. Without it, it would be not only difficult but nearly impossible to unravel related local and world affairs. Most westerners lack general knowledge on Islam, its emergence, its laws, its bylaws, and its convictions. In the western hemisphere, people generally only gain information about Islam through news media, which solely serve their own political agendas and espouse their own ideologies without revealing the whole truth. I was raised in a Muslim country. In school, I never missed the “Sharia hours”, which I was not obligated to attend but I did. Later, in Germany, I encountered Catholic students who, on campus or in the dormitories, tried to proselytize the students from Muslim countries. We spent many nighttime hours into the dawn discussing religion. Ironically, in many instances, I contributed and elaborated more on Islamic weltanschauung than the participating Muslim students. And, without being religious, religion has always been one of the topics I was most interested in, especially from a historical point of view. Soon after conceptualizing the first steps of the present manuscript, I realized what a difficult task it is, as I had to deal with a great number of historical facts, which at times occurred more than three millennia ago. I shared my plan with my relatives. My wife suggested I had a lot to read, and my son recommended that I study Marcus & Page, A Short Guide to Writing About History, which I greatly appreciated. It was a challenge and admittedly not an easy undertaking. Our story begins with two major empires, the Christian Byzantine, successor of the Roman Empire, and the Persian Empire, who were periodically involved in warfare for many decades. Then, in the early 7th century, a new force came to power in the Arabian Peninsula that soon developed into a major player: Islam rapidly burgeoned in an expeditious geographical expansion over neighboring regions ever since its inception in 623 CE. Within a relatively short period of time, it covered the entire Middle East, the south of Europe, and the north African continent. In comparison, it took the Roman Empire almost eleven centuries of effort to become a major power in the classical world, while just 70 years after the death of prophet Mohammad–around 646 AD– North Africa had already been almost completely Islamized. Hence, the developmental process of Islam, Sharia, the 633 CE Arab invasion of today's Syria and Iraq, and the eventually 638 CE conquest of Jerusalem bear relevance to our topic. Islam's policy of conversion was not only to introduce monotheism to the idolatrous Arab Bedouins, but also to impose its religious laws on non-Muslims, dictating all municipal and social decrees, and legislating and governing in an Islamic environment. Sharia law regulated not only the lives and society of Arabs, but also that of the non-Muslims in lands the Arab army conquered. In order to understand the Arab-Israeli conflict, it is necessary to have knowledge not only of the regional socio-political and geographical elements, but also of other factors, such as the Muslims' deeply rooted religious conviction, their cultural background, and the historically low degree of literacy amongst their population. For nearly two millennia, Jews have been living under Christian and Muslim domination. I have endeavored to set forth the long story of Jewish life under Islam and Christianity in a manner as dispassionate and detached as possible. The continuity of the narrative will be broken at times when the historical context renders it appropriate. The most logical method to present the narrative seemed to be a treatment in which Part I is totally dedicated to Islam, its development and laws, and the life of the Prophet, which is crucial to the emergence and evolution of the Islamic faith. The pillars of Islam are discussed as briefly as possible, with the emphasis laying on the Islamic laws affecting the relations between Muslims and non-Muslims. When needed, the opinions of opposing authors are interspersed with my research and commentary for further exploration of controversial issues. Part I is specifically about the support the Quran offers for the establishment of a Jewish Homeland, which the Jews call Eretz Yisrael. The validity of the translation and interpretation of the referenced Quranic verses are explored and scrutinized in length from the viewpoint of notable religious sages. In this Part, the Iranian scholar Shojaeddin Shafa (1918-2010) gives a great deal of new insight into Arab history and the interpretation of Islamic laws. His cited book, included in two volumes, is in Persian and has never been translated into any western language. Part II is dedicated to a section of Jewish history, starting with Abraham the Patriarch and ending in the year 135 CE, when Jews eventually lost their independence. Part III is about Jewish life in diaspora in various European and Muslim countries. Eventually, in the late 19th century, the miseries and deprivations in diaspora gave rise to Zionism and the desire to reestablish the Jewish state. In Part IV, we will analyze the regional political evolution–which still, after seven decades, involves new developments occurring on a daily basis–beginning with the early history and transiting to the reemergence of Zionism, World War I, the bitter Arab-Jewish relations in the Mandate Palestine, Jewish aliyah to the promised land, the reestablishment of the Jewish state, and eventually Islamic anti-Semitism. In Part V under the title “In Search of the Peace” suggestions and ideals will be prospectively elaborated. Statements and theories are referenced with biographical data. If a source is quoted once or twice, it is not listed in the bibliography but referenced in the foot- or endnotes.";
 
-const Intro = () => {
+const Intro = ({ introText }: IntroText) => {
+     // const [isExpanded, setIsExpanded] = useState(false);
+
+     // useEffect(() => {
+     //      // This ensures the component is only mounted on the client side
+     //      setIsExpanded(false);
+     // }, []);
+
+     // const toggleExpand = () => {
+     //      setIsExpanded(!isExpanded);
+     // };
+
      return (
           <div className="container mx-auto px-4 mt-4">
                <Card
-                    className="p-3 bg-slate-200 dark:bg-gray-950"
-                    isHoverable
+                    className="bg-slate-200 dark:bg-gray-950"
+                    // isHoverable
                     shadow="none"
-                    isPressable
+                    // isPressable
                >
-                    <h3 className="text-3xl mb-3">Introduction</h3>
-                    <p className="text-start">
-                         After some 45 years apart, my friend and medical school
-                         peer visited me in Los Angeles. He and his wife brought
-                         us many gifts from Germany, including a volume of the
-                         Holy Quran in original Arabic along with its German
-                         translation. I take tremendous enjoyment reading the
-                         books in my library, and the Quran was now one of them.
-                         I soon realized that the Quran is unlike the Jewish
-                         Scripture, which describes historical events
-                         sequentially. And so, during my free time, I looked at
-                         pages of the Quran wherever I happened to open the
-                         book. One day, I came across Chapter 5, (sūra
-                         al-Mā'ida) verse (ayah) 21, in which Allah orders the
-                         Children of Israel to go to the promised land. It was
-                         amazing how openly and boldly the Quran demonstrated
-                         its pro-Zionist standpoint. After coming across more
-                         pro-Zionist ayahs, it was difficult for me to
-                         comprehend how the Muslim world has remained seemingly
-                         unaware of these commandments. So many skirmishes, so
-                         many wars, so much misery and loss of life because the
-                         Muslims are unaware of these commandments? Or, like
-                         everything else these days, are even the divine
-                         commandments politically smeared? Or, is it due to lack
-                         of information and education? Or, a combination of all?
-                         Still more questions popped up when continued research
-                         reaffirmed the intent of ayah 5:21. The process of fact
-                         finding on this subject took me on a long journey, a
-                         journey through 3,500 years of Jewish history. At
-                         first, this extensive research was unplanned, but soon
-                         it evolved into a planned venture. Fortunately,
-                         research and comprehensive reading were part of my
-                         education in the European school I attended, and these
-                         were habits I never gave up. Having completed my
-                         research, I decided to elucidate readers on these
-                         Qur'anic verses, which have never been brought to
-                         widespread public attention. The pro-Zionist verses in
-                         the Quran express that Jews should live in the land
-                         promised by Allah. The Quran attests to the Jews'
-                         affiliation with the land of Israel. Sadly, lack of
-                         proper knowledge has aided biased and radical clerics
-                         and politicians in their agenda of hiding or
-                         misinterpreting these verses to mislead lay Muslims.
-                         Understanding Islam and the Quran would be the
-                         prerequisites for following a cliché Muslim's frame of
-                         mind and the aim of his ventures. Assuming we can
-                         understand a ‘theoretical&apos; or ‘stereotypical&apos;
-                         Muslim&apos;s ideas and beliefs would be a slippery
-                         slope of assumptions not based on reality or evidence –
-                         we might study a school of thought, for example,
-                         typical religious beliefs of Muslims in a specific
-                         region or of a specific set. This is even more
-                         pertinent when Muslim extremists and fundamentalists
-                         are the players. For them, the Qur'anic laws and their
-                         interpretations or misinterpretations are crucial to
-                         their daily political conduct, as are the many
-                         statements and misinterpretations in the Hadith. It is
-                         fair to conclude that Islam is not merely a religion,
-                         but also acts as guidance for a Muslim's life and la
-                         vie quotidienne. Ever since the Medina Agreement of the
-                         7th century, the religion of Islam and its accompanying
-                         politics have merged. Hence, in dealings with the
-                         Muslims, one cannot achieve a comprehensive
-                         understanding without giving some consideration to
-                         their religious mannerisms. For westerners, the Islamic
-                         Republic of Iran, the Islamic Republic of Pakistan, and
-                         Saudi Arabia's government, as theocratic regimes, modus
-                         operandi lack comprehensibility. Therefore, the need
-                         for information about Islam is essential. Without it,
-                         it would be not only difficult but nearly impossible to
-                         unravel related local and world affairs. Most
-                         westerners lack general knowledge on Islam, its
-                         emergence, its laws, its bylaws, and its convictions.
-                         In the western hemisphere, people generally only gain
-                         information about Islam through news media, which
-                         solely serve their own political agendas and espouse
-                         their own ideologies without revealing the whole truth.
-                         I was raised in a Muslim country. In school, I never
-                         missed the “Sharia hours”, which I was not obligated to
-                         attend but I did. Later, in Germany, I encountered
-                         Catholic students who, on campus or in the dormitories,
-                         tried to proselytize the students from Muslim
-                         countries. We spent many nighttime hours into the dawn
-                         discussing religion. Ironically, in many instances, I
-                         contributed and elaborated more on Islamic
-                         weltanschauung than the participating Muslim students.
-                         And, without being religious, religion has always been
-                         one of the topics I was most interested in, especially
-                         from a historical point of view. Soon after
-                         conceptualizing the first steps of the present
-                         manuscript, I realized what a difficult task it is, as
-                         I had to deal with a great number of historical facts,
-                         which at times occurred more than three millennia ago.
-                         I shared my plan with my relatives. My wife suggested I
-                         had a lot to read, and my son recommended that I study
-                         Marcus & Page, A Short Guide to Writing About History,
-                         which I greatly appreciated. It was a challenge and
-                         admittedly not an easy undertaking. Our story begins
-                         with two major empires, the Christian Byzantine,
-                         successor of the Roman Empire, and the Persian Empire,
-                         who were periodically involved in warfare for many
-                         decades. Then, in the early 7th century, a new force
-                         came to power in the Arabian Peninsula that soon
-                         developed into a major player: Islam rapidly burgeoned
-                         in an expeditious geographical expansion over
-                         neighboring regions ever since its inception in 623 CE.
-                         Within a relatively short period of time, it covered
-                         the entire Middle East, the south of Europe, and the
-                         north African continent. In comparison, it took the
-                         Roman Empire almost eleven centuries of effort to
-                         become a major power in the classical world, while just
-                         70 years after the death of prophet Mohammad–around 646
-                         AD– North Africa had already been almost completely
-                         Islamized. Hence, the developmental process of Islam,
-                         Sharia, the 633 CE Arab invasion of today's Syria and
-                         Iraq, and the eventually 638 CE conquest of Jerusalem
-                         bear relevance to our topic. Islam's policy of
-                         conversion was not only to introduce monotheism to the
-                         idolatrous Arab Bedouins, but also to impose its
-                         religious laws on non-Muslims, dictating all municipal
-                         and social decrees, and legislating and governing in an
-                         Islamic environment. Sharia law regulated not only the
-                         lives and society of Arabs, but also that of the
-                         non-Muslims in lands the Arab army conquered. In order
-                         to understand the Arab-Israeli conflict, it is
-                         necessary to have knowledge not only of the regional
-                         socio-political and geographical elements, but also of
-                         other factors, such as the Muslims' deeply rooted
-                         religious conviction, their cultural background, and
-                         the historically low degree of literacy amongst their
-                         population. For nearly two millennia, Jews have been
-                         living under Christian and Muslim domination. I have
-                         endeavored to set forth the long story of Jewish life
-                         under Islam and Christianity in a manner as
-                         dispassionate and detached as possible. The continuity
-                         of the narrative will be broken at times when the
-                         historical context renders it appropriate. The most
-                         logical method to present the narrative seemed to be a
-                         treatment in which Part I is totally dedicated to
-                         Islam, its development and laws, and the life of the
-                         Prophet, which is crucial to the emergence and
-                         evolution of the Islamic faith. The pillars of Islam
-                         are discussed as briefly as possible, with the emphasis
-                         laying on the Islamic laws affecting the relations
-                         between Muslims and non-Muslims. When needed, the
-                         opinions of opposing authors are interspersed with my
-                         research and commentary for further exploration of
-                         controversial issues. Part I is specifically about the
-                         support the Quran offers for the establishment of a
-                         Jewish Homeland, which the Jews call Eretz Yisrael. The
-                         validity of the translation and interpretation of the
-                         referenced Quranic verses are explored and scrutinized
-                         in length from the viewpoint of notable religious
-                         sages. In this Part, the Iranian scholar Shojaeddin
-                         Shafa (1918-2010) gives a great deal of new insight
-                         into Arab history and the interpretation of Islamic
-                         laws. His cited book, included in two volumes, is in
-                         Persian and has never been translated into any western
-                         language. Part II is dedicated to a section of Jewish
-                         history, starting with Abraham the Patriarch and ending
-                         in the year 135 CE, when Jews eventually lost their
-                         independence. Part III is about Jewish life in diaspora
-                         in various European and Muslim countries. Eventually,
-                         in the late 19th century, the miseries and deprivations
-                         in diaspora gave rise to Zionism and the desire to
-                         reestablish the Jewish state. In Part IV, we will
-                         analyze the regional political evolution–which still,
-                         after seven decades, involves new developments
-                         occurring on a daily basis–beginning with the early
-                         history and transiting to the reemergence of Zionism,
-                         World War I, the bitter Arab-Jewish relations in the
-                         Mandate Palestine, Jewish aliyah to the promised land,
-                         the reestablishment of the Jewish state, and eventually
-                         Islamic anti-Semitism. In Part V under the title “In
-                         Search of the Peace” suggestions and ideals will be
-                         prospectively elaborated. Statements and theories are
-                         referenced with biographical data. If a source is
-                         quoted once or twice, it is not listed in the
-                         bibliography but referenced in the foot- or endnotes.
-                    </p>
-                    <p className="mt-3">Solomon Pournia, MD</p>
-                    <p>Los Angeles, December 2019</p>
+                    <h3 className="text-3xl mb-3 p-3">Introduction</h3>
+
+                    <Accordion className="p-3 gradient-after">
+                         <AccordionItem
+                              key="1"
+                              title={
+                                   <h3 className="text-2xl font-medium inline">
+                                        After some 45 years apart, my friend and
+                                        medical school peer visited me in Los
+                                        Angeles. He and his wife brought us many
+                                        gifts from Germany, including a volume
+                                        of the Holy Quran in original Arabic
+                                        along with its German translation. I
+                                        take tremendous enjoyment reading the
+                                        books in my library, and the Quran was
+                                        now one of them. I soon realized that
+                                        the Quran is unlike the Jewish Scripture
+                                        which describes historical events
+                                        sequentially. And so, during my free
+                                        time, I looked at pages of the Quran
+                                        wherever I happened to open the book.
+                                        One day, I came across Chapter 5, (sūra
+                                        al-Mā'ida) verse (ayah) 21, in which
+                                        Allah orders...
+                                   </h3>
+                              }
+                         >
+                              {introText}
+                         </AccordionItem>
+                    </Accordion>
+                    <div className="p-3">
+                         <p className="mt-3">Solomon Pournia, MD</p>
+                         <p>Los Angeles, December 2019</p>
+                    </div>
                </Card>
+               <style jsx>{`
+                    .gradient-overlay {
+                         position: relative;
+                         max-height: 300px; // Adjust as needed
+                         overflow: hidden;
+                    }
+                    .gradient-overlay::after {
+                         content: "";
+                         position: absolute;
+                         bottom: 0;
+                         left: 0;
+                         width: 100%;
+                         height: 100px; // Adjust as needed
+                         background: linear-gradient(
+                              to bottom,
+                              transparent,
+                              rgb(226, 232, 240)
+                         );
+                    }
+                    .gradient-overlay.hidden {
+                         display: none;
+                    }
+                    .flex:hover .gradient-overlay::after {
+                         background: linear-gradient(
+                              to bottom,
+                              transparent,
+                              hsl(
+                                   var(--nextui-content2) /
+                                        var(
+                                             --nextui-content2-opacity,
+                                             var(--tw-bg-opacity)
+                                        )
+                              )
+                         );
+                    }
+               `}</style>
           </div>
      );
 };
@@ -964,9 +877,9 @@ export default function Home() {
 
                     <PressRelease />
 
-                    <Intro />
+                    <Intro introText={introText} />
 
-                    <section className="bg-gray-200 py-7 w-full relative">
+                    <section className="bg-gray-100 py-7 w-full relative">
                          <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="323"

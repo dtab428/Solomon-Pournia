@@ -55,7 +55,7 @@ export default function RootLayout({
                               defaultTheme: "dark",
                          }}
                     >
-                         <div className="relative flex flex-col h-screen">
+                         <div className="relative flex flex-col">
                               <Navbar />
                               <main className="pt-16 flex-grow">
                                    {children}

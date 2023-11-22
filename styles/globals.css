@@ -66,3 +66,20 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
      color: transparent;
      background-clip: text;
 }
+
+.gradient-after {
+     position: relative;
+}
+.gradient-after:after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background: linear-gradient(
+          to top,
+          rgb(226 232 240 / var(--tw-bg-opacity)),
+          transparent
+     );
+     height: 150px;
+}

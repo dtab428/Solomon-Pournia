@@ -11,13 +11,14 @@ interface BookContentItem {
 }
 interface BookTableProps {
      bookContent: BookContentItem[];
+     className?: string;
 }
 
 interface GroupedByPart {
      [key: string]: BookContentItem[];
 }
 
-const BookTable: React.FC<BookTableProps> = ({ bookContent }) => {
+const BookTable: React.FC<BookTableProps> = ({ bookContent, className }) => {
      // Grouping book contents by parts with a specific type
      const groupedByPart = bookContent.reduce<GroupedByPart>((acc, item) => {
           if (!acc[item.part]) {
@@ -28,7 +29,7 @@ const BookTable: React.FC<BookTableProps> = ({ bookContent }) => {
      }, {});
 
      return (
-          <div className="container mx-auto w-full mt-7">
+          <div className={`container mx-auto w-full mt-7 ${className || ""}`}>
                <h3 className="text-3xl mb-6">Image References</h3>
                <p className="mt-0 mb-5">
                     The book refers to many images, but does not include them.
