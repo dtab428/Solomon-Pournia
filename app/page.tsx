@@ -15,13 +15,19 @@ import {
      Button,
      Accordion,
      AccordionItem,
+     Link,
+     Modal,
+     ModalContent,
+     ModalHeader,
+     ModalBody,
+     ModalFooter,
+     useDisclosure,
 } from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 
@@ -582,25 +588,208 @@ interface SectionProps {
 }
 
 const BookSection: React.FC<SectionProps> = ({ className }) => {
+     const { isOpen, onOpen, onOpenChange } = useDisclosure();
      return (
-          <div className={`container mx-auto px-4 ${className}`}>
-               <h4 className={(subtitle(), "text-center max-w-xl mx-auto")}>
-                    Readers who wish to experience this intriguing work can
-                    purchase this book at select bookstores, or online at the
-                    Apple iTunes store, Amazon, Google Play, or Barnes and Noble
-               </h4>
+          <div className={`container max-w-5xl mx-auto px-4 ${className}`}>
+               <div className="marquee">
+                    <div className="marquee__group">
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <AmazonLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <ITunesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <BarnesNoblesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <GooglePlayLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <Image
+                                   src="/images/readerhouse-logo.png"
+                                   alt="Description of the image"
+                              />
+                         </Card>
+                    </div>
 
-               <Swiper
+                    <div aria-hidden="true" className="marquee__group">
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <AmazonLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <ITunesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <BarnesNoblesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <GooglePlayLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <Image
+                                   src="/images/readerhouse-logo.png"
+                                   alt="Description of the image"
+                              />
+                         </Card>
+                    </div>
+               </div>
+
+               <div className="marquee marquee--reverse mt-3">
+                    <div className="marquee__group">
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <AmazonLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <ITunesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <BarnesNoblesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <GooglePlayLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <Image
+                                   src="/images/readerhouse-logo.png"
+                                   alt="Description of the image"
+                              />
+                         </Card>
+                    </div>
+
+                    <div aria-hidden="true" className="marquee__group">
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <AmazonLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <ITunesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <BarnesNoblesLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <GooglePlayLogo />
+                         </Card>
+                         <Card
+                              className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+                              isHoverable
+                              shadow="none"
+                              isPressable
+                         >
+                              <Image
+                                   src="/images/readerhouse-logo.png"
+                                   alt="Description of the image"
+                              />
+                         </Card>
+                    </div>
+               </div>
+
+               {/* <Swiper
                     spaceBetween={32}
                     slidesPerView={"auto"} // Number of slides per view
                     navigation // Enable navigation
-                    modules={[Navigation, Autoplay]}
+                    modules={[Autoplay]}
                     autoplay={{
                          delay: 0,
-                         disableOnInteraction: true,
-                         pauseOnMouseEnter: true,
+                         disableOnInteraction: false,
+                         pauseOnMouseEnter: false,
                     }}
-                    speed={8000}
+                    speed={2000}
                     loop={true}
                     className="marquee mt-8"
                >
@@ -657,28 +846,105 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                               />
                          </Card>
                     </SwiperSlide>
-               </Swiper>
+               </Swiper> */}
 
-               <Swiper
-                    spaceBetween={32}
-                    slidesPerView={2}
-                    navigation // Enable navigation
-                    modules={[Navigation]} // Add the Navigation module
-                    className="mt-8"
-               >
-                    <SwiperSlide>
+               <div className="container max-w-2xl mx-auto mt-7 mb-7">
+                    <div className="flex gap-5">
                          <div>
                               <h4 className="text-2xl mb-3 font-medium">
                                    Front cover of the book
                               </h4>
-                              <Image
-                                   src="/images/frontcoverpdf_orig.png"
-                                   alt="Front cover of the book"
-                                   // Add other properties as needed, like width, height, etc.
-                              />
+                              <Button
+                                   onPress={onOpen}
+                                   style={{ height: "auto" }}
+                                   className="px-0"
+                              >
+                                   <Image
+                                        src="/images/frontcoverpdf_orig.png"
+                                        alt="Front cover of the book"
+                                   />
+                              </Button>
+                              <Modal
+                                   isOpen={isOpen}
+                                   onOpenChange={onOpenChange}
+                              >
+                                   <ModalContent>
+                                        {(onClose) => (
+                                             <>
+                                                  <ModalHeader className="flex flex-col gap-1">
+                                                       Modal Title
+                                                  </ModalHeader>
+                                                  <ModalBody>
+                                                       <p>
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                            Nullam pulvinar
+                                                            risus non risus
+                                                            hendrerit venenatis.
+                                                            Pellentesque sit
+                                                            amet hendrerit
+                                                            risus, sed porttitor
+                                                            quam.
+                                                       </p>
+                                                       <p>
+                                                            Lorem ipsum dolor
+                                                            sit amet,
+                                                            consectetur
+                                                            adipiscing elit.
+                                                            Nullam pulvinar
+                                                            risus non risus
+                                                            hendrerit venenatis.
+                                                            Pellentesque sit
+                                                            amet hendrerit
+                                                            risus, sed porttitor
+                                                            quam.
+                                                       </p>
+                                                       <p>
+                                                            Magna exercitation
+                                                            reprehenderit magna
+                                                            aute tempor
+                                                            cupidatat consequat
+                                                            elit dolor
+                                                            adipisicing. Mollit
+                                                            dolor eiusmod sunt
+                                                            ex incididunt cillum
+                                                            quis. Velit duis sit
+                                                            officia eiusmod
+                                                            Lorem aliqua enim
+                                                            laboris do dolor
+                                                            eiusmod. Et mollit
+                                                            incididunt nisi
+                                                            consectetur esse
+                                                            laborum eiusmod
+                                                            pariatur proident
+                                                            Lorem eiusmod et.
+                                                            Culpa deserunt
+                                                            nostrud ad veniam.
+                                                       </p>
+                                                  </ModalBody>
+                                                  <ModalFooter>
+                                                       <Button
+                                                            color="danger"
+                                                            variant="light"
+                                                            onPress={onClose}
+                                                       >
+                                                            Close
+                                                       </Button>
+                                                       <Button
+                                                            color="primary"
+                                                            onPress={onClose}
+                                                       >
+                                                            Action
+                                                       </Button>
+                                                  </ModalFooter>
+                                             </>
+                                        )}
+                                   </ModalContent>
+                              </Modal>
                          </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+
                          <div>
                               <h4 className="text-2xl mb-3 font-medium">
                                    Rear cover of the book
@@ -688,8 +954,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                                    alt="Rear cover of the book"
                               />
                          </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+
                          <div>
                               <h4 className="text-2xl mb-3 font-medium">
                                    The Book of the Quran with its German
@@ -700,9 +965,8 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
                                    alt="The Book of the Quran with its German translation"
                               />
                          </div>
-                    </SwiperSlide>
-                    {/* Add more SwiperSlides as needed */}
-               </Swiper>
+                    </div>
+               </div>
           </div>
      );
 };
@@ -711,7 +975,7 @@ const PressRelease = () => {
      return (
           <div className="container mx-auto px-4 mt-4">
                <Card
-                    className="p-3 bg-slate-200 dark:bg-gray-950"
+                    className="p-6 bg-slate-200 dark:bg-gray-950"
                     isHoverable
                     shadow="none"
                     isPressable
@@ -777,7 +1041,7 @@ const Intro = ({ introText }: IntroText) => {
      return (
           <div className="container mx-auto px-4 mt-4">
                <Card
-                    className="bg-slate-200 dark:bg-gray-950"
+                    className="bg-slate-200 dark:bg-gray-950 p-5"
                     // isHoverable
                     shadow="none"
                     // isPressable
@@ -861,19 +1125,71 @@ export default function Home() {
      return (
           <>
                <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
-                    <div className="inline-block max-w-3xl text-center justify-center">
-                         <h1 className="text-3xl">Introducing</h1>
-                         <h1 className="mt-3 text-5xl gradient-text">
+                    <div className="inline-block max-w-5xl text-center justify-center">
+                         <h1 className="text-2xl uppercase font-bold">
+                              Introducing
+                         </h1>
+                         <h1 className="text-6xl font-bold gradient-text">
                               THE PROMISED LAND OF ISRAEL
                          </h1>
 
-                         <h1 className="mt-5 text-2xl">
+                         <h1 className="mt-3 text-3xl font-medium">
                               An In-Depth Look at Zionism in the Quran and in
                               Jewish History
                          </h1>
+
+                         <h4
+                              className={
+                                   (subtitle(),
+                                   "text-center max-w-2xl mx-auto mt-4 text-xl")
+                              }
+                         >
+                              Readers who wish to experience this intriguing
+                              work can purchase this book at select bookstores,
+                              or online at the{" "}
+                              <Link
+                                   showAnchorIcon
+                                   color="primary"
+                                   href="https://books.apple.com/us/book/the-promised-land-of-israel/id6450221861"
+                                   style={{ font: "inherit" }}
+                                   target="_blank"
+                              >
+                                   Apple iTunes Store
+                              </Link>
+                              ,{" "}
+                              <Link
+                                   showAnchorIcon
+                                   color="primary"
+                                   href="https://www.amazon.com/Promised-Land-Israel-Depth-Zionism/dp/B0C7SFS2HF"
+                                   style={{ font: "inherit" }}
+                                   target="_blank"
+                              >
+                                   Amazon
+                              </Link>
+                              ,{" "}
+                              <Link
+                                   showAnchorIcon
+                                   color="primary"
+                                   href="https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+                                   style={{ font: "inherit" }}
+                                   target="_blank"
+                              >
+                                   Google Play
+                              </Link>
+                              , or{" "}
+                              <Link
+                                   showAnchorIcon
+                                   color="primary"
+                                   href="https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+                                   style={{ font: "inherit" }}
+                                   target="_blank"
+                              >
+                                   Barnes & Noble
+                              </Link>
+                         </h4>
                     </div>
 
-                    <BookSection className="mt-3" />
+                    <BookSection className="" />
 
                     <PressRelease />
 

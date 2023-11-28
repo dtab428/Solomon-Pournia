@@ -11,7 +11,15 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
      max-width: unset;
 }
 
-.marquee .swiper-wrapper {
+svg {
+     max-width: 100%;
+}
+button svg {
+     max-width: 125px;
+     height: auto;
+}
+
+/* .marquee .swiper-wrapper {
      -webkit-transition-timing-function: linear;
      transition-timing-function: linear;
      position: relative;
@@ -20,16 +28,17 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
 .marquee svg {
      height: 60px;
      width: auto;
-}
+} */
 
-.marquee {
+/* .marquee {
      position: relative;
 }
 
 .marquee .swiper-slide {
      width: auto;
      height: auto;
-}
+     flex-shrink: 0;
+} */
 .marquee::before,
 .marquee::after {
      content: "";
@@ -51,12 +60,12 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
      transform: rotate(180deg);
 }
 
-.marquee .swiper-button-prev,
+/* .marquee .swiper-button-prev,
 .swiper .swiper-button-next {
      z-index: 15;
-}
+} */
 
-.gradient-text {
+/* .gradient-text {
      background: linear-gradient(
           45deg,
           var(--tw-indigo-500),
@@ -65,7 +74,7 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
      -webkit-background-clip: text;
      color: transparent;
      background-clip: text;
-}
+} */
 
 .gradient-after {
      position: relative;
@@ -82,4 +91,96 @@ body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
           transparent
      );
      height: 150px;
+     pointer-events: none;
+     transition: 0.25s;
+}
+.gradient-after:has([data-open="true"]):after {
+     opacity: 0;
+     visibility: hidden;
+}
+
+/**********/
+
+.gradient-text {
+     --colorA: #d6009a;
+     --colorB: #9750dd;
+     cursor: default;
+     position: relative;
+     background-image: linear-gradient(
+          120deg,
+          var(--colorA) 0%,
+          var(--colorB) 50%,
+          var(--colorA) 100%
+     );
+     background-origin: padding-box;
+     background-size: 200%;
+     -webkit-box-decoration-break: clone;
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     color: unset;
+     animation-timeline: auto;
+     animation-range-start: normal;
+     animation-range-end: normal;
+     overflow: visible;
+     animation: 3s linear 0s infinite normal forwards running nextui-k-dAFEPd;
+}
+@keyframes nextui-k-dAFEPd {
+     100% {
+          background-position: -200% center;
+     }
+}
+
+/***************/
+
+:root {
+     --size: clamp(10rem, 1rem + 40vmin, 30rem);
+     --gap: calc(var(--size) / 14);
+     --duration: 50s;
+     --scroll-start: 0;
+     --scroll-end: calc(-100% - var(--gap));
+}
+
+.marquee {
+     display: flex;
+     overflow: hidden;
+     user-select: none;
+     gap: var(--gap);
+     mask-image: linear-gradient(
+          var(--mask-direction, to right),
+          hsl(0 0% 0% / 0),
+          hsl(0 0% 0% / 1) 20%,
+          hsl(0 0% 0% / 1) 80%,
+          hsl(0 0% 0% / 0)
+     );
+}
+
+.marquee__group {
+     flex-shrink: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     gap: var(--gap);
+     min-width: 100%;
+     animation: scroll-x var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+     .marquee__group {
+          animation-play-state: paused;
+     }
+}
+
+.marquee--reverse .marquee__group {
+     animation-direction: reverse;
+     animation-delay: -3s;
+}
+
+@keyframes scroll-x {
+     from {
+          transform: translateX(var(--scroll-start));
+     }
+     to {
+          transform: translateX(var(--scroll-end));
+     }
 }

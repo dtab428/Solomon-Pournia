@@ -63,7 +63,7 @@ const BookTable: React.FC<BookTableProps> = ({ bookContent, className }) => {
                                                   />
                                              </div>
                                              <div>
-                                                  <p className="text-xl mb-2">
+                                                  <p className="text-xl mb-2 dark:text-black">
                                                        <strong>Page:</strong>{" "}
                                                        {item.page}
                                                   </p>
