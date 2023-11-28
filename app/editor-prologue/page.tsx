@@ -2,7 +2,7 @@ import { title } from "@/components/primitives";
 
 export default function EditorProloguePage() {
 	return (
-		<div>
+		<div className="container max-w-6xl mx-auto my-5">
 			<h1 className={title()}>Editor's Prologue</h1>
 			<p className="mt-5">
 				In 1917 Great Britain issued the Balfour Declaration supporting the

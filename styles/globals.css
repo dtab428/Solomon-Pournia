@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 :root {
-     --tw-indigo-500: #6366f1; /* Replace with the actual value */
-     --tw-slate-300: #cbd5e1; /* Replace with the actual value */
+	--tw-indigo-500: #6366f1; /* Replace with the actual value */
+	--tw-slate-300: #cbd5e1; /* Replace with the actual value */
 }
 
 body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
-     max-width: unset;
+	max-width: unset;
 }
 
 svg {
-     max-width: 100%;
+	max-width: 100%;
 }
 button svg {
-     max-width: 125px;
-     height: auto;
+	max-width: 125px;
+	height: auto;
 }
 
 /* .marquee .swiper-wrapper {
@@ -41,23 +41,23 @@ button svg {
 } */
 .marquee::before,
 .marquee::after {
-     content: "";
-     position: absolute;
-     top: 0;
-     bottom: 0;
-     width: 100px; /* Adjust the width as needed */
-     z-index: 10;
-     pointer-events: none;
-     background: linear-gradient(
-          to right,
-          hsl(var(--nextui-background)) 0%,
-          transparent 100%
-     );
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100px; /* Adjust the width as needed */
+	z-index: 10;
+	pointer-events: none;
+	background: linear-gradient(
+		to right,
+		hsl(var(--nextui-background)) 0%,
+		transparent 100%
+	);
 }
 
 .marquee::after {
-     right: 0;
-     transform: rotate(180deg);
+	right: 0;
+	transform: rotate(180deg);
 }
 
 /* .marquee .swiper-button-prev,
@@ -77,110 +77,110 @@ button svg {
 } */
 
 .gradient-after {
-     position: relative;
+	position: relative;
 }
 .gradient-after:after {
-     content: "";
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     background: linear-gradient(
-          to top,
-          rgb(226 232 240 / var(--tw-bg-opacity)),
-          transparent
-     );
-     height: 150px;
-     pointer-events: none;
-     transition: 0.25s;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(
+		to top,
+		rgb(226 232 240 / var(--tw-bg-opacity)),
+		transparent
+	);
+	height: 150px;
+	pointer-events: none;
+	transition: 0.25s;
 }
 .gradient-after:has([data-open="true"]):after {
-     opacity: 0;
-     visibility: hidden;
+	opacity: 0;
+	visibility: hidden;
 }
 
 /**********/
 
 .gradient-text {
-     --colorA: #d6009a;
-     --colorB: #9750dd;
-     cursor: default;
-     position: relative;
-     background-image: linear-gradient(
-          120deg,
-          var(--colorA) 0%,
-          var(--colorB) 50%,
-          var(--colorA) 100%
-     );
-     background-origin: padding-box;
-     background-size: 200%;
-     -webkit-box-decoration-break: clone;
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
-     color: unset;
-     animation-timeline: auto;
-     animation-range-start: normal;
-     animation-range-end: normal;
-     overflow: visible;
-     animation: 3s linear 0s infinite normal forwards running nextui-k-dAFEPd;
+	--colorA: #0700d6;
+	--colorB: #5086dd;
+	cursor: default;
+	position: relative;
+	background-image: linear-gradient(
+		120deg,
+		var(--colorA) 0%,
+		var(--colorB) 50%,
+		var(--colorA) 100%
+	);
+	background-origin: padding-box;
+	background-size: 200%;
+	-webkit-box-decoration-break: clone;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: unset;
+	animation-timeline: auto;
+	animation-range-start: normal;
+	animation-range-end: normal;
+	overflow: visible;
+	animation: 3s linear 0s infinite normal forwards running nextui-k-dAFEPd;
 }
 @keyframes nextui-k-dAFEPd {
-     100% {
-          background-position: -200% center;
-     }
+	100% {
+		background-position: -200% center;
+	}
 }
 
 /***************/
 
 :root {
-     --size: clamp(10rem, 1rem + 40vmin, 30rem);
-     --gap: calc(var(--size) / 14);
-     --duration: 50s;
-     --scroll-start: 0;
-     --scroll-end: calc(-100% - var(--gap));
+	--size: clamp(10rem, 1rem + 40vmin, 30rem);
+	--gap: calc(var(--size) / 14);
+	--duration: 50s;
+	--scroll-start: 0;
+	--scroll-end: calc(-100% - var(--gap));
 }
 
 .marquee {
-     display: flex;
-     overflow: hidden;
-     user-select: none;
-     gap: var(--gap);
-     mask-image: linear-gradient(
-          var(--mask-direction, to right),
-          hsl(0 0% 0% / 0),
-          hsl(0 0% 0% / 1) 20%,
-          hsl(0 0% 0% / 1) 80%,
-          hsl(0 0% 0% / 0)
-     );
+	display: flex;
+	overflow: hidden;
+	user-select: none;
+	gap: var(--gap);
+	mask-image: linear-gradient(
+		var(--mask-direction, to right),
+		hsl(0 0% 0% / 0),
+		hsl(0 0% 0% / 1) 20%,
+		hsl(0 0% 0% / 1) 80%,
+		hsl(0 0% 0% / 0)
+	);
 }
 
 .marquee__group {
-     flex-shrink: 0;
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
-     gap: var(--gap);
-     min-width: 100%;
-     animation: scroll-x var(--duration) linear infinite;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: var(--gap);
+	min-width: 100%;
+	animation: scroll-x var(--duration) linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-     .marquee__group {
-          animation-play-state: paused;
-     }
+	.marquee__group {
+		animation-play-state: paused;
+	}
 }
 
 .marquee--reverse .marquee__group {
-     animation-direction: reverse;
-     animation-delay: -3s;
+	animation-direction: reverse;
+	animation-delay: -3s;
 }
 
 @keyframes scroll-x {
-     from {
-          transform: translateX(var(--scroll-start));
-     }
-     to {
-          transform: translateX(var(--scroll-end));
-     }
+	from {
+		transform: translateX(var(--scroll-start));
+	}
+	to {
+		transform: translateX(var(--scroll-end));
+	}
 }
