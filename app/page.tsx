@@ -24,6 +24,7 @@ import {
      ModalBody,
      ModalFooter,
      useDisclosure,
+     Chip,
 } from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
@@ -1057,41 +1058,63 @@ const Intro = ({ introText }: IntroText) => {
                     <div className="relative">
                          <h3 className="text-4xl px-3">Introduction</h3>
 
-                         <Accordion className="gradient-after">
-                              <AccordionItem
-                                   key="1"
-                                   title={
-                                        <>
-                                             <h3 className="text-xl font-medium inline">
-                                                  After some 45 years apart, my
-                                                  friend and medical school peer
-                                                  visited me in Los Angeles. He
-                                                  and his wife brought us many
-                                                  gifts from Germany, including
-                                                  a volume of the Holy Quran in
-                                                  original Arabic along with its
-                                                  German translation. I take
-                                                  tremendous enjoyment reading
-                                                  the books in my library, and
-                                                  the Quran was now one of them.
-                                                  I soon realized that the Quran
-                                                  is unlike the Jewish Scripture
-                                                  which describes historical
-                                                  events sequentially. And so,
-                                                  during my free time, I looked
-                                                  at pages of the Quran wherever
-                                                  I happened to open the book.
-                                                  One day, I came across Chapter
-                                                  5, (sūra al-Mā'ida) verse
-                                                  (ayah) 21, in which Allah
-                                                  orders...
-                                             </h3>
-                                        </>
-                                   }
+                         <div className="relative">
+                              <Accordion className="gradient-after">
+                                   <AccordionItem
+                                        key="1"
+                                        title={
+                                             <>
+                                                  <h3 className="text-xl font-medium inline">
+                                                       After some 45 years
+                                                       apart, my friend and
+                                                       medical school peer
+                                                       visited me in Los
+                                                       Angeles. He and his wife
+                                                       brought us many gifts
+                                                       from Germany, including a
+                                                       volume of the Holy Quran
+                                                       in original Arabic along
+                                                       with its German
+                                                       translation. I take
+                                                       tremendous enjoyment
+                                                       reading the books in my
+                                                       library, and the Quran
+                                                       was now one of them. I
+                                                       soon realized that the
+                                                       Quran is unlike the
+                                                       Jewish Scripture which
+                                                       describes historical
+                                                       events sequentially. And
+                                                       so, during my free time,
+                                                       I looked at pages of the
+                                                       Quran wherever I happened
+                                                       to open the book. One
+                                                       day, I came across
+                                                       Chapter 5, (sūra
+                                                       al-Mā'ida) verse (ayah)
+                                                       21, in which Allah
+                                                       orders...
+                                                  </h3>
+                                             </>
+                                        }
+                                   >
+                                        {introText}
+                                   </AccordionItem>
+                              </Accordion>
+
+                              <div
+                                   className="text-center"
+                                   style={{
+                                        position: "absolute",
+                                        bottom: 0,
+                                        left: 0,
+                                        right: 0,
+                                   }}
                               >
-                                   {introText}
-                              </AccordionItem>
-                         </Accordion>
+                                   <Button color="primary">Read More</Button>
+                              </div>
+                         </div>
+
                          <div className="p-3">
                               <p className="text-2xl font-medium mt-3">
                                    Solomon Pournia, MD
