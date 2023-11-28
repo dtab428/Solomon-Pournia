@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +8,9 @@
 	--tw-indigo-500: #6366f1; /* Replace with the actual value */
 	--tw-slate-300: #cbd5e1; /* Replace with the actual value */
 }
-
+body {
+	font-family: "Playfair Display", serif;
+}
 body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
 	max-width: unset;
 }
@@ -79,24 +83,11 @@ button svg {
 .gradient-after {
 	position: relative;
 }
-.gradient-after:after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background: linear-gradient(
-		to top,
-		rgb(226 232 240 / var(--tw-bg-opacity)),
-		transparent
-	);
-	height: 150px;
-	pointer-events: none;
-	transition: 0.25s;
+.gradient-after {
+	mask-image: linear-gradient(to bottom, black 0%, transparent);
 }
-.gradient-after:has([data-open="true"]):after {
-	opacity: 0;
-	visibility: hidden;
+.gradient-after:has([data-open="true"]) {
+	mask-image: unset;
 }
 
 /**********/
