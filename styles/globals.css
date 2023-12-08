@@ -49,7 +49,7 @@ button svg {
      position: absolute;
      top: 0;
      bottom: 0;
-     width: 100px; /* Adjust the width as needed */
+     width: 100px;
      z-index: 10;
      pointer-events: none;
      background: linear-gradient(
@@ -133,17 +133,18 @@ button svg {
 }
 
 .marquee {
+     position: relative;
      display: flex;
      overflow: hidden;
      user-select: none;
      gap: var(--gap);
-     mask-image: linear-gradient(
+     /* mask-image: linear-gradient(
           var(--mask-direction, to right),
           hsl(0 0% 0% / 0),
           hsl(0 0% 0% / 1) 20%,
           hsl(0 0% 0% / 1) 80%,
           hsl(0 0% 0% / 0)
-     );
+     ); */
 }
 
 .marquee__group {
