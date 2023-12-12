@@ -8,9 +8,9 @@
   --tw-indigo-500: #6366f1; /* Replace with the actual value */
   --tw-slate-300: #cbd5e1; /* Replace with the actual value */
 }
-body {
+/* body {
   font-family: "Playfair Display", serif;
-}
+} */
 body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
   max-width: unset;
 }
@@ -19,7 +19,7 @@ svg {
   max-width: 100%;
 }
 button svg {
-  max-width: 125px;
+  max-width: 100px;
   height: auto;
 }
 
@@ -43,8 +43,8 @@ button svg {
      height: auto;
      flex-shrink: 0;
 } */
-.marquee::before,
-.marquee::after {
+.masked-edges::before,
+.masked-edges::after {
   content: "";
   position: absolute;
   top: 0;
@@ -59,7 +59,7 @@ button svg {
   );
 }
 
-.marquee::after {
+.masked-edges::after {
   right: 0;
   transform: rotate(180deg);
 }
@@ -232,3 +232,28 @@ button svg {
 }
 
 /*******************/
+
+.highlight-bg {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  background: inherit;
+  border-radius: inherit;
+  background: linear-gradient(-90deg, #007cf0, #38fff5, #674cff, #007cf0);
+  background-size: 400% 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  animation: background-anim 8s ease-in-out infinite;
+  opacity: 0.35;
+}
+@keyframes background-anim {
+  50% {
+    background-position: 140% 50%;
+    transform: skew(-2deg);
+  }
+}
+
+/***************/

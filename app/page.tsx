@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { useRef } from "react";
 
 import { title, subtitle } from "@/components/primitives";
 import {
@@ -24,6 +23,7 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
+  Chip,
 } from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
@@ -594,10 +594,10 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 
   return (
     <div className={`container max-w-5xl mx-auto px-4 ${className}`}>
-      <div className="marquee">
+      <div className="marquee masked-edges">
         <div className="marquee__group">
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -605,7 +605,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <AmazonLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -613,7 +613,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <ITunesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -621,7 +621,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <BarnesNoblesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -629,7 +629,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <GooglePlayLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -643,7 +643,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 
         <div aria-hidden="true" className="marquee__group">
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -651,7 +651,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <AmazonLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -659,7 +659,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <ITunesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -667,7 +667,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <BarnesNoblesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -675,7 +675,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <GooglePlayLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -687,11 +687,10 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
           </Card>
         </div>
       </div>
-
-      <div className="marquee marquee--reverse mt-3">
+      <div className="marquee masked-edges marquee--reverse mt-3">
         <div className="marquee__group">
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -699,7 +698,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <AmazonLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -707,7 +706,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <ITunesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -715,7 +714,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <BarnesNoblesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -723,7 +722,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <GooglePlayLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -737,7 +736,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 
         <div aria-hidden="true" className="marquee__group">
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -745,7 +744,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <AmazonLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -753,7 +752,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <ITunesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -761,7 +760,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <BarnesNoblesLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -769,7 +768,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             <GooglePlayLogo />
           </Card>
           <Card
-            className="p-8 bg-sky-300 w-full h-full justify-center items-center"
+            className="p-4 bg-gray-100 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
@@ -781,7 +780,6 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
           </Card>
         </div>
       </div>
-
       <div className="container max-w-xl mx-auto mt-7 mb-7">
         <div className="flex gap-5">
           <div>
@@ -1439,23 +1437,30 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
-        <div className="inline-block max-w-5xl text-center justify-center">
-          <h1 className="text-2xl uppercase font-bold">Introducing</h1>
-          <h1 className="text-4xl font-bold gradient-text">
-            THE PROMISED LAND OF ISRAEL
+        <div className="inline-block max-w-6xl text-center justify-center">
+          <h1 className="text-2xl uppercase font-bold">
+            <span className="relative inline-flex px-3 py-2 rounded-3xl">
+              <span className="relative z-10 text-sm font-medium">
+                Introducing
+              </span>
+              <div className="highlight-bg"></div>
+            </span>
+          </h1>
+          <h1 className="mt-3 text-7xl font-bold gradient-text uppercase">
+            The Promised Land of Israel
           </h1>
 
-          <h1 className="mt-3 text-3xl font-medium">
+          <h1 className="mt-3 text-5xl max-w-4xl mx-auto font-medium">
             An In-Depth Look at Zionism in the Quran and in Jewish History
           </h1>
 
           <h4
             className={
-              (subtitle(), "text-center max-w-2xl mx-auto mt-4 text-xl")
+              (subtitle(), "text-center max-w-2xl mx-auto mt-5 text-xl")
             }
           >
             Readers who wish to experience this intriguing work can purchase
-            this book at select bookstores, or online at the{" "}
+            this book at select bookstores, or online at{" "}
             <Link
               showAnchorIcon
               color="primary"
@@ -1465,7 +1470,7 @@ export default function Home() {
             >
               Apple iTunes Store
             </Link>
-            ,{" "}
+            •{" "}
             <Link
               showAnchorIcon
               color="primary"
@@ -1475,7 +1480,7 @@ export default function Home() {
             >
               Amazon
             </Link>
-            ,{" "}
+            •{" "}
             <Link
               showAnchorIcon
               color="primary"
@@ -1485,7 +1490,7 @@ export default function Home() {
             >
               Google Play
             </Link>
-            , or{" "}
+            •{" "}
             <Link
               showAnchorIcon
               color="primary"
@@ -1498,7 +1503,7 @@ export default function Home() {
           </h4>
         </div>
 
-        <BookSection className="" />
+        <BookSection className="mt-3" />
 
         <section className="py-0 w-full relative">
           <div className="container mx-auto px-4 mt-4">
@@ -1563,14 +1568,39 @@ export default function Home() {
               </SpotlightCard>
 
               {/* Design Element */}
-              <SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-                <div className="relative h-full bg-white w-full h-full p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-                  <div className="text-5xl">✺</div>
+              <SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
+                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+                  <div className="marquee">
+                    <div className="marquee__group">
+                      <div className="text-7xl">✺</div>
+                      <div className="text-7xl">✧</div>
+                      <div className="text-7xl">✡</div>
+                    </div>
+
+                    <div aria-hidden="true" className="marquee__group">
+                      <div className="text-7xl">✺</div>
+                      <div className="text-7xl">✧</div>
+                      <div className="text-7xl">✡</div>
+                    </div>
+                  </div>
+                  <div className="marquee marquee--reverse mt-3">
+                    <div className="marquee__group">
+                      <div className="text-7xl">✡</div>
+                      <div className="text-7xl">✧</div>
+                      <div className="text-7xl">✺</div>
+                    </div>
+
+                    <div aria-hidden="true" className="marquee__group">
+                      <div className="text-7xl">✡</div>
+                      <div className="text-7xl">✧</div>
+                      <div className="text-7xl">✺</div>
+                    </div>
+                  </div>
                 </div>
               </SpotlightCard>
 
               {/* Card #3 -- Synopsis */}
-              <SpotlightCard noBg className="lg:col-span-8 col-span-4">
+              <SpotlightCard noBg className="lg:col-span-9 col-span-4">
                 <div className="relative h-full bg-white p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
                   {/* Radial gradient */}
                   <div
