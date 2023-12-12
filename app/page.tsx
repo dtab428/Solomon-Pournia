@@ -595,6 +595,7 @@ interface SectionProps {
 
 const BookSection: React.FC<SectionProps> = ({ className }) => {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
 	return (
 		<div className={`container max-w-5xl mx-auto px-4 ${className}`}>
 			<div className="marquee">
@@ -801,35 +802,18 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 								alt="Front cover of the book"
 							/>
 						</Button>
-						<Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+						<Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl">
 							<ModalContent>
 								{(onClose) => (
 									<>
 										<ModalHeader className="flex flex-col gap-1">
-											Modal Title
+											Front cover of the book
 										</ModalHeader>
 										<ModalBody>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-												Nullam pulvinar risus non risus hendrerit venenatis.
-												Pellentesque sit amet hendrerit risus, sed porttitor
-												quam.
-											</p>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-												Nullam pulvinar risus non risus hendrerit venenatis.
-												Pellentesque sit amet hendrerit risus, sed porttitor
-												quam.
-											</p>
-											<p>
-												Magna exercitation reprehenderit magna aute tempor
-												cupidatat consequat elit dolor adipisicing. Mollit dolor
-												eiusmod sunt ex incididunt cillum quis. Velit duis sit
-												officia eiusmod Lorem aliqua enim laboris do dolor
-												eiusmod. Et mollit incididunt nisi consectetur esse
-												laborum eiusmod pariatur proident Lorem eiusmod et.
-												Culpa deserunt nostrud ad veniam.
-											</p>
+											<Image
+												src="/images/frontcoverpdf_orig.png"
+												alt="Front cover of the book"
+											/>
 										</ModalBody>
 										<ModalFooter>
 											<Button color="danger" variant="light" onPress={onClose}>
@@ -846,10 +830,16 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 					</div>
 					<div>
 						<h4 className="text-md mb-3 font-medium">Rear cover of the book</h4>
-						<Image
-							src="/images/backcoverpdf_orig.png"
-							alt="Rear cover of the book"
-						/>
+						<Button
+							onPress={onOpen}
+							style={{ height: "auto" }}
+							className="px-0"
+						>
+							<Image
+								src="/images/backcoverpdf_orig.png"
+								alt="Rear cover of the book"
+							/>
+						</Button>
 					</div>
 				</div>
 				<div className="w-full mt-5">
@@ -934,7 +924,7 @@ const Intro = ({ introText, className }: IntroText) => {
 								right: 0,
 							}}
 						>
-							<Button color="primary" onPress={onOpen}>
+							<Button color="primary" onPress={onOpen} size="lg">
 								Read More
 							</Button>
 						</div>
@@ -946,12 +936,19 @@ const Intro = ({ introText, className }: IntroText) => {
 					</div>
 				</div>
 			</div>
-			<Modal isOpen={isOpen} onOpenChange={onOpenChange} size="full">
+			<Modal
+				isOpen={isOpen}
+				onOpenChange={onOpenChange}
+				size="5xl"
+				scrollBehavior="inside"
+			>
 				<ModalContent>
 					{(onClose) => (
 						<>
-							<ModalHeader className="flex flex-col gap-1">
-								<h3 className="text-xl font-medium mt-4">
+							<ModalHeader className="pb-2">Introduction</ModalHeader>
+							<ModalBody>
+								{" "}
+								<h3 className="text-xl font-medium">
 									After some 45 years apart, my friend and medical school peer
 									visited me in Los Angeles. He and his wife brought us many
 									gifts from Germany, including a volume of the Holy Quran in
@@ -964,14 +961,11 @@ const Intro = ({ introText, className }: IntroText) => {
 									came across Chapter 5, (sūra al-Mā'ida) verse (ayah) 21, in
 									which Allah orders...
 								</h3>
-							</ModalHeader>
-							<ModalBody>{introText}</ModalBody>
+								{introText}
+							</ModalBody>
 							<ModalFooter>
-								<Button color="danger" variant="light" onPress={onClose}>
+								<Button color="primary" variant="ghost" onPress={onClose}>
 									Close
-								</Button>
-								<Button color="primary" onPress={onClose}>
-									Action
 								</Button>
 							</ModalFooter>
 						</>
@@ -1151,7 +1145,7 @@ const EditorPrologue = () => {
 								right: 0,
 							}}
 						>
-							<Button color="primary" onPress={onOpen}>
+							<Button color="primary" onPress={onOpen} size="lg">
 								Read More
 							</Button>
 						</div>
@@ -1163,12 +1157,18 @@ const EditorPrologue = () => {
 				</div>
 			</div>
 
-			<Modal isOpen={isOpen} onOpenChange={onOpenChange} size="full">
+			<Modal
+				isOpen={isOpen}
+				onOpenChange={onOpenChange}
+				size="5xl"
+				scrollBehavior="inside"
+			>
 				<ModalContent>
 					{(onClose) => (
 						<>
-							<ModalHeader className="flex flex-col gap-1">
-								<h3 className="text-xl font-medium mt-3">
+							<ModalHeader className="pb-2">Editor's Prologue</ModalHeader>
+							<ModalBody>
+								<h3 className="text-xl font-medium">
 									In 1917 Great Britain issued the Balfour Declaration
 									supporting the establishment of a Jewish homeland in
 									Palestine. The League of Nations confirmed a British mandate
@@ -1184,14 +1184,11 @@ const EditorPrologue = () => {
 									Shortly after the British issued the White Paper of 1939,
 									which limited Jewish immigration to Palestine...
 								</h3>
-							</ModalHeader>
-							<ModalBody>{editorPrologueText()}</ModalBody>
+								{editorPrologueText()}
+							</ModalBody>
 							<ModalFooter>
-								<Button color="danger" variant="light" onPress={onClose}>
+								<Button color="primary" variant="ghost" onPress={onClose}>
 									Close
-								</Button>
-								<Button color="primary" onPress={onClose}>
-									Action
 								</Button>
 							</ModalFooter>
 						</>
@@ -1271,7 +1268,7 @@ export default function Home() {
 					<div className="container mx-auto px-4 mt-4">
 						<Spotlight className="max-w-2xl mx-auto grid gap-6 grid-cols-1 lg:grid-cols-2 items-start lg:max-w-none group">
 							{/* Card #1 */}
-							<SpotlightCard className="md:col-span-2">
+							<SpotlightCard className="col-span-2">
 								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
@@ -1303,7 +1300,7 @@ export default function Home() {
 								</div>
 							</SpotlightCard>
 							{/* Card #2 */}
-							<SpotlightCard className="md:col-span-2">
+							<SpotlightCard className="col-span-2">
 								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
@@ -1336,7 +1333,7 @@ export default function Home() {
 								</div>
 							</SpotlightCard>
 							{/* Card #3 */}
-							<SpotlightCard noBg className="lg:col-span-1">
+							<SpotlightCard noBg className="lg:col-span-1 col-span-2">
 								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden custom-gradient">
 									{/* Radial gradient */}
 									<div
@@ -1368,7 +1365,7 @@ export default function Home() {
 								</div>
 							</SpotlightCard>
 							{/* Card #4 */}
-							<SpotlightCard noBg className="lg:col-span-1">
+							<SpotlightCard noBg className="lg:col-span-1 col-span-2">
 								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden custom-gradient-2">
 									{/* Radial gradient */}
 									<div
