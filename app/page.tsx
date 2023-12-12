@@ -1268,71 +1268,6 @@ export default function Home() {
 					<div className="container mx-auto px-4 mt-4">
 						<Spotlight className="max-w-2xl mx-auto grid gap-6 grid-cols-1 lg:grid-cols-2 items-start lg:max-w-none group">
 							{/* Card #1 */}
-							<SpotlightCard className="col-span-2">
-								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-									{/* Radial gradient */}
-									<div
-										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-										aria-hidden="true"
-									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 rounded-full blur-[80px]"></div>
-									</div>
-									<div className="flex flex-col h-full items-center">
-										{/* Image */}
-										<div className="relative inline-flex">
-											<div
-												className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-custom-blue hidden"
-												aria-hidden="true"
-											></div>
-											{/* <Image
-                        className="inline-flex"
-                        // src={}
-                        width={200}
-                        height={200}
-                        alt="Card 01"
-                      /> */}
-										</div>
-										{/* Text */}
-										<div className="grow">
-											<PressRelease />
-										</div>
-									</div>
-								</div>
-							</SpotlightCard>
-							{/* Card #2 */}
-							<SpotlightCard className="col-span-2">
-								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-									{/* Radial gradient */}
-									<div
-										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-										aria-hidden="true"
-									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 rounded-full blur-[80px]"></div>
-									</div>
-									<div className="flex flex-col h-full items-center">
-										{/* Image */}
-										<div className="relative inline-flex">
-											<div
-												className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-custom-blue hidden"
-												aria-hidden="true"
-											></div>
-											{/* <Image
-                        className="inline-flex"
-                        // src={}
-                        width={200}
-                        height={200}
-                        alt="Card 02"
-                      /> */}
-										</div>
-										{/* Text */}
-										<BookTable
-											bookContent={bookImageReferences}
-											bookPartDescriptions={bookPartDescriptions}
-										/>
-									</div>
-								</div>
-							</SpotlightCard>
-							{/* Card #3 */}
 							<SpotlightCard noBg className="lg:col-span-1 col-span-2">
 								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden custom-gradient">
 									{/* Radial gradient */}
@@ -1364,7 +1299,7 @@ export default function Home() {
 									</div>
 								</div>
 							</SpotlightCard>
-							{/* Card #4 */}
+							{/* Card #2 */}
 							<SpotlightCard noBg className="lg:col-span-1 col-span-2">
 								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden custom-gradient-2">
 									{/* Radial gradient */}
@@ -1393,6 +1328,71 @@ export default function Home() {
 										<div className="grow">
 											<EditorPrologue />
 										</div>
+									</div>
+								</div>
+							</SpotlightCard>
+							{/* Card #3 */}
+							<SpotlightCard className="col-span-2">
+								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+									{/* Radial gradient */}
+									<div
+										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
+										aria-hidden="true"
+									>
+										<div className="absolute inset-0 translate-z-0 bg-gray-200 rounded-full blur-[80px]"></div>
+									</div>
+									<div className="flex flex-col h-full items-center">
+										{/* Image */}
+										<div className="relative inline-flex">
+											<div
+												className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-custom-blue hidden"
+												aria-hidden="true"
+											></div>
+											{/* <Image
+                        className="inline-flex"
+                        // src={}
+                        width={200}
+                        height={200}
+                        alt="Card 01"
+                      /> */}
+										</div>
+										{/* Text */}
+										<div className="grow">
+											<PressRelease />
+										</div>
+									</div>
+								</div>
+							</SpotlightCard>
+							{/* Card #4 */}
+							<SpotlightCard className="col-span-2">
+								<div className="relative h-full bg-gray-100 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+									{/* Radial gradient */}
+									<div
+										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
+										aria-hidden="true"
+									>
+										<div className="absolute inset-0 translate-z-0 bg-gray-200 rounded-full blur-[80px]"></div>
+									</div>
+									<div className="flex flex-col h-full items-center">
+										{/* Image */}
+										<div className="relative inline-flex">
+											<div
+												className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-custom-blue hidden"
+												aria-hidden="true"
+											></div>
+											{/* <Image
+                        className="inline-flex"
+                        // src={}
+                        width={200}
+                        height={200}
+                        alt="Card 02"
+                      /> */}
+										</div>
+										{/* Text */}
+										<BookTable
+											bookContent={bookImageReferences}
+											bookPartDescriptions={bookPartDescriptions}
+										/>
 									</div>
 								</div>
 							</SpotlightCard>
