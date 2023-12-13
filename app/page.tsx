@@ -818,24 +818,33 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
-        <div className="inline-block max-w-6xl text-center justify-center">
-          <h1 className="text-2xl uppercase font-bold">
+        <div className="inline-block max-w-6xl justify-center text-center">
+          <div>
             <span className="relative inline-flex px-3 py-2 rounded-3xl">
               <span className="relative z-10 text-sm font-medium">
                 Introducing
               </span>
               <div className="highlight-bg"></div>
             </span>
-          </h1>
-          <h1 className="mt-3 lg:text-7xl text-4xl font-bold gradient-text uppercase">
-            The Promised Land of Israel
+          </div>
+          <h1 className="mt-3 inline-block gradient-text dahlia-font mx-auto">
+            <span className="block text-5xl ms-12 ps-12 text-left">the</span>
+            <span className="block text-8xl ms-6 -mt-5">promised land</span>
+            {/* <span className="block lg:text-4xl text-4xl -mt-1">of</span> */}
+            <span className="block text-8xl -mt-5">
+              <span className="text-5xl">of</span>
+              <span className="ms-2">Israel</span>
+            </span>
           </h1>
 
-          <h1 className="mt-3 lg:text-5xl text-2xl max-w-4xl mx-auto font-medium">
-            An In-Depth Look at Zionism in the Quran and in Jewish History
+          <h1 className="mt-3 lg:text-2xl text-base max-w-md mx-auto font-medium text-center">
+            An In-Depth Look at{" "}
+            <span className="dahlia-font gradient-text">Zionism</span> in the
+            Quran and in{" "}
+            <span className="dahlia-font gradient-text">Jewish History</span>
           </h1>
 
-          <h4 className="text-center max-w-2xl mx-auto mt-5 lg:text-xl text-md">
+          <h4 className="text-center max-w-2xl mx-auto mt-5 lg:text-xl text-md text-center">
             Readers who wish to experience this intriguing work can purchase
             this book at select bookstores, or online at{" "}
             <Link

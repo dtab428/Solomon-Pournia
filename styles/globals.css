@@ -1,8 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap");
 
+@font-face {
+  font-family: "DahliaMedium";
+  src: url("/fonts/dahlia-medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dahlia-font {
+  font-family: "DahliaMedium", sans-serif;
+  font-weight: normal;
+}
 
 :root {
   --tw-indigo-500: #6366f1; /* Replace with the actual value */
