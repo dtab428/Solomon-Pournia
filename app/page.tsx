@@ -1106,7 +1106,7 @@ export default function Home() {
               </SpotlightCard>
 
               {/* Synopsis */}
-              <SpotlightCard noBg className="lg:col-span-9 col-span-4">
+              <SpotlightCard noBg className="lg:col-span-9 col-span-12">
                 <div className="relative h-full bg-white p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
                   {/* Radial gradient */}
                   <div
