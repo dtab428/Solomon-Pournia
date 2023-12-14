@@ -141,7 +141,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 			<div className="marquee masked-edges marquee--reverse mt-3">
 				<div className="marquee__group">
 					<Card
-						className="p-4 dark:bg-gray-400 w-full h-full justify-center items-center"
+						className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
 						isHoverable
 						shadow="none"
 						isPressable
@@ -149,7 +149,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 						<AmazonLogo />
 					</Card>
 					<Card
-						className="p-4 dark:bg-gray-400 w-full h-full justify-center items-center"
+						className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
 						isHoverable
 						shadow="none"
 						isPressable
@@ -157,7 +157,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 						<ITunesLogo />
 					</Card>
 					<Card
-						className="p-4 dark:bg-gray-400 w-full h-full justify-center items-center"
+						className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
 						isHoverable
 						shadow="none"
 						isPressable
@@ -165,7 +165,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 						<BarnesNoblesLogo />
 					</Card>
 					<Card
-						className="p-4 dark:bg-gray-400 w-full h-full justify-center items-center"
+						className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
 						isHoverable
 						shadow="none"
 						isPressable
@@ -173,7 +173,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 						<GooglePlayLogo />
 					</Card>
 					<Card
-						className="p-4 dark:bg-gray-400 w-full h-full justify-center items-center"
+						className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
 						isHoverable
 						shadow="none"
 						isPressable
