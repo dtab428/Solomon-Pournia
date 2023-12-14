@@ -96,7 +96,7 @@ button svg {
 	position: relative;
 }
 .gradient-after {
-	mask-image: linear-gradient(to bottom, black 65%, transparent);
+	mask-image: linear-gradient(to bottom, black, transparent);
 }
 .gradient-after:has([data-open="true"]) {
 	mask-image: unset;
