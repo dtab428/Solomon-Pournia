@@ -4,10 +4,10 @@ export const siteConfig = {
 	name: "Solomon Pournia",
 	description: "Author of The Promised Land of Israel",
 	navItems: [
-		// {
-		// 	label: "Home",
-		// 	href: "/",
-		// },
+		{
+			label: "Home",
+			href: "/",
+		},
 
 		// {
 		// 	label: "Editor's Prologue",
