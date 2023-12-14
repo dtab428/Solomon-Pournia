@@ -219,7 +219,7 @@ button svg {
   );
 }
 
-.custom-gradient {
+/* .custom-gradient {
   background: linear-gradient(
     to right top,
     rgb(255 215 0 / 15%),
@@ -241,7 +241,7 @@ button svg {
     rgb(0 242 255 / 15%),
     rgb(173 0 255 / 15%)
   );
-}
+} */
 
 /*******************/
 

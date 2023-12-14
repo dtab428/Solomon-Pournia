@@ -4,49 +4,49 @@ export const siteConfig = {
 	name: "Solomon Pournia",
 	description: "Author of The Promised Land of Israel",
 	navItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
+		// {
+		// 	label: "Home",
+		// 	href: "/",
+		// },
 
-		{
-			label: "Editor's Prologue",
-			href: "/editor-prologue",
-		},
+		// {
+		// 	label: "Editor's Prologue",
+		// 	href: "/editor-prologue",
+		// },
 	],
 	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
+		// {
+		// 	label: "Profile",
+		// 	href: "/profile",
+		// },
+		// {
+		// 	label: "Dashboard",
+		// 	href: "/dashboard",
+		// },
+		// {
+		// 	label: "Projects",
+		// 	href: "/projects",
+		// },
+		// {
+		// 	label: "Team",
+		// 	href: "/team",
+		// },
+		// {
+		// 	label: "Calendar",
+		// 	href: "/calendar",
+		// },
+		// {
+		// 	label: "Settings",
+		// 	href: "/settings",
+		// },
+		// {
+		// 	label: "Help & Feedback",
+		// 	href: "/help-feedback",
+		// },
+		// {
+		// 	label: "Logout",
+		// 	href: "/logout",
+		// },
 	],
 	links: {
 		github: "https://github.com/nextui-org/nextui",

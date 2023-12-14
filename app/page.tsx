@@ -23,7 +23,7 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
-  Chip,
+  Tooltip,
 } from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
@@ -268,7 +268,7 @@ const Intro = ({ introText, className }: IntroText) => {
   return (
     <>
       <div className={`h-full ${className}`}>
-        <TopLeftSvgAccent />
+        {/* <TopLeftSvgAccent /> */}
         <BottomRightSvgAccent />
         <div className="relative flex flex-wrap h-full">
           <div className="relative">
@@ -492,7 +492,7 @@ const EditorPrologue = () => {
   return (
     <>
       <TopLeftSvgAccent />
-      <BottomRightSvgAccent />
+      {/* <BottomRightSvgAccent /> */}
       <div className="h-full">
         <div className="relative flex flex-wrap h-full">
           <h3 className={title()}>Editor's Prologue</h3>
@@ -813,21 +813,22 @@ const Synopsis = () => {
 };
 
 export default function Home() {
-  const modalOne = useDisclosure();
-  const modalTwo = useDisclosure();
+  const modalFrontCover = useDisclosure();
+  const modalBackCover = useDisclosure();
+  const modalQuran = useDisclosure();
   return (
     <>
       <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
         <div className="inline-block max-w-6xl justify-center text-center">
           <div>
             <span className="relative inline-flex px-3 py-2 rounded-3xl">
-              <span className="relative z-10 text-sm font-medium">
+              <span className="relative z-10 text-xs font-medium">
                 Introducing
               </span>
               <div className="highlight-bg"></div>
             </span>
           </div>
-          <h1 className="mt-3 inline-block gradient-text dahlia-font mx-auto">
+          <h1 className="inline-block gradient-text dahlia-font mx-auto">
             <span className="block text-5xl ms-12 ps-12 text-left">the</span>
             <span className="block text-8xl ms-6 -mt-5">promised land</span>
             {/* <span className="block lg:text-4xl text-4xl -mt-1">of</span> */}
@@ -839,9 +840,40 @@ export default function Home() {
 
           <h1 className="mt-3 lg:text-2xl text-base max-w-md mx-auto font-medium text-center">
             An In-Depth Look at{" "}
-            <span className="dahlia-font gradient-text">Zionism</span> in the
-            Quran and in{" "}
-            <span className="dahlia-font gradient-text">Jewish History</span>
+            <Tooltip
+              showArrow={true}
+              content={
+                <div className="max-w-sm">
+                  <p>
+                    <strong>Zi·on·ism</strong>
+                  </p>
+                  <p>
+                    a movement for (originally) the re-establishment and (now)
+                    the development and protection of a Jewish nation in what is
+                    now Israel. It was established as a political organization
+                    in 1897 under Theodor Herzl, and was later led by Chaim
+                    Weizmann.
+                  </p>
+                </div>
+              }
+            >
+              <span className="dahlia-font gradient-text cursor-pointer">
+                Zionism
+              </span>
+            </Tooltip>{" "}
+            in the Quran and in{" "}
+            <Tooltip
+              showArrow={true}
+              content={
+                <div className="max-w-sm">
+                  Jews originated from the Israelites and Hebrews of historical
+                  Israel and Judah, two related kingdoms that emerged in the
+                  Levant during the Iron Age.
+                </div>
+              }
+            >
+              <span className="dahlia-font gradient-text">Jewish History</span>
+            </Tooltip>
           </h1>
 
           <h4 className="text-center max-w-2xl mx-auto mt-5 lg:text-xl text-md text-center">
@@ -901,7 +933,7 @@ export default function Home() {
                     Front cover of the book
                   </h4>
                   <Button
-                    onPress={modalOne.onOpen}
+                    onPress={modalFrontCover.onOpen}
                     style={{ height: "auto" }}
                     className="px-0"
                   >
@@ -916,9 +948,8 @@ export default function Home() {
               </SpotlightCard>
 
               <Modal
-                isOpen={modalOne.isOpen}
-                onOpenChange={modalOne.onOpenChange}
-                size="2xl"
+                isOpen={modalFrontCover.isOpen}
+                onOpenChange={modalFrontCover.onOpenChange}
               >
                 <ModalContent>
                   {(onClose) => (
@@ -936,14 +967,11 @@ export default function Home() {
                       </ModalBody>
                       <ModalFooter>
                         <Button
-                          color="danger"
-                          variant="light"
+                          color="primary"
+                          variant="ghost"
                           onPress={onClose}
                         >
                           Close
-                        </Button>
-                        <Button color="primary" onPress={onClose}>
-                          Action
                         </Button>
                       </ModalFooter>
                     </>
@@ -958,7 +986,7 @@ export default function Home() {
                     Rear cover of the book
                   </h4>
                   <Button
-                    onPress={modalTwo.onOpen}
+                    onPress={modalBackCover.onOpen}
                     style={{ height: "auto" }}
                     className="px-0"
                   >
@@ -973,9 +1001,8 @@ export default function Home() {
               </SpotlightCard>
 
               <Modal
-                isOpen={modalTwo.isOpen}
-                onOpenChange={modalTwo.onOpenChange}
-                size="2xl"
+                isOpen={modalBackCover.isOpen}
+                onOpenChange={modalBackCover.onOpenChange}
               >
                 <ModalContent>
                   {(onClose) => (
@@ -993,14 +1020,11 @@ export default function Home() {
                       </ModalBody>
                       <ModalFooter>
                         <Button
-                          color="danger"
-                          variant="light"
+                          color="primary"
+                          variant="ghost"
                           onPress={onClose}
                         >
                           Close
-                        </Button>
-                        <Button color="primary" onPress={onClose}>
-                          Action
                         </Button>
                       </ModalFooter>
                     </>
@@ -1014,14 +1038,65 @@ export default function Home() {
                   <h4 className="text-md mb-3 font-medium text-center">
                     The Book of the Quran with its German translation
                   </h4>
-                  <div className="max-w-[250px]">
-                    <Image
-                      src="/images/quran_orig.jpg"
-                      alt="The Book of the Quran with its German translation"
-                    />
-                  </div>
+                  <Button
+                    onPress={modalQuran.onOpen}
+                    style={{ height: "auto" }}
+                    className="px-0"
+                  >
+                    <div className="max-w-[250px]">
+                      <Image
+                        src="/images/quran_orig.jpg"
+                        alt="The Book of the Quran with its German translation"
+                      />
+                    </div>
+                  </Button>
                 </div>
               </SpotlightCard>
+
+              <Modal
+                isOpen={modalQuran.isOpen}
+                onOpenChange={modalQuran.onOpenChange}
+              >
+                <ModalContent>
+                  {(onClose) => (
+                    <>
+                      <ModalHeader className="flex flex-col gap-1">
+                        The Book of the Quran with its German translation
+                      </ModalHeader>
+                      <ModalBody>
+                        <div className="max-w-lg">
+                          <Image
+                            src="/images/quran_orig.jpg"
+                            alt="The Book of the Quran with its German translation"
+                          />
+                          <p className="mt-3">
+                            I received this volume of the Quran as a gift from a
+                            friend and a classmate in medical school. It is
+                            written in Arabic, accompanied by a German
+                            translation. The edition was published by the
+                            Islamic Library in Germany in 1994. Given its
+                            origin, we have confidence in the accuracy of the
+                            translation from Arabic to German. The 33-page index
+                            is particularly impressive, serving as a valuable
+                            tool to locate specific subjects. The book, &#39;THE
+                            PROMISED LAND OF ISRAEL,&#39; extensively references
+                            quotes from this Quranic source.&quot;
+                          </p>
+                        </div>
+                      </ModalBody>
+                      <ModalFooter>
+                        <Button
+                          color="primary"
+                          variant="ghost"
+                          onPress={onClose}
+                        >
+                          Close
+                        </Button>
+                      </ModalFooter>
+                    </>
+                  )}
+                </ModalContent>
+              </Modal>
 
               {/* Introduction */}
               <SpotlightCard noBg className="lg:col-span-6 col-span-12">
