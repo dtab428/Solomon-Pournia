@@ -308,7 +308,7 @@ const Intro = ({ introText, className }: IntroText) => {
 								onPress={onOpen}
 								size="lg"
 								endContent={<DiagonalArrow />}
-								className="w-full bg-white/50 backdrop-blur-sm text-gray-800 text-xl font-medium"
+								className="w-full bg-teal-500/20 backdrop-blur-sm text-gray-800 dark:text-white text-xl font-medium"
 							>
 								Read More
 							</Button>
@@ -535,7 +535,7 @@ const EditorPrologue = () => {
 								onPress={onOpen}
 								size="lg"
 								endContent={<DiagonalArrow />}
-								className="w-full bg-white/50 backdrop-blur-sm text-gray-800 text-xl font-medium"
+								className="w-full bg-teal-500/20 backdrop-blur-sm text-gray-800 dark:text-white text-xl font-medium"
 							>
 								Read More
 							</Button>
@@ -772,7 +772,7 @@ const Synopsis = () => {
 								onPress={onOpen}
 								size="lg"
 								endContent={<DiagonalArrow />}
-								className="w-full bg-white/50 backdrop-blur-sm text-gray-800 text-xl font-medium"
+								className="w-full bg-teal-500/20 backdrop-blur-sm text-gray-800 dark:text-white text-xl font-medium"
 							>
 								Read More
 							</Button>
