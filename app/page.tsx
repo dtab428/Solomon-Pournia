@@ -42,6 +42,10 @@ declare module "react" {
   }
 }
 
+const navigateToExternalLink = (url) => {
+  window.open(url, "_blank");
+};
+
 const BookSection: React.FC<SectionProps> = ({ className }) => {
   return (
     <div
@@ -54,6 +58,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.amazon.com/Promised-Land-Israel-Depth-Zionism/dp/B0C7SFS2HF"
+              )
+            }
           >
             <AmazonLogo />
           </Card>
@@ -62,6 +71,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://books.apple.com/us/book/the-promised-land-of-israel/id6450221861"
+              )
+            }
           >
             <ITunesLogo />
           </Card>
@@ -70,6 +84,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.barnesandnoble.com/w/the-promised-land-of-israel-solomon-pournia/1143646088;jsessionid=5388C60E63C4743B11059EC61BCC85C1.prodny_store01-atgap14?ean=9798885054713"
+              )
+            }
           >
             <BarnesNoblesLogo />
           </Card>
@@ -78,6 +97,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+              )
+            }
           >
             <GooglePlayLogo />
           </Card>
@@ -86,6 +110,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://readerhouse.com/product/the-promised-land-of-israel/"
+              )
+            }
           >
             <Image
               src="/images/readerhouse-logo.png"
@@ -100,6 +129,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.amazon.com/Promised-Land-Israel-Depth-Zionism/dp/B0C7SFS2HF"
+              )
+            }
           >
             <AmazonLogo />
           </Card>
@@ -108,6 +142,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://books.apple.com/us/book/the-promised-land-of-israel/id6450221861"
+              )
+            }
           >
             <ITunesLogo />
           </Card>
@@ -116,6 +155,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.barnesandnoble.com/w/the-promised-land-of-israel-solomon-pournia/1143646088;jsessionid=5388C60E63C4743B11059EC61BCC85C1.prodny_store01-atgap14?ean=9798885054713"
+              )
+            }
           >
             <BarnesNoblesLogo />
           </Card>
@@ -124,6 +168,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+              )
+            }
           >
             <GooglePlayLogo />
           </Card>
@@ -132,6 +181,11 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://readerhouse.com/product/the-promised-land-of-israel/"
+              )
+            }
           >
             <Image
               src="/images/readerhouse-logo.png"
@@ -147,30 +201,27 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://readerhouse.com/product/the-promised-land-of-israel/"
+              )
+            }
           >
-            <AmazonLogo />
+            <Image
+              src="/images/readerhouse-logo.png"
+              alt="Description of the image"
+            />
           </Card>
           <Card
             className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
-          >
-            <ITunesLogo />
-          </Card>
-          <Card
-            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
-            isHoverable
-            shadow="none"
-            isPressable
-          >
-            <BarnesNoblesLogo />
-          </Card>
-          <Card
-            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
-            isHoverable
-            shadow="none"
-            isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+              )
+            }
           >
             <GooglePlayLogo />
           </Card>
@@ -179,11 +230,39 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.barnesandnoble.com/w/the-promised-land-of-israel-solomon-pournia/1143646088;jsessionid=5388C60E63C4743B11059EC61BCC85C1.prodny_store01-atgap14?ean=9798885054713"
+              )
+            }
           >
-            <Image
-              src="/images/readerhouse-logo.png"
-              alt="Description of the image"
-            />
+            <BarnesNoblesLogo />
+          </Card>
+          <Card
+            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
+            isHoverable
+            shadow="none"
+            isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://books.apple.com/us/book/the-promised-land-of-israel/id6450221861"
+              )
+            }
+          >
+            <ITunesLogo />
+          </Card>
+          <Card
+            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
+            isHoverable
+            shadow="none"
+            isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.amazon.com/Promised-Land-Israel-Depth-Zionism/dp/B0C7SFS2HF"
+              )
+            }
+          >
+            <AmazonLogo />
           </Card>
         </div>
 
@@ -193,30 +272,27 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://readerhouse.com/product/the-promised-land-of-israel/"
+              )
+            }
           >
-            <AmazonLogo />
+            <Image
+              src="/images/readerhouse-logo.png"
+              alt="Description of the image"
+            />
           </Card>
           <Card
             className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
             isHoverable
             shadow="none"
             isPressable
-          >
-            <ITunesLogo />
-          </Card>
-          <Card
-            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
-            isHoverable
-            shadow="none"
-            isPressable
-          >
-            <BarnesNoblesLogo />
-          </Card>
-          <Card
-            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
-            isHoverable
-            shadow="none"
-            isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+              )
+            }
           >
             <GooglePlayLogo />
           </Card>
@@ -225,11 +301,39 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
             isHoverable
             shadow="none"
             isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.barnesandnoble.com/w/the-promised-land-of-israel-solomon-pournia/1143646088;jsessionid=5388C60E63C4743B11059EC61BCC85C1.prodny_store01-atgap14?ean=9798885054713"
+              )
+            }
           >
-            <Image
-              src="/images/readerhouse-logo.png"
-              alt="Description of the image"
-            />
+            <BarnesNoblesLogo />
+          </Card>
+          <Card
+            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
+            isHoverable
+            shadow="none"
+            isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://books.apple.com/us/book/the-promised-land-of-israel/id6450221861"
+              )
+            }
+          >
+            <ITunesLogo />
+          </Card>
+          <Card
+            className="p-4 bg-gray-100 dark:bg-gray-400 w-full h-full justify-center items-center"
+            isHoverable
+            shadow="none"
+            isPressable
+            onPress={() =>
+              navigateToExternalLink(
+                "https://www.amazon.com/Promised-Land-Israel-Depth-Zionism/dp/B0C7SFS2HF"
+              )
+            }
+          >
+            <AmazonLogo />
           </Card>
         </div>
       </div>
@@ -918,7 +1022,7 @@ const Hero = () => {
         <Link
           showAnchorIcon
           color="primary"
-          href="https://play.google.com/store/books/details/Solomon_Pournia_THE_PROMISED_LAND_OF_ISRAEL?id=HvLEEAAAQBAJ"
+          href="https://www.barnesandnoble.com/w/the-promised-land-of-israel-solomon-pournia/1143646088;jsessionid=5388C60E63C4743B11059EC61BCC85C1.prodny_store01-atgap14?ean=9798885054713"
           style={{ font: "inherit" }}
           target="_blank"
         >
