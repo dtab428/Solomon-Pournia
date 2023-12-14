@@ -319,7 +319,7 @@ const Intro = ({ introText, className }: IntroText) => {
 						<p className="text-3xl font-medium mt-3 dahlia-font">
 							Solomon Pournia, MD
 						</p>
-						<p className="text-xl">Los Angeles, December 2019</p>
+						<p className="text-lg">Los Angeles, December 2019</p>
 					</div>
 				</div>
 			</div>
@@ -547,7 +547,7 @@ const EditorPrologue = () => {
 						<p className="text-3xl font-medium mt-3 dahlia-font">
 							Farshid Delshad
 						</p>
-						<p className="text-xl">Los Angeles, Winter 2022</p>
+						<p className="text-lg">Los Angeles, Winter 2022</p>
 					</div>
 				</div>
 			</div>
