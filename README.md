@@ -1,6 +1,6 @@
 # Solomon Pournia's website for his book, "The Promised Land of Israel"
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+Built with NextJS + NextUI.
 
 ## Technologies Used
 
