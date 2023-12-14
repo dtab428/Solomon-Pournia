@@ -1003,19 +1003,19 @@ export default function Home() {
                   <h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
                     <div className="marquee">
                       <div className="marquee__group">
-                        <div>The Quran with its German translation</div>
+                        <div>Rear cover of the book</div>
                         <div>✧</div>
-                        <div>The Quran with its German translation</div>
+                        <div>Rear cover of the book</div>
                         <div>✧</div>
-                        <div>The Quran with its German translation</div>
+                        <div>Rear cover of the book</div>
                       </div>
 
                       <div aria-hidden="true" className="marquee__group">
-                        <div>The Quran with its German translation</div>
+                        <div>Rear cover of the book</div>
                         <div>✧</div>
-                        <div>The Quran with its German translation</div>
+                        <div>Rear cover of the book</div>
                         <div>✧</div>
-                        <div>The Quran with its German translation</div>
+                        <div>Rear cover of the book</div>
                       </div>
                     </div>
                   </h4>
