@@ -308,7 +308,7 @@ const Intro = ({ introText, className }: IntroText) => {
 								onPress={onOpen}
 								size="lg"
 								endContent={<DiagonalArrow />}
-								className="w-full bg-white/50 backdrop-blur-sm text-gray-800"
+								className="w-full bg-white/50 backdrop-blur-sm text-gray-800 text-xl font-medium"
 							>
 								Read More
 							</Button>
@@ -535,7 +535,7 @@ const EditorPrologue = () => {
 								onPress={onOpen}
 								size="lg"
 								endContent={<DiagonalArrow />}
-								className="w-full bg-white/50 backdrop-blur-sm text-gray-800"
+								className="w-full bg-white/50 backdrop-blur-sm text-gray-800 text-xl font-medium"
 							>
 								Read More
 							</Button>
@@ -777,7 +777,7 @@ const Synopsis = () => {
 								onPress={onOpen}
 								size="lg"
 								endContent={<DiagonalArrow />}
-								className="w-full bg-white/50 backdrop-blur-sm text-gray-800"
+								className="w-full bg-white/50 backdrop-blur-sm text-gray-800 text-xl font-medium"
 							>
 								Read More
 							</Button>
@@ -937,7 +937,7 @@ export default function Home() {
 						<Spotlight className="max-w-2xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
 							{/* Front cover of book */}
 							<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-								<div className="relative h-full bg-white dark:bg-gray-800 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
 										<div className="marquee">
 											<div className="marquee__group dark:text-black">
@@ -1011,7 +1011,7 @@ export default function Home() {
 
 							{/* Rear cover of book */}
 							<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-								<div className="relative h-full bg-white dark:bg-gray-800 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
 										<div className="marquee">
 											<div className="marquee__group dark:text-black">
@@ -1085,7 +1085,7 @@ export default function Home() {
 
 							{/* Quran German translated */}
 							<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-								<div className="relative h-full bg-white dark:bg-gray-800 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
 										<div className="marquee">
 											<div className="marquee__group dark:text-black">
@@ -1171,13 +1171,13 @@ export default function Home() {
 
 							{/* Introduction */}
 							<SpotlightCard noBg className="lg:col-span-6 col-span-12">
-								<div className="relative h-full bg-white dark:bg-gray-800 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
 										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
 										aria-hidden="true"
 									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-[80px]"></div>
+										<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
 									</div>
 									<div className="custom-gradient absolute inset-0"></div>
 									<div className="flex flex-col h-full items-center">
@@ -1196,13 +1196,13 @@ export default function Home() {
 							</SpotlightCard>
 							{/* Editor's Prologue */}
 							<SpotlightCard noBg className="lg:col-span-6 col-span-12">
-								<div className="relative h-full bg-white dark:bg-gray-800 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
 										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
 										aria-hidden="true"
 									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-[80px]"></div>
+										<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
 									</div>
 									<div className="custom-gradient-2 absolute inset-0"></div>
 									<div className="flex flex-col h-full items-center">
@@ -1230,7 +1230,7 @@ export default function Home() {
 
 							{/* Design Element */}
 							<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
-								<div className="relative h-full bg-white dark:bg-gray-800 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 									<div className="marquee" style={{ "--gap": "1rem" }}>
 										<div className="marquee__group" style={{ "--gap": "1rem" }}>
 											<div
@@ -1333,13 +1333,13 @@ export default function Home() {
 
 							{/* Synopsis */}
 							<SpotlightCard noBg className="lg:col-span-9 col-span-12">
-								<div className="relative h-full bg-white dark:bg-gray-800 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
 										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
 										aria-hidden="true"
 									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-[80px]"></div>
+										<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
 									</div>
 									<div className="custom-gradient-3 absolute inset-0"></div>
 									<div className="flex flex-col h-full items-center">
@@ -1359,13 +1359,13 @@ export default function Home() {
 							</SpotlightCard>
 							{/* Full Press Release */}
 							<SpotlightCard noBg className="col-span-12">
-								<div className="relative h-full bg-white dark:bg-gray-800 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
 										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
 										aria-hidden="true"
 									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-[80px]"></div>
+										<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
 									</div>
 									<div className="flex flex-col h-full items-center">
 										{/* Image */}
@@ -1391,13 +1391,13 @@ export default function Home() {
 							</SpotlightCard>
 							{/* Image References */}
 							<SpotlightCard noBg className="col-span-12">
-								<div className="relative h-full bg-white dark:bg-gray-800 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+								<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 									{/* Radial gradient */}
 									<div
 										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
 										aria-hidden="true"
 									>
-										<div className="absolute inset-0 translate-z-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-[80px]"></div>
+										<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
 									</div>
 									<div className="flex flex-col h-full items-center">
 										{/* Image */}
