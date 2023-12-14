@@ -853,6 +853,7 @@ export default function Home() {
 						An In-Depth Look at{" "}
 						<Tooltip
 							showArrow={true}
+							closeDelay={0}
 							content={
 								<div className="max-w-sm">
 									<p>
@@ -875,6 +876,7 @@ export default function Home() {
 						in the Quran and in{" "}
 						<Tooltip
 							showArrow={true}
+							closeDelay={0}
 							content={
 								<div className="max-w-sm">
 									Jews originated from the Israelites and Hebrews of historical
