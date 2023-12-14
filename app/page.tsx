@@ -1233,17 +1233,26 @@ export default function Home() {
 								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 									<div className="marquee" style={{ "--gap": "1rem" }}>
 										<div className="marquee__group" style={{ "--gap": "1rem" }}>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
-												the promised land of Israel
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
 												style={{ "--colorA": "#14B8A6" }}
 											>
 												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
@@ -1258,17 +1267,26 @@ export default function Home() {
 											className="marquee__group"
 											style={{ "--gap": "1rem" }}
 										>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
-												the promised land of Israel
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
 												style={{ "--colorA": "#14B8A6" }}
 											>
 												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
@@ -1283,17 +1301,26 @@ export default function Home() {
 										style={{ "--gap": "1rem" }}
 									>
 										<div className="marquee__group" style={{ "--gap": "1rem" }}>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
-												the promised land of Israel
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
 												style={{ "--colorA": "#14B8A6" }}
 											>
 												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
@@ -1308,17 +1335,26 @@ export default function Home() {
 											className="marquee__group"
 											style={{ "--gap": "1rem" }}
 										>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
-												the promised land of Israel
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
 												style={{ "--colorA": "#14B8A6" }}
 											>
 												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div className="text-4xl dahlia-font gradient-text">
+												✺
 											</div>
 											<div
 												className="text-4xl dahlia-font gradient-text"
