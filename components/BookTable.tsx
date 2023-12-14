@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, Accordion, AccordionItem } from "@nextui-org/react";
-import { title, subtitle } from "@/components/primitives";
+import { title } from "@/components/primitives";
 interface BookContentItem {
   part: string;
   page: string;
@@ -60,41 +60,39 @@ const BookTable: React.FC<BookTableProps> = ({
               <span className="text-2xl font-medium">{`Part ${part.toUpperCase()}`}</span>
             }
             textValue="test"
-            subtitle={findSummaryForPart(part)}
-          >
-            {items.map((item, itemIndex) => (
+            subtitle={
               <div
-                key={itemIndex}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "20px",
-                  marginBottom: "10px",
-                }}
-              >
-                <div className="my-4 flex justify-end">
-                  <Image
-                    src={`/images/references/${item.image}`}
-                    alt="Book Image"
-                    style={{ width: "100%" }}
-                  />
+                dangerouslySetInnerHTML={{ __html: findSummaryForPart(part) }}
+              />
+            }
+          >
+            <div className="grid grid-cols-3 gap-3">
+              {items.map((item, itemIndex) => (
+                <div key={itemIndex}>
+                  <div className="my-4 flex justify-end">
+                    <Image
+                      src={`/images/references/${item.image}`}
+                      alt="Book Image"
+                      style={{ width: "100%" }}
+                    />
+                  </div>
+                  {/* <div>
+                    <p className="text-xl mb-2">
+                      <strong>Page:</strong> {item.page}
+                    </p>
+                    {item.description && (
+                      <div>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: item.description,
+                          }}
+                        />
+                      </div>
+                    )}
+                  </div> */}
                 </div>
-                <div>
-                  <p className="text-xl mb-2">
-                    <strong>Page:</strong> {item.page}
-                  </p>
-                  {item.description && (
-                    <div>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: item.description,
-                        }}
-                      />
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </AccordionItem>
         ))}
       </Accordion>
