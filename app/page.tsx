@@ -615,11 +615,11 @@ const synopsisText = () => {
 				(839-923 AD) as a command by Allah. Other high ranking Muslim exegetes
 				such as Ibn Miskawayh (932-1030), Ibn Asakir (1106-1176 AD), Ibn
 				al-Athir (1160- 1233 AD) and Ibn Khallikan (1211-1282 AD) passed on
-				Al-Tabari&#39;s exegetical interpretation. The verse’s validity is
+				Al-Tabari's exegetical interpretation. The verse’s validity is
 				strengthened by the existence of other, similar verses, while there is
-				no Qur&#39;anic verse that contradicts or abrogates any of the pro-
-				Zionist verses. Additionally, there are theories1 projecting that a
-				number of additional pro- Zionist verses once existed but were lost or
+				no Qur'anic verse that contradicts or abrogates any of the pro- Zionist
+				verses. Additionally, there are theories1 projecting that a number of
+				additional pro- Zionist verses once existed but were lost or
 				deliberately omitted during the Uthmanic recension of the Quran; we will
 				investigate this further later on. It is fair to assume, there are many
 				learned yet biased clerics who are aware of the multiple pro-Zionist
@@ -629,16 +629,16 @@ const synopsisText = () => {
 			</p>
 			<p>
 				Starting late in the 20th century, to compliment the cover up of the
-				pro-Zionist Qur&#39;anic verses, some dogmatic believers claimed the
-				al-Aqsa mosque (Arab. al-Masjid al-Aqṣā) in Jerusalem to be the mosque
-				referred to in the Quran when describing the Prophet&#39;s spiritual
-				Night Journey. In reality, Muslim troops set foot in Jerusalem for the
-				first time in 638 CE, some five years after the passing of the Prophet,
-				when there was no mosque yet in Jerusalem. In fact, the al-Aqsa mosque
-				in Jerusalem was built in 710 CE, some seven decades after the death of
-				the Prophet2. However, according to some narratives and objective Muslim
-				sages, the al-Aqsa mosque referred to in the Quran at verse 17:01, known
-				as al-Isra, is a mosque in Heaven3.
+				pro-Zionist Qur'anic verses, some dogmatic believers claimed the al-Aqsa
+				mosque (Arab. al-Masjid al-Aqṣā) in Jerusalem to be the mosque referred
+				to in the Quran when describing the Prophet's spiritual Night Journey.
+				In reality, Muslim troops set foot in Jerusalem for the first time in
+				638 CE, some five years after the passing of the Prophet, when there was
+				no mosque yet in Jerusalem. In fact, the al-Aqsa mosque in Jerusalem was
+				built in 710 CE, some seven decades after the death of the Prophet2.
+				However, according to some narratives and objective Muslim sages, the
+				al-Aqsa mosque referred to in the Quran at verse 17:01, known as
+				al-Isra, is a mosque in Heaven3.
 			</p>
 			<p>
 				Further, Jerusalem has only been politically mischaracterized as Islam’s
@@ -650,7 +650,7 @@ const synopsisText = () => {
 				city and a part of Southern Syria, as admitted by some Muslim Arab
 				politicians4. The diaries of well-known tourists give testimony to the
 				fact that Jerusalem was, for the Muslims, a forgotten city5. In 1948,
-				after Israel&#39;s War of Independence when the Jordanian government
+				after Israel's War of Independence when the Jordanian government
 				occupied Jerusalem, the government failed to elect Jerusalem as their
 				capital city for many years, and even moved the Supreme Muslim Council6
 				from Jerusalem to Amman. There are numerous sources and materials
@@ -664,11 +664,11 @@ const synopsisText = () => {
 				hidden religious aspect of the conflict has been generally neglected by
 				the parties. Accordingly, the Muslim world is often subjected to
 				provocation by zealous clerics and politicians who implement anti-Jewish
-				propaganda, including the misinterpretation of the Qur&#39;anic verses.
-				We can only assume they have left the Muslims generally unaware of the
+				propaganda, including the misinterpretation of the Qur'anic verses. We
+				can only assume they have left the Muslims generally unaware of the
 				Quran’s pro-Zionist passages. This book, with all its detailed
 				historical facts and thorough investigative studies of the pro-Zionist
-				Qur&#39;anic verses, is a compendium new both to Muslim countries and
+				Qur'anic verses, is a compendium new both to Muslim countries and
 				western literature. It should serve as an eye-opener for Muslim
 				politicians, traditional clerics, and Muslims in general, as well as to
 				westerners with an interest in intertextual Qur’anic studies. The well-
@@ -698,7 +698,7 @@ const synopsisText = () => {
 				which later was historically dubbed as the Zionist movement. As a result
 				of this movement, the State of Israel was reborn. All that the Jewish
 				people want is to live in peace in their homeland, which enjoys
-				legitimacy as such via Biblical, Qur&#39;anic, historical, and
+				legitimacy as such via Biblical, Qur'anic, historical, and
 				archaeological evidence in addition to support by international laws and
 				institutions. Israel was not so much created in response to the largest
 				modern calamity suffered by the Jews (the Holocaust), but rather, the
@@ -717,9 +717,9 @@ const synopsisText = () => {
 				of Making Boundaries. Cambridge University Press.
 			</div>
 			<div>
-				3 Cf. Frederick S. Colby (6 August 2008). Narrating Muhammad&#39;s Night
-				Journey: Tracing the Development of the Ibn &#39;Abbas Ascension
-				Discourse. SUNY Press. p. 15.
+				3 Cf. Frederick S. Colby (6 August 2008). Narrating Muhammad's Night
+				Journey: Tracing the Development of the Ibn 'Abbas Ascension Discourse.
+				SUNY Press. p. 15.
 			</div>
 			<div>
 				4 Cf. F. E. Peters Jerusalem (1985): The Holy City in the Eyes of
@@ -1144,9 +1144,9 @@ export default function Home() {
 														origin, we have confidence in the accuracy of the
 														translation from Arabic to German. The 33-page index
 														is particularly impressive, serving as a valuable
-														tool to locate specific subjects. The book, &#39;THE
-														PROMISED LAND OF ISRAEL,&#39; extensively references
-														quotes from this Quranic source.&quot;
+														tool to locate specific subjects. The book, 'THE
+														PROMISED LAND OF ISRAEL,' extensively references
+														quotes from this Quranic source.
 													</p>
 												</div>
 											</ModalBody>
