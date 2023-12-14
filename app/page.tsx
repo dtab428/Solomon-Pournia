@@ -42,7 +42,7 @@ declare module "react" {
   }
 }
 
-const navigateToExternalLink = (url) => {
+const navigateToExternalLink = (url: string) => {
   window.open(url, "_blank");
 };
 
