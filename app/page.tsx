@@ -928,19 +928,37 @@ export default function Home() {
             <Spotlight className="max-w-2xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
               {/* Front cover of book */}
               <SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden p-4">
-                  <h4 className="text-md mb-3 font-medium">
-                    Front cover of the book
+                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+                  <h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+                    <div className="marquee">
+                      <div className="marquee__group">
+                        <div>Front cover of book</div>
+                        <div>✧</div>
+                        <div>Front cover of book</div>
+                        <div>✧</div>
+                        <div>Front cover of book</div>
+                      </div>
+
+                      <div aria-hidden="true" className="marquee__group">
+                        <div>Front cover of book</div>
+                        <div>✧</div>
+                        <div>Front cover of book</div>
+                        <div>✧</div>
+                        <div>Front cover of book</div>
+                      </div>
+                    </div>
                   </h4>
                   <Button
                     onPress={modalFrontCover.onOpen}
                     style={{ height: "auto" }}
                     className="px-0"
                   >
-                    <div className="max-w-[250px]">
+                    <div className="h-full w-full">
                       <Image
+                        removeWrapper
                         src="/images/frontcoverpdf_orig.png"
                         alt="Front cover of the book"
+                        className="z-0 w-full h-full object-cover"
                       />
                     </div>
                   </Button>
@@ -981,19 +999,37 @@ export default function Home() {
 
               {/* Rear cover of book */}
               <SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden p-4">
-                  <h4 className="text-md mb-3 font-medium">
-                    Rear cover of the book
+                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+                  <h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+                    <div className="marquee">
+                      <div className="marquee__group">
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                      </div>
+
+                      <div aria-hidden="true" className="marquee__group">
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                      </div>
+                    </div>
                   </h4>
                   <Button
                     onPress={modalBackCover.onOpen}
                     style={{ height: "auto" }}
                     className="px-0"
                   >
-                    <div className="max-w-[250px]">
+                    <div className="h-full w-full">
                       <Image
+                        removeWrapper
                         src="/images/backcoverpdf_orig.png"
                         alt="Rear cover of the book"
+                        className="z-0 w-full h-full object-cover"
                       />
                     </div>
                   </Button>
@@ -1034,19 +1070,36 @@ export default function Home() {
 
               {/* Quran German translated */}
               <SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
-                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden p-4">
-                  <h4 className="text-md mb-3 font-medium text-center">
-                    The Book of the Quran with its German translation
+                <div className="relative h-full bg-white w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+                  <h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+                    <div className="marquee">
+                      <div className="marquee__group">
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                      </div>
+
+                      <div aria-hidden="true" className="marquee__group">
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                        <div>✧</div>
+                        <div>The Quran with its German translation</div>
+                      </div>
+                    </div>
                   </h4>
                   <Button
                     onPress={modalQuran.onOpen}
-                    style={{ height: "auto" }}
-                    className="px-0"
+                    className="px-0 h-full w-full"
                   >
-                    <div className="max-w-[250px]">
+                    <div className="h-full w-full">
                       <Image
+                        removeWrapper
                         src="/images/quran_orig.jpg"
-                        alt="The Book of the Quran with its German translation"
+                        alt="Rear cover of the book"
+                        className="z-0 w-full h-full object-cover"
                       />
                     </div>
                   </Button>
