@@ -36,6 +36,12 @@ interface SectionProps {
 	className?: string; // Optional className prop
 }
 
+declare module "react" {
+	interface CSSProperties {
+		[key: `--${string}`]: string | number;
+	}
+}
+
 const BookSection: React.FC<SectionProps> = ({ className }) => {
 	return (
 		<div className={`container max-w-5xl mx-auto px-4 ${className}`}>
@@ -816,6 +822,7 @@ export default function Home() {
 	const modalFrontCover = useDisclosure();
 	const modalBackCover = useDisclosure();
 	const modalQuran = useDisclosure();
+
 	return (
 		<>
 			<section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
@@ -830,7 +837,9 @@ export default function Home() {
 					</div>
 					<h1 className="inline-block gradient-text dahlia-font mx-auto">
 						<span className="block text-5xl ms-12 ps-12 text-left">the</span>
-						<span className="block text-8xl ms-6 -mt-5">promised land</span>
+						<span className="block lg:text-8xl text-6xl ms-6 -mt-5">
+							promised land
+						</span>
 						{/* <span className="block lg:text-4xl text-4xl -mt-1">of</span> */}
 						<span className="block text-8xl -mt-5">
 							<span className="text-5xl">of</span>
@@ -1106,7 +1115,7 @@ export default function Home() {
 										<div className="h-full w-full">
 											<Image
 												removeWrapper
-												src="/images/quran_orig.jpg"
+												src="/images/quran_front.jpg"
 												alt="Rear cover of the book"
 												className="z-0 w-full h-full object-cover"
 											/>
@@ -1222,30 +1231,101 @@ export default function Home() {
 							{/* Design Element */}
 							<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
 								<div className="relative h-full bg-white dark:bg-gray-800 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
-									<div className="marquee">
-										<div className="marquee__group">
-											<div className="text-7xl">✺</div>
-											<div className="text-7xl">✧</div>
-											<div className="text-7xl">✡</div>
+									<div className="marquee" style={{ "--gap": "1rem" }}>
+										<div className="marquee__group" style={{ "--gap": "1rem" }}>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
 										</div>
 
-										<div aria-hidden="true" className="marquee__group">
-											<div className="text-7xl">✺</div>
-											<div className="text-7xl">✧</div>
-											<div className="text-7xl">✡</div>
+										<div
+											aria-hidden="true"
+											className="marquee__group"
+											style={{ "--gap": "1rem" }}
+										>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
 										</div>
 									</div>
-									<div className="marquee marquee--reverse mt-3">
-										<div className="marquee__group">
-											<div className="text-7xl">✡</div>
-											<div className="text-7xl">✧</div>
-											<div className="text-7xl">✺</div>
+									<div
+										className="marquee marquee--reverse mt-3"
+										style={{ "--gap": "1rem" }}
+									>
+										<div className="marquee__group" style={{ "--gap": "1rem" }}>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
 										</div>
 
-										<div aria-hidden="true" className="marquee__group">
-											<div className="text-7xl">✡</div>
-											<div className="text-7xl">✧</div>
-											<div className="text-7xl">✺</div>
+										<div
+											aria-hidden="true"
+											className="marquee__group"
+											style={{ "--gap": "1rem" }}
+										>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
+											<div
+												className="text-4xl dahlia-font gradient-text"
+												style={{ "--colorA": "#14B8A6" }}
+											>
+												the promised land of Israel
+											</div>
 										</div>
 									</div>
 								</div>
