@@ -44,7 +44,9 @@ declare module "react" {
 
 const BookSection: React.FC<SectionProps> = ({ className }) => {
   return (
-    <div className={`container max-w-5xl mx-auto px-4 ${className}`}>
+    <div
+      className={`container lg:max-w-2xl max-w-lg mx-auto px-4 ${className}`}
+    >
       <div className="marquee masked-edges">
         <div className="marquee__group">
           <Card
@@ -935,7 +937,7 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
-        <div className="max-w-6xl mx-auto px-3">
+        <div className="container max-w-6xl mx-auto px-3">
           <Hero />
           <BookSection className="mt-3" />
           <Spotlight className="mt-5 max-w-2xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
