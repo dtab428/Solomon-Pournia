@@ -251,14 +251,17 @@ const PressRelease = () => {
 	// }, []);
 	return (
 		<>
-			<h3 className={title()}>Full press release text</h3>
-			{/* <p ref={textRef} className="mt-5"> */}
-			<p className="mt-5">
-				{/* {text.split("").map((char, index) => (
+			<TopLeftSvgAccent />
+			<div className="relative z-10">
+				<h3 className={title()}>Full press release text</h3>
+				{/* <p ref={textRef} className="mt-5"> */}
+				<p className="mt-5">
+					{/* {text.split("").map((char, index) => (
 					<span key={index}>{char}</span>
 				))} */}
-				{text}
-			</p>
+					{text}
+				</p>
+			</div>
 		</>
 	);
 };
@@ -1419,6 +1422,7 @@ export default function Home() {
 											bookPartDescriptions={bookPartDescriptions}
 										/>
 									</div>
+									<BottomRightSvgAccent />
 								</div>
 							</SpotlightCard>
 						</Spotlight>
