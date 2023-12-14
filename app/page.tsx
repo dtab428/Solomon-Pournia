@@ -1369,7 +1369,7 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
                 </div>
-                <div className="flex flex-col h-full items-center">
+                <div className="flex flex-col h-full items-center relative z-10">
                   {/* Image */}
                   <div className="relative inline-flex">
                     <div
