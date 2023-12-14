@@ -594,11 +594,6 @@ const synopsisText = () => {
 	return (
 		<>
 			<p>
-				What would one say if the Holy Quran were found to contain beliefs
-				consistent with Zionism? What if the Quran in its very philological
-				content blesses and encourages the Jews to live in the land of Israel?
-			</p>
-			<p>
 				What if billions of Muslims were to be made aware of the clearly
 				‘pro-Zionist’ verses in the Quran, and were to alter their world view to
 				welcome the Jews in their ancestral homeland? Not too long ago, my
