@@ -884,7 +884,7 @@ export default function Home() {
 						</Tooltip>
 					</h1>
 
-					<h4 className="text-center max-w-2xl mx-auto mt-4 lg:text-xl text-base text-center">
+					<h4 className="text-gray-700 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4 lg:text-xl text-base text-center">
 						Readers who wish to experience this intriguing work can purchase
 						this book at select bookstores, or online at{" "}
 						<Link
@@ -1235,28 +1235,19 @@ export default function Home() {
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 										</div>
@@ -1269,28 +1260,19 @@ export default function Home() {
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 										</div>
@@ -1303,28 +1285,19 @@ export default function Home() {
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 										</div>
@@ -1337,28 +1310,19 @@ export default function Home() {
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 											<div className="text-4xl dahlia-font gradient-text">
 												✺
 											</div>
-											<div
-												className="text-4xl dahlia-font gradient-text"
-												style={{ "--colorA": "#14B8A6" }}
-											>
+											<div className="text-4xl dahlia-font gradient-text">
 												the promised land of Israel
 											</div>
 										</div>

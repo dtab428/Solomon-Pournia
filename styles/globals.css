@@ -105,8 +105,8 @@ button svg {
 /**********/
 
 .gradient-text {
-	--colorA: #0700d6;
-	--colorB: #5086dd;
+	--colorA: #069e8d;
+	--colorB: #37ddca;
 	cursor: default;
 	position: relative;
 	background-image: linear-gradient(
