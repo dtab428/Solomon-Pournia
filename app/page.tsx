@@ -847,7 +847,7 @@ export default function Home() {
 						</span>
 					</h1>
 
-					<h1 className="mt-3 lg:text-2xl text-base max-w-md mx-auto font-medium text-center">
+					<h1 className="mt-3 lg:text-2xl text-md max-w-md mx-auto font-medium text-center lg:text-wrap-unset text-wrap-balance">
 						An In-Depth Look at{" "}
 						<Tooltip
 							showArrow={true}
@@ -885,7 +885,7 @@ export default function Home() {
 						</Tooltip>
 					</h1>
 
-					<h4 className="text-center max-w-2xl mx-auto mt-5 lg:text-xl text-md text-center">
+					<h4 className="text-center max-w-2xl mx-auto mt-4 lg:text-xl text-base text-center">
 						Readers who wish to experience this intriguing work can purchase
 						this book at select bookstores, or online at{" "}
 						<Link
@@ -933,7 +933,7 @@ export default function Home() {
 				<BookSection className="mt-3" />
 
 				<section className="py-0 w-full relative">
-					<div className="container mx-auto px-4 mt-4">
+					<div className="container mx-auto px-4 mt-5">
 						<Spotlight className="max-w-2xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
 							{/* Front cover of book */}
 							<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
