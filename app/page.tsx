@@ -882,7 +882,7 @@ const Hero = () => {
         </Tooltip>
       </h1>
 
-      <h4 className="text-gray-700 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4 lg:text-xl text-base text-center">
+      <h4 className="text-gray-700 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4 mb-6 lg:text-xl text-base text-center">
         Readers who wish to experience this intriguing work can purchase this
         book at select bookstores, or online at{" "}
         <Link
@@ -937,10 +937,10 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center gap-5 pt-8 pb-5 md:pt-10 pb-8">
-        <div className="container max-w-6xl mx-auto px-3">
+        <div className="container max-w-7xl mx-auto px-3">
           <Hero />
           <BookSection className="mt-3" />
-          <Spotlight className="mt-5 max-w-2xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
+          <Spotlight className="mt-8 mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
             {/* Front cover of book */}
             <SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
               <div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">

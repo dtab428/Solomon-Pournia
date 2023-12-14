@@ -267,6 +267,7 @@ export const bookImageReferences = [
     page: "279",
     title: "The Jewish Legion Flag in WWI",
     source: "Wikipedia",
+    image: "part4_image8.png",
   },
   {
     part: "IV",

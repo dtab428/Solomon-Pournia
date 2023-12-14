@@ -92,7 +92,7 @@ const BookTable: React.FC<BookTableProps> = ({
               />
             }
           >
-            <div className="grid grid-cols-3 gap-3 pb-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gris-cols-1 gap-3 pb-5">
               {items.map((item, itemIndex) => (
                 <div key={itemIndex}>
                   <Card
