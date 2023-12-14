@@ -1,5 +1,12 @@
 import React from "react";
-import { Image, Accordion, AccordionItem } from "@nextui-org/react";
+import {
+  Image,
+  Accordion,
+  AccordionItem,
+  Card,
+  CardFooter,
+  Button,
+} from "@nextui-org/react";
 import { title } from "@/components/primitives";
 interface BookContentItem {
   part: string;
@@ -69,13 +76,27 @@ const BookTable: React.FC<BookTableProps> = ({
             <div className="grid grid-cols-3 gap-3">
               {items.map((item, itemIndex) => (
                 <div key={itemIndex}>
-                  <div className="my-4 flex justify-end">
-                    <Image
-                      src={`/images/references/${item.image}`}
-                      alt="Book Image"
-                      style={{ width: "100%" }}
-                    />
-                  </div>
+                  <Card
+                    isFooterBlurred
+                    radius="lg"
+                    className="border-none h-full"
+                  >
+                    <div className="h-full">
+                      <Image
+                        src={`/images/references/${item.image}`}
+                        alt={`Reference image from The Promised Land of Israel: Part ${item.part}, Page ${item.page}`}
+                        className="h-full w-full object-cover max-h-[300px]"
+                        removeWrapper={true}
+                      />
+                    </div>
+
+                    <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                      <p className="text-lg text-white/80">
+                        Part: {item.part}, Page: {item.page}
+                      </p>
+                    </CardFooter>
+                  </Card>
+
                   {/* <div>
                     <p className="text-xl mb-2">
                       <strong>Page:</strong> {item.page}
