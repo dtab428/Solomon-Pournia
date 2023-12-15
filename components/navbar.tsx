@@ -38,7 +38,7 @@ export const Navbar = () => {
 			shouldHideOnScroll
 			isBlurred={false}
 		>
-			<div className="flex w-full items-center inline-block w-auto rounded-3xl bg-white backdrop-blur-lg bg-teal-200/25 p-3">
+			<div className="flex w-full items-center inline-block w-auto rounded-3xl backdrop-blur-lg bg-teal-200/25 p-3">
 				<NavbarContent className="" justify="center">
 					<NavbarBrand as="li" className="gap-3 max-w-fit">
 						<NextLink
