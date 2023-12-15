@@ -91,7 +91,7 @@ const BookTable: React.FC<BookTableProps> = ({
 								dangerouslySetInnerHTML={{ __html: findSummaryForPart(part) }}
 							/>
 						}
-						className={`group${index}`}
+						className={`group`}
 						indicator={({ isOpen }) =>
 							isOpen ? (
 								<svg
@@ -99,7 +99,7 @@ const BookTable: React.FC<BookTableProps> = ({
 									viewBox="0 0 24 24"
 									width="32"
 									height="32"
-									className={`text-teal-500 rounded-full transition group${index}-hover:bg-teal-200`}
+									className={`text-teal-500 rounded-full transition hover:bg-teal-200`}
 								>
 									<path
 										d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
@@ -112,7 +112,7 @@ const BookTable: React.FC<BookTableProps> = ({
 									viewBox="0 0 24 24"
 									width="32"
 									height="32"
-									className={`text-teal-500 rounded-full transition group-hover:bg-teal-200`}
+									className={`text-teal-500 rounded-full transition hover:bg-teal-200`}
 								>
 									<path
 										d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"
