@@ -279,3 +279,32 @@ button svg {
 	opacity: 0;
 	animation: fade-in 1s forwards 0.3s;
 }
+
+/*************/
+.swiper-slide {
+	height: auto !important;
+}
+
+.custom-swiper-scrollbar {
+	position: relative;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+	border-radius: 10px;
+	height: 4px; /* Adjust the height of the scrollbar */
+}
+
+.custom-swiper-scrollbar .swiper-scrollbar-drag {
+	background: rgba(
+		0,
+		0,
+		0,
+		0.5
+	); /* Background of the draggable scrollbar element */
+	border-radius: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	display: none !important;
+}

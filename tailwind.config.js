@@ -47,6 +47,9 @@ module.exports = {
 							DEFAULT: "#14B8A6",
 						},
 						// ... rest of the colors
+						secondary: {
+							DEFAULT: "#57a8ff",
+						},
 					},
 				},
 				dark: {

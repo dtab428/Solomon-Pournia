@@ -14,6 +14,15 @@ import {
 	ModalContent,
 } from "@nextui-org/react";
 
+import "swiper/css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { Scrollbar } from "swiper/modules";
+
+import "swiper/css/navigation";
+import "swiper/css/scrollbar";
+
 // Assuming title is a function from "@/components/primitives"
 import { title } from "@/components/primitives";
 
@@ -71,7 +80,7 @@ const BookTable: React.FC<BookTableProps> = ({
 		setSelectedItem(item);
 		onOpen();
 	};
-
+	const [swiperInstance, setSwiperInstance] = useState(null);
 	return (
 		<div className={`container mx-auto w-full ${className || ""}`}>
 			<h3 className={title()}>Image References</h3>
@@ -84,7 +93,7 @@ const BookTable: React.FC<BookTableProps> = ({
 					<AccordionItem
 						key={index}
 						title={
-							<span className="text-2xl font-medium mb-1 block">{`Part ${part.toUpperCase()}`}</span>
+							<span className="text-2xl font-medium mb-1 block text-teal-600">{`Part ${part.toUpperCase()}`}</span>
 						}
 						subtitle={
 							<div
@@ -122,46 +131,84 @@ const BookTable: React.FC<BookTableProps> = ({
 							)
 						}
 					>
-						<div className="grid lg:grid-cols-3 md:grid-cols-2 gris-cols-1 gap-3 pb-5">
-							{items.map((item, itemIndex) => (
-								<div key={itemIndex}>
-									<Card
-										isFooterBlurred
-										radius="lg"
-										className="border-none h-full w-full"
-										isPressable
-										onPress={() => handleOpen(item)}
+						{/* <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-3 pb-5"> */}
+						<div className="gap-3 pb-5">
+							<Swiper
+								spaceBetween={10}
+								slidesPerView={2.5}
+								onSlideChange={() => console.log("slide change")}
+								onSwiper={(swiper) => setSwiperInstance(swiper)} // Store swiper instance
+								modules={[Navigation, Scrollbar]}
+								navigation={{ el: ".custom-swiper-navigation" }}
+								scrollbar={{ el: ".custom-swiper-scrollbar", draggable: true }}
+								breakpoints={{
+									992: {
+										slidesPerView: 5.5,
+									},
+								}}
+							>
+								{items.map((item, itemIndex) => (
+									<SwiperSlide
+										key={itemIndex}
+										style={{ height: "auto!important" }}
 									>
-										<div className="h-full w-full">
-											<Image
-												src={`/images/references/${item.image}`}
-												alt={`Reference image from The Promised Land of Israel: Part ${item.part}, Page ${item.page}`}
-												className="h-full w-full object-cover max-h-[300px]"
-												removeWrapper={true}
-												isZoomed
-											/>
-										</div>
-										<CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-											<p className="text-lg text-white/80">
-												Part: {item.part}, Page: {item.page}
-											</p>
-										</CardFooter>
-									</Card>
+										<Card
+											// isFooterBlurred
+											radius="lg"
+											className="border-none h-full w-full"
+											isPressable
+											onPress={() => handleOpen(item)}
+										>
+											<div className="h-full w-full">
+												<Image
+													src={`/images/references/${item.image}`}
+													alt={`Reference image from The Promised Land of Israel: Part ${item.part}, Page ${item.page}`}
+													className="h-full w-full object-cover max-h-[300px]"
+													removeWrapper={true}
+													isZoomed
+												/>
+											</div>
+											<CardFooter className="justify-center bg-teal-500/70 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+												<p className="text-lg text-white/80">
+													Part: {item.part}, Page: {item.page}
+												</p>
+											</CardFooter>
+										</Card>
+									</SwiperSlide>
+								))}
+							</Swiper>
+							<div className="w-full mt-5">
+								<div className="custom-swiper-scrollbar"></div>
+								<div className="custom-swiper-navigation text-end flex gap-3 justify-end mt-4">
+									<Button
+										onClick={() => swiperInstance.slidePrev()}
+										className="text-xl"
+										color="secondary"
+									>
+										Previous
+									</Button>
+									<Button
+										onClick={() => swiperInstance.slideNext()}
+										className="text-xl"
+										color="secondary"
+									>
+										Next
+									</Button>
 								</div>
-							))}
+							</div>
 						</div>
 					</AccordionItem>
 				))}
 			</Accordion>
 
 			{selectedItem && (
-				<Modal isOpen={isOpen} onClose={onClose}>
+				<Modal isOpen={isOpen} onClose={onClose} scrollBehavior="inside">
 					<ModalContent>
 						<ModalHeader>
 							Part: {selectedItem.part}, Page: {selectedItem.page}
 						</ModalHeader>
 						<ModalBody>
-							<div className="">
+							<div>
 								<Image
 									src={`/images/references/${selectedItem.image}`}
 									alt={`Reference image from The Promised Land of Israel: Part ${selectedItem.part}, Page ${selectedItem.page}`}
@@ -169,7 +216,7 @@ const BookTable: React.FC<BookTableProps> = ({
 									removeWrapper={true}
 								/>
 								<div
-									className="mt-3"
+									className="mt-3 font-medium text-lg"
 									dangerouslySetInnerHTML={{
 										__html: selectedItem.description || "",
 									}}
