@@ -17,9 +17,10 @@ import {
 
 import "swiper/css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Scrollbar } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper"; // Import Swiper type
 
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -81,7 +82,7 @@ const BookTable: React.FC<BookTableProps> = ({
 		setSelectedItem(item);
 		onOpen();
 	};
-	const [swiperInstance, setSwiperInstance] = useState(null);
+	const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 	return (
 		<div className={`container mx-auto w-full ${className || ""}`}>
 			<h3 className={title()}>Image References</h3>
@@ -98,7 +99,7 @@ const BookTable: React.FC<BookTableProps> = ({
 							dangerouslySetInnerHTML={{ __html: findSummaryForPart(part) }}
 						/>
 						<div className="gap-3 pb-5 mt-5">
-							<Swiper
+							<SwiperComponent
 								spaceBetween={10}
 								slidesPerView={2.5}
 								onSlideChange={() => console.log("slide change")}
@@ -141,7 +142,7 @@ const BookTable: React.FC<BookTableProps> = ({
 										</Card>
 									</SwiperSlide>
 								))}
-							</Swiper>
+							</SwiperComponent>
 							<div className="w-full mt-5">
 								<div className="custom-swiper-scrollbar"></div>
 								<div className="custom-swiper-navigation text-end flex gap-3 justify-end mt-4">
