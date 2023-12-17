@@ -80,7 +80,10 @@ const BookTable: React.FC<BookTableProps> = ({
 		setSelectedItem(item);
 		onOpen();
 	};
-	const [swiperInstance, setSwiperInstance] = useState(null);
+	const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+		null
+	);
+
 	return (
 		<div className={`container mx-auto w-full ${className || ""}`}>
 			<h3 className={title()}>Image References</h3>
@@ -137,7 +140,7 @@ const BookTable: React.FC<BookTableProps> = ({
 								spaceBetween={10}
 								slidesPerView={2.5}
 								onSlideChange={() => console.log("slide change")}
-								onSwiper={(swiper) => setSwiperInstance(swiper)} // Store swiper instance
+								onSwiper={(swiper) => setSwiperInstance(swiper)}
 								modules={[Navigation, Scrollbar]}
 								navigation={{ el: ".custom-swiper-navigation" }}
 								scrollbar={{ el: ".custom-swiper-scrollbar", draggable: true }}
@@ -181,14 +184,14 @@ const BookTable: React.FC<BookTableProps> = ({
 								<div className="custom-swiper-scrollbar"></div>
 								<div className="custom-swiper-navigation text-end flex gap-3 justify-end mt-4">
 									<Button
-										onClick={() => swiperInstance.slidePrev()}
+										onClick={() => swiperInstance?.slidePrev()}
 										className="text-xl"
 										color="secondary"
 									>
 										Previous
 									</Button>
 									<Button
-										onClick={() => swiperInstance.slideNext()}
+										onClick={() => swiperInstance?.slideNext()}
 										className="text-xl"
 										color="secondary"
 									>
