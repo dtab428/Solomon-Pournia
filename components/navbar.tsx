@@ -33,9 +33,8 @@ export const Navbar = () => {
 	return (
 		<NextUINavbar
 			maxWidth="sm"
-			position="sticky"
+			position="static"
 			className="bg-transparent flex-wrap before:content-[''] before:block before:h-[0.5rem] before:w-full"
-			shouldHideOnScroll
 			isBlurred={false}
 		>
 			<div className="flex w-full items-center inline-block w-auto rounded-3xl backdrop-blur-lg bg-teal-200/25 p-3">
