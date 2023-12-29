@@ -17,10 +17,8 @@ import {
 
 import "swiper/css";
 
-import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import { Scrollbar } from "swiper/modules";
-import { Swiper as SwiperType } from "swiper"; // Import Swiper type
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Scrollbar } from "swiper/modules";
 
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -82,7 +80,6 @@ const BookTable: React.FC<BookTableProps> = ({
 		setSelectedItem(item);
 		onOpen();
 	};
-	const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 	return (
 		<div className={`container mx-auto w-full ${className || ""}`}>
 			<h3 className={title()}>Image References</h3>
@@ -94,30 +91,19 @@ const BookTable: React.FC<BookTableProps> = ({
 				{Object.entries(groupedByPart).map(([part, items], index) => (
 					<div key={index}>
 						{/* <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-3 pb-5"> */}
-						<span className="text-2xl font-medium mb-1 block text-teal-600">{`Part ${part.toUpperCase()}`}</span>
+						<span className="text-4xl font-bold mb-1 block text-teal-600">{`Part ${part.toUpperCase()}`}</span>
 						<div
+							className="text-xl"
 							dangerouslySetInnerHTML={{ __html: findSummaryForPart(part) }}
 						/>
-						<div className="gap-3 pb-5 mt-5">
-							<SwiperComponent
-								spaceBetween={10}
-								slidesPerView={2.5}
-								onSlideChange={() => console.log("slide change")}
-								onSwiper={(swiper) => setSwiperInstance(swiper)} // Store swiper instance
-								modules={[Navigation, Scrollbar]}
-								navigation={{ el: ".custom-swiper-navigation" }}
-								scrollbar={{ el: ".custom-swiper-scrollbar", draggable: true }}
-								breakpoints={{
-									992: {
-										slidesPerView: 5.5,
-									},
-								}}
-							>
-								{items.map((item, itemIndex) => (
-									<SwiperSlide
-										key={itemIndex}
-										style={{ height: "auto!important" }}
-									>
+						<div className="pb-5 mt-5">
+							{items.map((item, itemIndex) => (
+								<div
+									key={itemIndex}
+									style={{ height: "auto!important" }}
+									className="my-7"
+								>
+									<div className="grid grid-cols-2 gap-5 items-center">
 										<Card
 											// isFooterBlurred
 											radius="lg"
@@ -129,7 +115,7 @@ const BookTable: React.FC<BookTableProps> = ({
 												<Image
 													src={`/images/references/${item.image}`}
 													alt={`Reference image from The Promised Land of Israel: Part ${item.part}, Page ${item.page}`}
-													className="h-full w-full object-cover max-h-[300px]"
+													className="h-full w-full object-cover"
 													removeWrapper={true}
 													isZoomed
 												/>
@@ -140,28 +126,12 @@ const BookTable: React.FC<BookTableProps> = ({
 												</p>
 											</CardFooter>
 										</Card>
-									</SwiperSlide>
-								))}
-							</SwiperComponent>
-							<div className="w-full mt-5">
-								<div className="custom-swiper-scrollbar"></div>
-								<div className="custom-swiper-navigation text-end flex gap-3 justify-end mt-4">
-									<Button
-										onClick={() => swiperInstance.slidePrev()}
-										className="text-xl"
-										color="secondary"
-									>
-										Previous
-									</Button>
-									<Button
-										onClick={() => swiperInstance.slideNext()}
-										className="text-xl"
-										color="secondary"
-									>
-										Next
-									</Button>
+										<div>
+											<p>{item.description}</p>
+										</div>
+									</div>
 								</div>
-							</div>
+							))}
 						</div>
 						<Divider orientation="horizontal" className="my-5" />
 					</div>

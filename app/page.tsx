@@ -966,9 +966,7 @@ const Hero = () => {
 						</div>
 					}
 				>
-					<span className="dahlia-font gradient-text cursor-pointer">
-						Zionism
-					</span>
+					<span className="cursor-pointer">Zionism</span>
 				</Tooltip>{" "}
 				in the Quran and in{" "}
 				<Tooltip
@@ -982,7 +980,7 @@ const Hero = () => {
 						</div>
 					}
 				>
-					<span className="dahlia-font gradient-text">Jewish History</span>
+					<span className="cursor-pointer">Jewish History</span>
 				</Tooltip>
 			</h1>
 
@@ -1046,7 +1044,7 @@ export default function Home() {
 					<BookSection className="mt-3" />
 					<Spotlight className="mt-8 mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
 						{/* Front cover of book */}
-						<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
+						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
 							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
 									<div className="marquee">
@@ -1116,7 +1114,7 @@ export default function Home() {
 						</Modal>
 
 						{/* Rear cover of book */}
-						<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
+						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
 							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
 									<div className="marquee">
@@ -1186,7 +1184,7 @@ export default function Home() {
 						</Modal>
 
 						{/* Quran German translated */}
-						<SpotlightCard className="lg:col-span-4 col-span-12 flex items-center justify-center">
+						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
 							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
 								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
 									<div className="marquee">
@@ -1266,6 +1264,58 @@ export default function Home() {
 								)}
 							</ModalContent>
 						</Modal>
+
+						{/* Quran German translated */}
+						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
+							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+									<div className="marquee">
+										<div className="marquee__group dark:text-black">
+											<div>The Quran with its German translation</div>
+											<div className="text-xl">✧</div>
+											<div>The Quran with its German translation</div>
+											<div className="text-xl">✧</div>
+											<div>The Quran with its German translation</div>
+										</div>
+
+										<div
+											aria-hidden="true"
+											className="marquee__group dark:text-black"
+										>
+											<div>The Quran with its German translation</div>
+											<div className="text-xl">✧</div>
+											<div>The Quran with its German translation</div>
+											<div className="text-xl">✧</div>
+											<div>The Quran with its German translation</div>
+										</div>
+									</div>
+								</h4>
+								<Button
+									onPress={modalQuran.onOpen}
+									className="px-0 h-full w-full"
+								>
+									<div className="h-full w-full">
+										<Image
+											removeWrapper
+											src="/images/quran_back.png"
+											alt="Rear cover of the book"
+											className="z-0 w-full h-full object-cover"
+										/>
+									</div>
+								</Button>
+							</div>
+						</SpotlightCard>
+
+						<p className="mt-3 col-span-6 col-start-7 text-lg my-3">
+							I received this volume of the Quran as a gift from a friend and a
+							classmate in medical school. It is written in Arabic, accompanied
+							by a German translation. The edition was published by the Islamic
+							Library in Germany in 1994. Given its origin, we have confidence
+							in the accuracy of the translation from Arabic to German. The
+							33-page index is particularly impressive, serving as a valuable
+							tool to locate specific subjects. The book, 'THE PROMISED LAND OF
+							ISRAEL,' extensively references quotes from this Quranic source.
+						</p>
 
 						{/* Introduction */}
 						<SpotlightCard noBg className="lg:col-span-6 col-span-12">
