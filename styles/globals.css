@@ -294,3 +294,9 @@ button svg {
 }
 
 /************/
+
+.accordion-mask {
+	/* height: 600px; */
+	overflow: hidden;
+	mask: linear-gradient(to top, transparent, #fff);
+}

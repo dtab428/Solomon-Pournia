@@ -1560,8 +1560,8 @@ export default function Home() {
 
             {/* Image References */}
             <div className="col-span-12 relative mt-6">
-              <div className="text-center sticky top-4 bg-teal-500/30 backdrop-blur-md rounded-full z-50 relative">
-                <ul className="p-4 inline-flex z-10 lg:text-3xl text-xl cursor-pointer">
+              <div className="text-center sticky top-4 z-50 relative">
+                <ul className="p-4 inline-flex z-10 lg:text-2xl text-xl cursor-pointer bg-white/20 backdrop-blur-md rounded-full">
                   <li
                     className="after:content-['✧'] after:mx-4"
                     onClick={() => scrollToSection("part-I")}
