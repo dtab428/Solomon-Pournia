@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
 	Image,
 	Accordion,
@@ -80,6 +80,17 @@ const BookTable: React.FC<BookTableProps> = ({
 		setSelectedItem(item);
 		onOpen();
 	};
+	const DescriptionComponent = ({ description }) => {
+		const descriptionRef = useRef(null);
+
+		useEffect(() => {
+			if (descriptionRef.current) {
+				descriptionRef.current.innerHTML = description;
+			}
+		}, [description]);
+
+		return <div ref={descriptionRef}></div>;
+	};
 	return (
 		<div className={`container mx-auto w-full ${className || ""}`}>
 			<h3 className={title()}>Image References</h3>
@@ -131,13 +142,9 @@ const BookTable: React.FC<BookTableProps> = ({
 												</CardFooter>
 											</Card>
 											<div>
-												{item.description && (
-													<p
-														dangerouslySetInnerHTML={{
-															__html: item.description,
-														}}
-													></p>
-												)}
+												<DescriptionComponent
+													description={item.description || ""}
+												/>
 											</div>
 										</div>
 									</div>
