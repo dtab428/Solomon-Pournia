@@ -32,6 +32,8 @@ import Spotlight, { SpotlightCard } from "@/components/Spotlight";
 
 import { bookImageReferences, bookPartDescriptions } from "@/app/data";
 
+import ContactForm from "@/components/ContactForm";
+
 interface SectionProps {
 	className?: string; // Optional className prop
 }
@@ -344,7 +346,7 @@ const BookSection: React.FC<SectionProps> = ({ className }) => {
 const PressRelease = () => {
 	const textRef = useRef(null);
 	const text =
-		"An interesting work that offers well-documented accuracy and authenticity of the quoted facts, rendering them beyond malicious interpretation. Author Solomon Pournia received his medical degree from the Düsseldorf Medical Academy in Germany. However, history and religion were the other two fields he pursued and researched alongside his main profession as a physician. Nonetheless, the factual information contained in this book, so relevant to the Middle East crises and the Arab-Israeli issue, has not been revealed and remained hidden from Muslims around the world and Westerners. The need for enlightenment and clarification could not stop him from announcing and revealing the truth. He hopes that this first release will spark a tremendous awakening that will lead to insight and the loss of bigotry. Pournia writes, “Not too long ago, my old-time peer from my years in German medical school brought me some souvenirs while visiting me in Los Angeles, including a volume of the Quran with its German translation. While reading, I came across the first pro-Zionist (or, historically defined, the first pro-Israelite) verse in the Quran, and this was very surprising to me. Soon, the index of this version of the Quran became a great help in searching through the ayahs and finding others dealing with the same issue. Continuing my targeted search, I discovered evidence confirming the gravity of the first ayah in relation to other ayahs, all of which I will explain in detail in this book.” Published by Fulton Books, Solomon Pournia&apos;s book tackles very sensitive topics and serves as an eye-opener for Muslim politicians, traditional clerics, Muslims in general, and interested Westerners.";
+		"An interesting work that offers well-documented accuracy and authenticity of the quoted facts, rendering them beyond malicious interpretation. Author Solomon Pournia received his medical degree from the Düsseldorf Medical Academy in Germany. However, history and religion were the other two fields he pursued and researched alongside his main profession as a physician. Nonetheless, the factual information contained in this book, so relevant to the Middle East crises and the Arab-Israeli issue, has not been revealed and remained hidden from Muslims around the world and Westerners. The need for enlightenment and clarification could not stop him from announcing and revealing the truth. He hopes that this first release will spark a tremendous awakening that will lead to insight and the loss of bigotry. Pournia writes, 'Not too long ago, my old-time peer from my years in German medical school brought me some souvenirs while visiting me in Los Angeles, including a volume of the Quran with its German translation. While reading, I came across the first pro-Zionist (or, historically defined, the first pro-Israelite) verse in the Quran, and this was very surprising to me. Soon, the index of this version of the Quran became a great help in searching through the ayahs and finding others dealing with the same issue. Continuing my targeted search, I discovered evidence confirming the gravity of the first ayah in relation to other ayahs, all of which I will explain in detail in this book.' Published by Fulton Books, Solomon Pournia's book tackles very sensitive topics and serves as an eye-opener for Muslim politicians, traditional clerics, Muslims in general, and interested Westerners.";
 
 	// useEffect(() => {
 	// 	// Target all spans (characters) within the ref element
@@ -1031,6 +1033,21 @@ const Hero = () => {
 	);
 };
 
+const scrollToSection = (sectionId: string) => {
+	const section = document.getElementById(sectionId);
+	if (section) {
+		// Get the position of the section
+		const rect = section.getBoundingClientRect();
+		const sectionTop = rect.top + window.scrollY;
+
+		// Scroll to the section with an offset of 100px above
+		window.scrollTo({
+			top: sectionTop - 100, // Adjust 100px offset above the section
+			behavior: "smooth",
+		});
+	}
+};
+
 export default function Home() {
 	const modalFrontCover = useDisclosure();
 	const modalBackCover = useDisclosure();
@@ -1042,280 +1059,297 @@ export default function Home() {
 				<div className="container max-w-8xl mx-auto px-3">
 					<Hero />
 					<BookSection className="mt-3" />
-					<Spotlight className="mt-8 mx-auto grid gap-4 grid-cols-1 lg:grid-cols-12 items-start lg:max-w-none group">
-						{/* Front cover of book */}
-						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
-							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
-								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
-									<div className="marquee">
-										<div className="marquee__group dark:text-black">
-											<div>Front cover of book</div>
-											<div className="text-xl">✧</div>
-											<div>Front cover of book</div>
-											<div className="text-xl">✧</div>
-											<div>Front cover of book</div>
-										</div>
-
-										<div
-											aria-hidden="true"
-											className="marquee__group dark:text-black"
-										>
-											<div>Front cover of book</div>
-											<div className="text-xl">✧</div>
-											<div>Front cover of book</div>
-											<div className="text-xl">✧</div>
-											<div>Front cover of book</div>
-										</div>
-									</div>
-								</h4>
-								<Button
-									onPress={modalFrontCover.onOpen}
-									style={{ height: "auto" }}
-									className="px-0"
-								>
-									<div className="h-full w-full">
-										<Image
-											removeWrapper
-											src="/images/frontcoverpdf_orig.png"
-											alt="Front cover of the book"
-											className="z-0 w-full h-full object-cover"
-										/>
-									</div>
-								</Button>
-							</div>
-						</SpotlightCard>
-
-						<Modal
-							isOpen={modalFrontCover.isOpen}
-							onOpenChange={modalFrontCover.onOpenChange}
-						>
-							<ModalContent>
-								{(onClose) => (
-									<>
-										<ModalHeader className="flex flex-col gap-1">
-											Front cover of the book
-										</ModalHeader>
-										<ModalBody>
-											<div className="max-w-lg">
-												<Image
-													src="/images/frontcoverpdf_orig.png"
-													alt="Front cover of the book"
-												/>
+					<Spotlight className="mt-8 mx-auto grid grid-cols-12 gap-4  items-start lg:max-w-none group">
+						<div className="grid col-span-12 grid-cols-12 gap-4 justify-center max-w-6xl mx-auto">
+							{/* Front cover of book */}
+							<SpotlightCard className="lg:col-span-6 col-span-12 flex items-center justify-center">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+										<div className="marquee">
+											<div className="marquee__group dark:text-black">
+												<div>Front cover of book</div>
+												<div className="text-xl">✧</div>
+												<div>Front cover of book</div>
+												<div className="text-xl">✧</div>
+												<div>Front cover of book</div>
 											</div>
-										</ModalBody>
-										<ModalFooter>
-											<Button color="primary" variant="ghost" onPress={onClose}>
-												Close
-											</Button>
-										</ModalFooter>
-									</>
-								)}
-							</ModalContent>
-						</Modal>
 
-						{/* Rear cover of book */}
-						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
-							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
-								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
-									<div className="marquee">
-										<div className="marquee__group dark:text-black">
-											<div>Rear cover of the book</div>
-											<div className="text-xl">✧</div>
-											<div>Rear cover of the book</div>
-											<div className="text-xl">✧</div>
-											<div>Rear cover of the book</div>
-										</div>
-
-										<div
-											aria-hidden="true"
-											className="marquee__group dark:text-black"
-										>
-											<div>Rear cover of the book</div>
-											<div className="text-xl">✧</div>
-											<div>Rear cover of the book</div>
-											<div className="text-xl">✧</div>
-											<div>Rear cover of the book</div>
-										</div>
-									</div>
-								</h4>
-								<Button
-									onPress={modalBackCover.onOpen}
-									style={{ height: "auto" }}
-									className="px-0"
-								>
-									<div className="h-full w-full">
-										<Image
-											removeWrapper
-											src="/images/backcoverpdf_orig.png"
-											alt="Rear cover of the book"
-											className="z-0 w-full h-full object-cover"
-										/>
-									</div>
-								</Button>
-							</div>
-						</SpotlightCard>
-
-						<Modal
-							isOpen={modalBackCover.isOpen}
-							onOpenChange={modalBackCover.onOpenChange}
-						>
-							<ModalContent>
-								{(onClose) => (
-									<>
-										<ModalHeader className="flex flex-col gap-1">
-											Rear cover of the book
-										</ModalHeader>
-										<ModalBody>
-											<div className="max-w-lg">
-												<Image
-													src="/images/backcoverpdf_orig.png"
-													alt="Rear cover of the book"
-												/>
+											<div
+												aria-hidden="true"
+												className="marquee__group dark:text-black"
+											>
+												<div>Front cover of book</div>
+												<div className="text-xl">✧</div>
+												<div>Front cover of book</div>
+												<div className="text-xl">✧</div>
+												<div>Front cover of book</div>
 											</div>
-										</ModalBody>
-										<ModalFooter>
-											<Button color="primary" variant="ghost" onPress={onClose}>
-												Close
-											</Button>
-										</ModalFooter>
-									</>
-								)}
-							</ModalContent>
-						</Modal>
-
-						{/* Quran German translated */}
-						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
-							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
-								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
-									<div className="marquee">
-										<div className="marquee__group dark:text-black">
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
 										</div>
-
-										<div
-											aria-hidden="true"
-											className="marquee__group dark:text-black"
-										>
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
+									</h4>
+									<Button
+										onPress={modalFrontCover.onOpen}
+										style={{ height: "auto" }}
+										className="px-0"
+									>
+										<div className="h-full w-full">
+											<Image
+												removeWrapper
+												src="/images/frontcoverpdf_orig.png"
+												alt="Front cover of the book"
+												className="z-0 w-full h-full object-cover"
+											/>
 										</div>
-									</div>
-								</h4>
-								<Button
-									onPress={modalQuran.onOpen}
-									className="px-0 h-full w-full"
-								>
-									<div className="h-full w-full">
-										<Image
-											removeWrapper
-											src="/images/quran_front.jpg"
-											alt="Rear cover of the book"
-											className="z-0 w-full h-full object-cover"
-										/>
-									</div>
-								</Button>
-							</div>
-						</SpotlightCard>
+									</Button>
+								</div>
+							</SpotlightCard>
 
-						<Modal
-							isOpen={modalQuran.isOpen}
-							onOpenChange={modalQuran.onOpenChange}
-						>
-							<ModalContent>
-								{(onClose) => (
-									<>
-										<ModalHeader className="flex flex-col gap-1">
-											The Book of the Quran with its German translation
-										</ModalHeader>
-										<ModalBody>
-											<div className="max-w-lg">
-												<Image
-													src="/images/quran_orig.jpg"
-													alt="The Book of the Quran with its German translation"
-												/>
-												<p className="mt-3">
-													I received this volume of the Quran as a gift from a
-													friend and a classmate in medical school. It is
-													written in Arabic, accompanied by a German
-													translation. The edition was published by the Islamic
-													Library in Germany in 1994. Given its origin, we have
-													confidence in the accuracy of the translation from
-													Arabic to German. The 33-page index is particularly
-													impressive, serving as a valuable tool to locate
-													specific subjects. The book, 'THE PROMISED LAND OF
-													ISRAEL,' extensively references quotes from this
-													Quranic source.
-												</p>
+							<Modal
+								isOpen={modalFrontCover.isOpen}
+								onOpenChange={modalFrontCover.onOpenChange}
+							>
+								<ModalContent>
+									{(onClose) => (
+										<>
+											<ModalHeader className="flex flex-col gap-1">
+												Front cover of the book
+											</ModalHeader>
+											<ModalBody>
+												<div className="max-w-lg">
+													<Image
+														src="/images/frontcoverpdf_orig.png"
+														alt="Front cover of the book"
+													/>
+												</div>
+											</ModalBody>
+											<ModalFooter>
+												<Button
+													color="primary"
+													variant="ghost"
+													onPress={onClose}
+												>
+													Close
+												</Button>
+											</ModalFooter>
+										</>
+									)}
+								</ModalContent>
+							</Modal>
+
+							{/* Rear cover of book */}
+							<SpotlightCard className="lg:col-span-6 col-span-12 flex items-center justify-center">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+										<div className="marquee">
+											<div className="marquee__group dark:text-black">
+												<div>Rear cover of the book</div>
+												<div className="text-xl">✧</div>
+												<div>Rear cover of the book</div>
+												<div className="text-xl">✧</div>
+												<div>Rear cover of the book</div>
 											</div>
-										</ModalBody>
-										<ModalFooter>
-											<Button color="primary" variant="ghost" onPress={onClose}>
-												Close
-											</Button>
-										</ModalFooter>
-									</>
-								)}
-							</ModalContent>
-						</Modal>
 
-						{/* Quran German translated */}
-						<SpotlightCard className="lg:col-span-3 col-span-12 flex items-center justify-center">
-							<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
-								<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
-									<div className="marquee">
-										<div className="marquee__group dark:text-black">
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
+											<div
+												aria-hidden="true"
+												className="marquee__group dark:text-black"
+											>
+												<div>Rear cover of the book</div>
+												<div className="text-xl">✧</div>
+												<div>Rear cover of the book</div>
+												<div className="text-xl">✧</div>
+												<div>Rear cover of the book</div>
+											</div>
 										</div>
-
-										<div
-											aria-hidden="true"
-											className="marquee__group dark:text-black"
-										>
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
-											<div className="text-xl">✧</div>
-											<div>The Quran with its German translation</div>
+									</h4>
+									<Button
+										onPress={modalBackCover.onOpen}
+										style={{ height: "auto" }}
+										className="px-0"
+									>
+										<div className="h-full w-full">
+											<Image
+												removeWrapper
+												src="/images/backcoverpdf_orig.png"
+												alt="Rear cover of the book"
+												className="z-0 w-full h-full object-cover"
+											/>
 										</div>
-									</div>
-								</h4>
-								<Button
-									onPress={modalQuran.onOpen}
-									className="px-0 h-full w-full"
-								>
-									<div className="h-full w-full">
-										<Image
-											removeWrapper
-											src="/images/quran_back.png"
-											alt="Rear cover of the book"
-											className="z-0 w-full h-full object-cover"
-										/>
-									</div>
-								</Button>
-							</div>
-						</SpotlightCard>
+									</Button>
+								</div>
+							</SpotlightCard>
 
-						<p className="mt-3 col-span-6 col-start-7 text-lg my-3">
-							I received this volume of the Quran as a gift from a friend and a
-							classmate in medical school. It is written in Arabic, accompanied
-							by a German translation. The edition was published by the Islamic
-							Library in Germany in 1994. Given its origin, we have confidence
-							in the accuracy of the translation from Arabic to German. The
-							33-page index is particularly impressive, serving as a valuable
-							tool to locate specific subjects. The book, 'THE PROMISED LAND OF
-							ISRAEL,' extensively references quotes from this Quranic source.
-						</p>
+							<Modal
+								isOpen={modalBackCover.isOpen}
+								onOpenChange={modalBackCover.onOpenChange}
+							>
+								<ModalContent>
+									{(onClose) => (
+										<>
+											<ModalHeader className="flex flex-col gap-1">
+												Rear cover of the book
+											</ModalHeader>
+											<ModalBody>
+												<div className="max-w-lg">
+													<Image
+														src="/images/backcoverpdf_orig.png"
+														alt="Rear cover of the book"
+													/>
+												</div>
+											</ModalBody>
+											<ModalFooter>
+												<Button
+													color="primary"
+													variant="ghost"
+													onPress={onClose}
+												>
+													Close
+												</Button>
+											</ModalFooter>
+										</>
+									)}
+								</ModalContent>
+							</Modal>
+						</div>
+
+						<div className="grid col-span-12 grid-cols-12 gap-4 justify-center max-w-3xl mx-auto">
+							{/* Quran German translated */}
+							<SpotlightCard className="lg:col-span-6 col-span-12 flex items-center justify-center">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+										<div className="marquee">
+											<div className="marquee__group dark:text-black">
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+											</div>
+
+											<div
+												aria-hidden="true"
+												className="marquee__group dark:text-black"
+											>
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+											</div>
+										</div>
+									</h4>
+									<Button
+										onPress={modalQuran.onOpen}
+										className="px-0 h-full w-full"
+									>
+										<div className="h-full w-full">
+											<Image
+												removeWrapper
+												src="/images/quran_front.jpg"
+												alt="Rear cover of the book"
+												className="z-0 w-full h-full object-cover"
+											/>
+										</div>
+									</Button>
+								</div>
+							</SpotlightCard>
+
+							<Modal
+								isOpen={modalQuran.isOpen}
+								onOpenChange={modalQuran.onOpenChange}
+							>
+								<ModalContent>
+									{(onClose) => (
+										<>
+											<ModalHeader className="flex flex-col gap-1">
+												The Book of the Quran with its German translation
+											</ModalHeader>
+											<ModalBody>
+												<div className="max-w-lg">
+													<Image
+														src="/images/quran_orig.jpg"
+														alt="The Book of the Quran with its German translation"
+													/>
+													<p className="mt-3">
+														I received this volume of the Quran as a gift from a
+														friend and a classmate in medical school. It is
+														written in Arabic, accompanied by a German
+														translation. The edition was published by the
+														Islamic Library in Germany in 1994. Given its
+														origin, we have confidence in the accuracy of the
+														translation from Arabic to German. The 33-page index
+														is particularly impressive, serving as a valuable
+														tool to locate specific subjects. The book, 'THE
+														PROMISED LAND OF ISRAEL,' extensively references
+														quotes from this Quranic source.
+													</p>
+												</div>
+											</ModalBody>
+											<ModalFooter>
+												<Button
+													color="primary"
+													variant="ghost"
+													onPress={onClose}
+												>
+													Close
+												</Button>
+											</ModalFooter>
+										</>
+									)}
+								</ModalContent>
+							</Modal>
+
+							{/* Quran German translated Rear Cover */}
+							<SpotlightCard className="lg:col-span-6 col-span-12 flex items-center justify-center">
+								<div className="relative h-full bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center flex-col flex-wrap rounded-[inherit] z-20 overflow-hidden">
+									<h4 className="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large backdrop-blur backdrop-saturate-150 absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between text-lg font-medium">
+										<div className="marquee">
+											<div className="marquee__group dark:text-black">
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+											</div>
+
+											<div
+												aria-hidden="true"
+												className="marquee__group dark:text-black"
+											>
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+												<div className="text-xl">✧</div>
+												<div>The Quran with its German translation</div>
+											</div>
+										</div>
+									</h4>
+									<Button
+										onPress={modalQuran.onOpen}
+										className="px-0 h-full w-full"
+									>
+										<div className="h-full w-full">
+											<Image
+												removeWrapper
+												src="/images/quran_back.png"
+												alt="Rear cover of the book"
+												className="z-0 w-full h-full object-cover"
+											/>
+										</div>
+									</Button>
+								</div>
+							</SpotlightCard>
+
+							<p className="mt-3 col-span-12 text-lg my-3">
+								I received this volume of the Quran as a gift from a friend and
+								a classmate in medical school. It is written in Arabic,
+								accompanied by a German translation. The edition was published
+								by the Islamic Library in Germany in 1994. Given its origin, we
+								have confidence in the accuracy of the translation from Arabic
+								to German. The 33-page index is particularly impressive, serving
+								as a valuable tool to locate specific subjects. The book, 'THE
+								PROMISED LAND OF ISRAEL,' extensively references quotes from
+								this Quranic source.
+							</p>
+						</div>
 
 						{/* Introduction */}
 						<SpotlightCard noBg className="lg:col-span-6 col-span-12">
@@ -1481,6 +1515,7 @@ export default function Home() {
 								</div>
 							</div>
 						</SpotlightCard>
+
 						{/* Full Press Release */}
 						<SpotlightCard noBg className="col-span-12">
 							<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
@@ -1513,7 +1548,66 @@ export default function Home() {
 								</div>
 							</div>
 						</SpotlightCard>
+
 						{/* Image References */}
+						<div className="col-span-12 relative mt-6">
+							<div className="text-center sticky top-4 bg-teal-500/30 backdrop-blur-md rounded-full z-50 relative">
+								<ul className="p-4 inline-flex z-10 lg:text-3xl text-xl cursor-pointer">
+									<li
+										className="after:content-['✧'] after:mx-4"
+										onClick={() => scrollToSection("part-I")}
+									>
+										Part I
+									</li>
+									<li
+										className="after:content-['✧'] after:mx-4"
+										onClick={() => scrollToSection("part-II")}
+									>
+										Part II
+									</li>
+									<li
+										className="after:content-['✧'] after:mx-4"
+										onClick={() => scrollToSection("part-III")}
+									>
+										Part III
+									</li>
+									<li
+										className="after:content-['✧'] after:mx-4"
+										onClick={() => scrollToSection("part-IV")}
+									>
+										Part IV
+									</li>
+									<li onClick={() => scrollToSection("part-V")}>Part V</li>
+								</ul>
+							</div>
+							<div className="col-span-12 mt-3">
+								<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20">
+									{/* Radial gradient */}
+									<div
+										className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
+										aria-hidden="true"
+									>
+										<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
+									</div>
+									<div className="flex flex-col h-full items-center relative z-10">
+										{/* Image */}
+										<div className="relative inline-flex">
+											<div
+												className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-custom-blue hidden"
+												aria-hidden="true"
+											></div>
+										</div>
+										{/* Text */}
+										<BookTable
+											bookContent={bookImageReferences}
+											bookPartDescriptions={bookPartDescriptions}
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Contact Form */}
 						<SpotlightCard noBg className="col-span-12">
 							<div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
 								{/* Radial gradient */}
@@ -1523,26 +1617,19 @@ export default function Home() {
 								>
 									<div className="absolute inset-0 translate-z-0 bg-teal-100/20 dark:bg-gray-800 rounded-full blur-[80px]"></div>
 								</div>
-								<div className="flex flex-col h-full items-center relative z-10">
+								<div className="flex flex-col h-full  relative z-10">
 									{/* Image */}
 									<div className="relative inline-flex">
 										<div
 											className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-custom-blue hidden"
 											aria-hidden="true"
 										></div>
-										{/* <Image
-                        className="inline-flex"
-                        // src={}
-                        width={200}
-                        height={200}
-                        alt="Card 02"
-                      /> */}
 									</div>
 									{/* Text */}
-									<BookTable
-										bookContent={bookImageReferences}
-										bookPartDescriptions={bookPartDescriptions}
-									/>
+									<div className="px-3 mb-5">
+										<h3 className={title()}>Contact</h3>
+									</div>
+									<ContactForm />
 								</div>
 								<BottomRightSvgAccent />
 							</div>

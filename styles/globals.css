@@ -26,6 +26,9 @@
 body .\[\&\>svg\]\:max-w-\[theme\(spacing\.unit-8\)\] > svg {
 	max-width: unset;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 svg {
 	max-width: 100%;

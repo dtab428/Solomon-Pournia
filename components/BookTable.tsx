@@ -87,55 +87,68 @@ const BookTable: React.FC<BookTableProps> = ({
 				The book refers to many images, but does not include them. Below, you'll
 				find all images cited in the book.
 			</p>
-			<div>
-				{Object.entries(groupedByPart).map(([part, items], index) => (
-					<div key={index}>
-						{/* <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-3 pb-5"> */}
-						<span className="text-4xl font-bold mb-1 block text-teal-600">{`Part ${part.toUpperCase()}`}</span>
-						<div
-							className="text-xl"
-							dangerouslySetInnerHTML={{ __html: findSummaryForPart(part) }}
-						/>
-						<div className="pb-5 mt-5">
-							{items.map((item, itemIndex) => (
-								<div
-									key={itemIndex}
-									style={{ height: "auto!important" }}
-									className="my-7"
-								>
-									<div className="grid grid-cols-2 gap-5 items-center">
-										<Card
-											// isFooterBlurred
-											radius="lg"
-											className="border-none h-full w-full"
-											isPressable
-											onPress={() => handleOpen(item)}
-										>
-											<div className="h-full w-full">
-												<Image
-													src={`/images/references/${item.image}`}
-													alt={`Reference image from The Promised Land of Israel: Part ${item.part}, Page ${item.page}`}
-													className="h-full w-full object-cover"
-													removeWrapper={true}
-													isZoomed
-												/>
+			<div className="mt-8">
+				{Object.entries(groupedByPart).map(
+					([part, items], index, entriesArray) => (
+						<div key={index}>
+							{/* <div className="grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-3 pb-5"> */}
+							<span
+								className="text-3xl font-bold mb-2 block text-teal-600"
+								id={`part-${part.toUpperCase()}`}
+							>{`Part ${part.toUpperCase()}`}</span>
+							<div
+								className="text-xl"
+								dangerouslySetInnerHTML={{ __html: findSummaryForPart(part) }}
+							/>
+							<div className="pb-5 mt-5 max-w-5xl">
+								{items.map((item, itemIndex) => (
+									<div
+										key={itemIndex}
+										style={{ height: "auto!important" }}
+										className="my-7"
+									>
+										<div className="grid lg:grid-cols-2 gap-5 items-center">
+											<Card
+												// isFooterBlurred
+												radius="lg"
+												className="border-none h-full w-full"
+												isPressable
+												onPress={() => handleOpen(item)}
+											>
+												<div className="h-full w-full">
+													<Image
+														src={`/images/references/${item.image}`}
+														alt={`Reference image from The Promised Land of Israel: Part ${item.part}, Page ${item.page}`}
+														className="h-full w-full object-cover"
+														removeWrapper={true}
+														isZoomed
+													/>
+												</div>
+												<CardFooter className="justify-center bg-teal-500/70 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+													<p className="text-lg text-white/80">
+														Part: {item.part}, Page: {item.page}
+													</p>
+												</CardFooter>
+											</Card>
+											<div>
+												{item.description && (
+													<p
+														dangerouslySetInnerHTML={{
+															__html: item.description,
+														}}
+													></p>
+												)}
 											</div>
-											<CardFooter className="justify-center bg-teal-500/70 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-												<p className="text-lg text-white/80">
-													Part: {item.part}, Page: {item.page}
-												</p>
-											</CardFooter>
-										</Card>
-										<div>
-											<p>{item.description}</p>
 										</div>
 									</div>
-								</div>
-							))}
+								))}
+							</div>
+							{index !== entriesArray.length - 1 && (
+								<Divider orientation="horizontal" className="my-14" />
+							)}
 						</div>
-						<Divider orientation="horizontal" className="my-5" />
-					</div>
-				))}
+					)
+				)}
 			</div>
 
 			{selectedItem && (
