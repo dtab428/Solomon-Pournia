@@ -1561,27 +1561,27 @@ export default function Home() {
             {/* Image References */}
             <div className="col-span-12 relative mt-6">
               <div className="text-center sticky top-4 z-50 relative">
-                <ul className="p-4 inline-flex z-10 lg:text-2xl text-xl cursor-pointer bg-white/20 backdrop-blur-md rounded-full">
+                <ul className="p-4 inline-flex z-10 lg:text-xl text-xl cursor-pointer bg-white/20 backdrop-blur-md rounded-full">
                   <li
-                    className="after:content-['✧'] after:mx-4"
+                    className="after:content-['✧'] after:mx-4 after:text-lg"
                     onClick={() => scrollToSection("part-I")}
                   >
                     Part I
                   </li>
                   <li
-                    className="after:content-['✧'] after:mx-4"
+                    className="after:content-['✧'] after:mx-4 after:text-lg"
                     onClick={() => scrollToSection("part-II")}
                   >
                     Part II
                   </li>
                   <li
-                    className="after:content-['✧'] after:mx-4"
+                    className="after:content-['✧'] after:mx-4 after:text-lg"
                     onClick={() => scrollToSection("part-III")}
                   >
                     Part III
                   </li>
                   <li
-                    className="after:content-['✧'] after:mx-4"
+                    className="after:content-['✧'] after:mx-4 after:text-lg"
                     onClick={() => scrollToSection("part-IV")}
                   >
                     Part IV
