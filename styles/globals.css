@@ -58,26 +58,7 @@ button svg {
      height: auto;
      flex-shrink: 0;
 } */
-.masked-edges::before,
-.masked-edges::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100px;
-	z-index: 10;
-	pointer-events: none;
-	background: linear-gradient(
-		to right,
-		hsl(var(--nextui-background)) 0%,
-		transparent 100%
-	);
-}
 
-.masked-edges::after {
-	right: 0;
-	transform: rotate(180deg);
-}
 
 /* .marquee .swiper-button-prev,
 .swiper .swiper-button-next {
@@ -153,13 +134,13 @@ button svg {
 	overflow: hidden;
 	user-select: none;
 	gap: var(--gap);
-	/* mask-image: linear-gradient(
+	mask-image: linear-gradient(
           var(--mask-direction, to right),
           hsl(0 0% 0% / 0),
           hsl(0 0% 0% / 1) 20%,
           hsl(0 0% 0% / 1) 80%,
           hsl(0 0% 0% / 0)
-     ); */
+     );
 }
 
 .marquee__group {
