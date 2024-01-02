@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
 	Image,
-	Accordion,
-	AccordionItem,
 	Card,
 	CardFooter,
 	Button,
@@ -14,14 +12,6 @@ import {
 	ModalContent,
 	Divider,
 } from "@nextui-org/react";
-
-import "swiper/css";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper/modules";
-
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
 
 // Assuming title is a function from "@/components/primitives"
 import { title } from "@/components/primitives";
