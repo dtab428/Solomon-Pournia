@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Input, Textarea, Button } from "@nextui-org/react";
 
 export default function ContactForm() {
@@ -12,7 +12,7 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Send form data to your API route or server
     const response = await fetch("/api/sendEmail", {
