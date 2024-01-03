@@ -1568,7 +1568,7 @@ export default function Home() {
                   size="lg"
                   aria-label="Part"
                   onSelectionChange={(selectedKey) =>
-                    scrollToSection(selectedKey)
+                    scrollToSection(selectedKey as string)
                   }
                 >
                   <Tab key="part-I" title="Part I" />
