@@ -1579,7 +1579,7 @@ export default function Home() {
                 </Tabs>
               </div>
               <div className="col-span-12 mt-3">
-                <div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-xl border-1 z-20">
+                <div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-3xl border-1 z-20">
                   {/* Radial gradient */}
                   <div
                     className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"

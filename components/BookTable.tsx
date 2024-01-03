@@ -77,7 +77,7 @@ const BookTable: React.FC<BookTableProps> = ({
     [key: string]: HTMLDivElement | null;
   }
 
-  const accordionRefs = useRef({});
+  const accordionRefs = useRef<AccordionRefs>({});
 
   const toggleAccordion = (part: string) => {
     if (expandedPart === part) {
