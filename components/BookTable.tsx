@@ -73,6 +73,10 @@ const BookTable: React.FC<BookTableProps> = ({
     onOpen();
   };
 
+  interface AccordionRefs {
+    [key: string]: HTMLDivElement | null;
+  }
+
   const accordionRefs = useRef({});
 
   const toggleAccordion = (part: string) => {

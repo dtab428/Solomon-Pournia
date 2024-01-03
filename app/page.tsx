@@ -24,6 +24,8 @@ import {
   ModalFooter,
   useDisclosure,
   Tooltip,
+  Tabs,
+  Tab,
 } from "@nextui-org/react";
 
 import BookTable from "@/components/BookTable";
@@ -1055,7 +1057,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-5 pt-8 md:pt-10 bg-white lg:rounded-b-[120px] rounded-b-[40px]">
+      <section className="flex flex-col items-center justify-center gap-5 pt-8 md:pt-10 pb-4 bg-white lg:rounded-b-[120px] rounded-b-[40px]">
         <Hero />
       </section>
       <section className="">
@@ -1561,33 +1563,20 @@ export default function Home() {
             {/* Image References */}
             <div className="col-span-12 relative mt-6">
               <div className="text-center sticky top-4 z-50 relative">
-                <ul className="p-4 inline-flex z-10 lg:text-xl text-xl cursor-pointer bg-white/20 backdrop-blur-md rounded-full">
-                  <li
-                    className="after:content-['✧'] after:mx-4 after:text-lg"
-                    onClick={() => scrollToSection("part-I")}
-                  >
-                    Part I
-                  </li>
-                  <li
-                    className="after:content-['✧'] after:mx-4 after:text-lg"
-                    onClick={() => scrollToSection("part-II")}
-                  >
-                    Part II
-                  </li>
-                  <li
-                    className="after:content-['✧'] after:mx-4 after:text-lg"
-                    onClick={() => scrollToSection("part-III")}
-                  >
-                    Part III
-                  </li>
-                  <li
-                    className="after:content-['✧'] after:mx-4 after:text-lg"
-                    onClick={() => scrollToSection("part-IV")}
-                  >
-                    Part IV
-                  </li>
-                  <li onClick={() => scrollToSection("part-V")}>Part V</li>
-                </ul>
+                <Tabs
+                  key="test"
+                  size="xl"
+                  aria-label="Part"
+                  onSelectionChange={(selectedKey) =>
+                    scrollToSection(selectedKey)
+                  }
+                >
+                  <Tab key="part-I" title="Part I" />
+                  <Tab key="part-II" title="Part II" />
+                  <Tab key="part-III" title="Part III" />
+                  <Tab key="part-IV" title="Part IV" />
+                  <Tab key="part-V" title="Part V" />
+                </Tabs>
               </div>
               <div className="col-span-12 mt-3">
                 <div className="relative h-full bg-white dark:bg-gray-900 p-6 pb-8 rounded-xl border-1 z-20">
