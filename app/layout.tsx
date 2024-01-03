@@ -56,7 +56,7 @@ export default function RootLayout({
           }}
         >
           <Navbar />
-          <main>{children}</main>
+          <main className="px-3">{children}</main>
           <footer className="w-full flex items-center justify-center pt-3 pb-6">
             <Link
               isExternal
