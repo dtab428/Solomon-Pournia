@@ -1565,7 +1565,7 @@ export default function Home() {
               <div className="text-center sticky top-4 z-50 relative">
                 <Tabs
                   key="test"
-                  size="xl"
+                  size="lg"
                   aria-label="Part"
                   onSelectionChange={(selectedKey) =>
                     scrollToSection(selectedKey)
