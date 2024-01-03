@@ -45,7 +45,7 @@ export const Navbar = () => {
               href="/"
             >
               {/* <Logo /> */}
-              <p className="font-bold text-black dark:text-white lowercase text-5xl dahlia-font">
+              <p className="font-bold text-black dark:text-white lowercase lg:text-5xl text-2xl dahlia-font">
                 Solomon Pournia
               </p>
             </NextLink>

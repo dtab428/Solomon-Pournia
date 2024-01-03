@@ -1057,7 +1057,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-5 pt-8 md:pt-10 pb-4 bg-white lg:rounded-b-[120px] rounded-b-[40px]">
+      <section className="flex flex-col items-center justify-center gap-5 pt-8 md:pt-10 bg-white lg:rounded-b-[120px] rounded-b-[40px] after:content-[''] after:block after:w-full after:h-[1px] after:mx-auto after:[background:linear-gradient(to_right,_transparent,_#37eada,_transparent)] overflow-hidden">
         <Hero />
       </section>
       <section className="">
@@ -1065,7 +1065,7 @@ export default function Home() {
       </section>
       <div className="before:bg-gray-100/70 before:h-[40px] before:w-full before:absolute relative">
         <Spotlight className="mt-8 mx-auto grid grid-cols-12 gap-4  items-start lg:max-w-none group">
-          <div className="col-span-12 bg-white lg:rounded-b-[120px] rounded-b-[40px]">
+          <div className="col-span-12 bg-white lg:rounded-b-[120px] rounded-b-[40px] after:content-[''] after:block after:w-full after:h-[1px] after:mx-auto after:[background:linear-gradient(to_right,_transparent,_#37eada,_transparent)] overflow-hidden">
             <div className="grid col-span-12 grid-cols-12 gap-4 justify-center max-w-4xl mx-auto">
               {/* Front cover of book */}
               <SpotlightCard className="lg:col-span-6 col-span-12 flex items-center justify-center">
