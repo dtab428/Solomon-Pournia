@@ -92,8 +92,13 @@ const BookTable: React.FC<BookTableProps> = ({
     }
   };
 
-  const DescriptionComponent = ({ description }) => {
-    const descriptionRef = useRef(null);
+  interface DescriptionComponentProps {
+    description: string;
+  }
+  const DescriptionComponent: React.FC<DescriptionComponentProps> = ({
+    description,
+  }) => {
+    const descriptionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
       if (descriptionRef.current) {
